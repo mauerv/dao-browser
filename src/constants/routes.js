@@ -1,0 +1,5 @@
+export const HOME = '/'
+export const CREATE_INFO = '/create-info'
+export const NEWS = '/news'
+export const DAOS = '/daos'
+export const DAO = '/daos/:id'
