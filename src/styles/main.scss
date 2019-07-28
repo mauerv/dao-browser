@@ -1,0 +1,49 @@
+.content {
+	margin: 56px auto 62px auto;
+}
+.wrap-url {
+	word-wrap: break-word;
+}
+.sm-thumbnail {
+	width: 100px;
+	max-width: 100px;
+}
+.lg-thumbnail {
+	width: 100px;
+}
+.btn.tag {
+	box-shadow: none;
+	font-size: 12px;
+	padding: 5px 0;
+	width: 120px;
+}
+.btn.tag:hover {
+	cursor: default;
+	box-shadow: none;
+}
+.footer-icon-light {
+	color: #eee;
+	font-size: 25px;
+}
+.footer-icon-light:hover {
+	color: #ccc;
+}
+.secondary-icon {
+	color: #84a7f6;
+}
+
+@media only screen and (min-width: 768px) {
+  .lg-thumbnail {
+		width: 150px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .lg-thumbnail {
+		width: 200px;
+  }
+}
+
+.break-words {
+	word-break: break-all;
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/mauerv/Code/Blockchain/OneBigLab/src/styles/main.scss"],"names":[],"mappings":"AAAA,SACC,sBAA4B,CAE7B,UACC,oBAAqB","file":"main.96ebabcb.chunk.css","sourcesContent":[".content {\n\tmargin: 70px auto 100px auto;\n}\n.wrap-url {\n\tword-wrap: break-word;\n}\n"]}
