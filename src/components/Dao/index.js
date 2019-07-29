@@ -4,11 +4,13 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import ContractGrid from '../ContractGrid'
 import SocialIcons from '../SocialIcons'
 import TagGroup from '../Tags/TagGroup'
+import TagGrid from '../Tags/TagGrid'
 import AuditList from '../AuditList'
 import DocumentGrid from '../DocumentGrid'
 import TextBlock from '../TextBlock'
 import LinkList from '../LinkList'
 import LinkBlock from '../LinkBlock'
+import TeamGrid from '../TeamGrid'
 
 import daos from '../../data/daos'
 
@@ -43,6 +45,7 @@ export default ({ match }) => {
 				framework={dao.framework}
 				status={dao.status}
 			/>
+			<TeamGrid team={dao.team} />
 			<TextBlock title='Assets Governed' text={dao.assetsGoverned} />
 			<TextBlock title='Decentralization Level' text={dao.decentralizationLevel} />
 			<TextBlock title='Centralization Points' text={dao.centralizationPoints} />
@@ -52,6 +55,7 @@ export default ({ match }) => {
 			<DocumentGrid documents={dao.documents}/>
 			<LinkList title='Podcasts' list={dao.podcasts} />
 			<LinkList title='Insightful Articles' list={dao.articles} />
+			<TagGrid tags={dao.tags} />
 		</MDBContainer>
 	)
 }
