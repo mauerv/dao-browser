@@ -2509,26 +2509,44 @@ export default [
 			}
 		],
 		title: 'LegalBlock',
-		subtitle: 'A Decentralized-driven Legal Community Practicing Collective Wisdom',
-		status: '-',
+		subtitle: 'A Decentralized-driven Legal Community',
+		status: 'active',
 		image: 'legal_block.jpg',
-		description: '',
+		description: 'A blockchain legal community promoting collective wisdom. A coordinated community of Legal professionals, acting under the umbrella of collective wisdom. Not another isolated community.',
 		website: `https://legalblock.co/`,
 		contractProof: ``,
-		blockchain: '-',
-		framework: '-',
+		blockchain: 'Ethereum',
+		framework: 'Aragon OS',
 		contracts: [],
 		audits: [],
+		email: 'contact@legalblock.co',
 		social: {
 			github: '',
 			twitter: 'legal_block',
-			medium: '',
-			telegram: '',
-			reddit: '',
+			medium: 'https://medium.com/legal-block',
+			telegram: 'https://t.me/LegalBlockCommunity',
+			reddit: 'Legalblock',
 			discord: '',
+			youtube: 'https://www.youtube.com/channel/UCdl3X6gkco4-qr7lALMsctA'
 		},
-		articles: [],
-		documents: []
+		articles: [
+			{
+				title: 'Introducing LegalBlock',
+				url: 'https://medium.com/legal-block/introducing-legalblock-1eb78b00ea5e',
+				date: '15/12/2017'
+			},
+			{
+				title: 'Why LegalBlock needs Accredited Lawyers',
+				url: 'https://medium.com/legal-block/why-legablock-needs-accredited-lawyers-89810fa8ed9c',
+				date: '17/09/2018'
+			}
+		],
+		documents: [
+			{
+				title: 'LegalBlock Paper I',
+				url: 'http://legalblock.co/documents/LegalBlock%20Paper%20I%20.pdf'
+			}
+		]
 	},
 	{
 		id: 60,
@@ -2856,10 +2874,10 @@ export default [
 		podcasts: [],
 		title: 'Aragon Black',
 		subtitle: '',
-		status: '-',
+		status: 'active',
 		image: 'aragonblack.png',
-		description: '',
-		website: ``,
+		description: 'Aragon Black is the third full-team of the Aragon project taking part in its fight for freedom and full decentralization.',
+		website: `https://www.aragon.black/`,
 		contractProof: ``,
 		blockchain: '-',
 		framework: '-',
