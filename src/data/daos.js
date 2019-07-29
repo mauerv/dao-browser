@@ -21,6 +21,29 @@ export default [
 		title: 'MolochDAO',
 		subtitle: 'A community DAO focused on funding Ethereum dev',
 		status: 'active',
+		team: [
+			{
+				name: 'Ameen Soleimani',
+				twitter: 'ameensol'
+			},
+			{
+				name: 'James Young',
+				twitter: 'jamesyoung'
+			},
+			{
+				name: 'Rahul Sethuram',
+				twitter: 'RHLSTHRM'
+			},
+			{
+				name: 'Layne Haber',
+				twitter: 'LayneHaber'
+			},
+			{
+				name: 'Arjun Bhuptani',
+				twitter: 'Arjun_Bhuptani'
+			}
+		],
+		tags: ['Funding', 'ETH 2.0'],
 		assetsGoverned: 'The community decides that members to accept, in what proposals to work on and how to spend the crypto funds controlled by the DAO.',
 		decentralizationLevel: 'Fully Decentralized',
 		centralizationPoints: 'None',
@@ -101,6 +124,7 @@ export default [
 		website: `https://humanitydao.org/`,
 		contractProof: `https://github.com/marbleprotocol/humanity`,
 		documents: [],
+		team: [],
 		contracts: [
 			{
 				name: 'Humanity (ERC20)',
@@ -147,6 +171,7 @@ export default [
 		title: 'MakerDAO',
 		subtitle: 'Transparent and sustainable finance',
 		status: 'active',
+		tags: [],
 		image: 'maker.jpg',
 		podcasts: [
 			{
@@ -195,6 +220,7 @@ export default [
 				date: '29/01/2019'
 			}
 		],
+		team: [],
 		audits: [
 			{
 				auditor: "Trail of Bits",
@@ -286,6 +312,7 @@ export default [
 				auditDate: "20/05/2019"
 			}
 		],
+		team: [],
 		image: 'nexus_mutual.jpg',
 		blockchain: 'Ethereum',
 		framework: 'Custom',
@@ -399,7 +426,8 @@ export default [
 				title: "Whitepaper",
 				url: 'https://www.nexusmutual.io/assets/docs/nmx_white_paperv2_3.pdf'
 			}
-		]
+		],
+		tags: []
 	},
 	{
 		id: 4,
@@ -425,6 +453,7 @@ export default [
 		description: 'A decentralized autonomous organization that delivers fast, affordable and transparent justice for all.',
 		website: `https://kleros.io/`,
 		contractProof: ``,
+		team: [],
 		contracts: [
 			{
 				name: 'Kleros',
@@ -473,7 +502,8 @@ export default [
 				title: "Whitepaper",
 				url: `https://kleros.io/assets/whitepaper.pdf`
 			}
-		]
+		],
+		tags: []
 	},
 	{
 		id: 5,
@@ -488,6 +518,7 @@ export default [
 		description: 'MetaCartel DAO is a not for profit grants DAO that aims to fund and support projects that are looking to advance usability, UX or further experiment with new Web 3.0 use cases.',
 		website: `https://www.metacartel.org/`,
 		contractProof: `https://twitter.com/meta_cartel/status/1151137914950017024`,
+		team: [],
 		contracts: [
 			{
 				name: 'DAO contract',
@@ -510,7 +541,8 @@ export default [
 			discourse: 'https://forum.metacartel.org/'
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		tags: []
 	},
 	{
 		id: 6,
@@ -524,6 +556,7 @@ export default [
 		framework: 'Moloch Fork',
 		description: `A place where members secure the collective bag 💰 to fund initiatives to foster Andrew Yang's presidential campaign.`,
 		website: `https://www.yangdao.org/`,
+		team: [],
 		contractProof: `https://twitter.com/YangDAOofficial/status/1154047687588581378`,
 		contracts: [
 			{
@@ -546,7 +579,8 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		tags: []
 	},
 	{
 		id: 7,
@@ -560,6 +594,7 @@ export default [
 		title: 'dxDAO',
 		subtitle: 'Managing DutchX exchange protocol',
 		status: 'active',
+		team: [],
 		audits: [
 			{
 				auditor: 'Solidified',
@@ -636,7 +671,8 @@ export default [
 				title: "DxDAO Resources",
 				url: "https://docs.google.com/document/d/1PIgWibaN1n1UF3oMx-Ca-ebFK8tHmT2JVQbOC_xSQSg/edit"
 			}
-		]
+		],
+		tags: []
 	},
 	{
 		id: 8,
@@ -693,7 +729,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 9,
@@ -736,7 +774,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 10,
@@ -774,7 +814,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 11,
@@ -816,7 +858,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 12,
@@ -858,7 +902,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 13,
@@ -895,7 +941,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 14,
@@ -930,7 +978,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 15,
@@ -966,7 +1016,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 16,
@@ -1002,7 +1054,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 17,
@@ -1038,7 +1092,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 18,
@@ -1074,7 +1130,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 19,
@@ -1116,7 +1174,9 @@ export default [
 				title: "Genesis Protocol",
 				url: "https://docs.google.com/document/d/1b3UXvIDjxTVjS1nZNAn0umSY4DT5Y1yJeNHg07ny_5k/edit#"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 20,
@@ -1180,7 +1240,9 @@ export default [
 				title: "Messari Report",
 				url: "https://messari.github.io/research/profiles/DigixDAO(DGD).pdf"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 21,
@@ -1221,7 +1283,9 @@ export default [
 				date: '01/03/2018'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 22,
@@ -1252,7 +1316,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 23,
@@ -1283,7 +1349,9 @@ export default [
 				date: '29/06/2018'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 24,
@@ -1348,7 +1416,9 @@ export default [
 				title: 'Aragon Manifesto',
 				url: 'https://blog.aragon.org/the-aragon-manifesto-4a21212eac03/'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 25,
@@ -1380,7 +1450,9 @@ export default [
 				title: "Whitepaper",
 				url: 'https://github.com/aragon/nest/blob/master/Nest%20DAO%20Governance/Nest%20DAO%20specification%20at%202019-11-07.md#membership-for-the-nest-dao'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 26,
@@ -1411,7 +1483,9 @@ export default [
 				date: '01/02/2018'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 27,
@@ -1442,7 +1516,9 @@ export default [
 				date: '30/11/2018'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 28,
@@ -1473,7 +1549,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 29,
@@ -1498,7 +1576,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 30,
@@ -1534,7 +1614,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 31,
@@ -1566,7 +1648,8 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		tags: []
 	},
 	{
 		id: 32,
@@ -1591,7 +1674,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 33,
@@ -1616,7 +1701,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 34,
@@ -1641,7 +1728,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 35,
@@ -1666,7 +1755,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 36,
@@ -1700,7 +1791,9 @@ export default [
 				title: "Pitch Deck",
 				url: "https://docs.google.com/presentation/d/1CvVZRCSsal1SJyb4IT3slR4D52A94G35xcDZSSrtFa8/edit#slide=id.p"
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 37,
@@ -1726,7 +1819,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 38,
@@ -1751,7 +1846,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 39,
@@ -1782,7 +1879,9 @@ export default [
 				date: '07/04/2019'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 40,
@@ -1812,7 +1911,9 @@ export default [
 				title: 'How to MemeDAO',
 				url: 'https://docs.google.com/document/d/1iJZfjmOK1eZHq-flmVF_44dZWNsN-Z2KAeLqW3pLQo8/edit'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 41,
@@ -1837,7 +1938,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 42,
@@ -1868,7 +1971,9 @@ export default [
 				date: '02/06/2019'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 43,
@@ -1893,7 +1998,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 44,
@@ -1918,7 +2025,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 45,
@@ -1943,7 +2052,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 46,
@@ -1968,7 +2079,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 47,
@@ -1993,7 +2106,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 48,
@@ -2024,7 +2139,9 @@ export default [
 				date: '24/02/2019'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 49,
@@ -2059,7 +2176,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 50,
@@ -2148,7 +2267,9 @@ export default [
 				title: 'Whitepaper',
 				url: 'https://district0x.io/docs/district0x-whitepaper.pdf'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 51,
@@ -2217,7 +2338,8 @@ export default [
 					title: 'district0x Whitepaper',
 					url: 'https://district0x.io/docs/district0x-whitepaper.pdf'
 				}
-		]
+		],
+		team: []
 	},
 	{
 		id: 52,
@@ -2309,7 +2431,9 @@ export default [
 				title: 'district0x Whitepaper',
 				url: 'https://district0x.io/docs/district0x-whitepaper.pdf'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 53,
@@ -2339,7 +2463,9 @@ export default [
 				title: 'Aragon Nest Proposal: Kipos',
 				url: 'https://github.com/aragon/nest/issues/155'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 54,
@@ -2369,7 +2495,9 @@ export default [
 				url: ``
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 55,
@@ -2401,7 +2529,9 @@ export default [
 				title: "Whitepaper",
 				url: 'https://docs.google.com/document/d/1cErxBj73-D3v5aYB5J-qc13nQ03XEfcuFAIl_N9_76I/edit'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 56,
@@ -2426,7 +2556,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 57,
@@ -2451,7 +2583,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 58,
@@ -2483,6 +2617,7 @@ export default [
 		framework: '-',
 		contracts: [],
 		audits: [],
+		team: [],
 		social: {
 			github: '',
 			twitter: 'oceanprotocol',
@@ -2492,7 +2627,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 59,
@@ -2510,6 +2647,10 @@ export default [
 		],
 		title: 'LegalBlock',
 		subtitle: 'A Decentralized-driven Legal Community',
+		assetsGoverned: '',
+		tags: ['Legal'],
+		decentralizationLevel: '',
+		centralizationPoints: '',
 		status: 'active',
 		image: 'legal_block.jpg',
 		description: 'A blockchain legal community promoting collective wisdom. A coordinated community of Legal professionals, acting under the umbrella of collective wisdom. Not another isolated community.',
@@ -2519,6 +2660,20 @@ export default [
 		framework: 'Aragon OS',
 		contracts: [],
 		audits: [],
+		team: [
+				{
+					name: 'Maria T Vidal',
+					twitter: 'mariatvidal'
+				},
+				{
+					name: 'Albi Rodriguez J',
+					twitter: 'albirodriguez'
+				},
+				{
+					name: 'Malthus John',
+					twitter: 'MalthusJohn'
+				}
+		],
 		email: 'contact@legalblock.co',
 		social: {
 			github: '',
@@ -2546,7 +2701,8 @@ export default [
 				title: 'LegalBlock Paper I',
 				url: 'http://legalblock.co/documents/LegalBlock%20Paper%20I%20.pdf'
 			}
-		]
+		],
+		team: []
 	},
 	{
 		id: 60,
@@ -2577,7 +2733,8 @@ export default [
 					title: 'district0x Whitepaper',
 					url: 'https://district0x.io/docs/district0x-whitepaper.pdf'
 				}
-		]
+		],
+		team: []
 	},
 	{
 		id: 61,
@@ -2602,7 +2759,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 62,
@@ -2627,7 +2786,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 63,
@@ -2669,7 +2830,9 @@ export default [
 				date: '08/02/2019'
 			}
 		],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 64,
@@ -2694,7 +2857,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 65,
@@ -2735,7 +2900,8 @@ export default [
 				name: 'Josh Ma',
 				twitter: 'Joshma91'
 			}
-		]
+		],
+		tags: []
 	},
 	{
 		id: 66,
@@ -2760,7 +2926,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 67,
@@ -2785,7 +2953,9 @@ export default [
 			discord: '6aGhs6v',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 68,
@@ -2817,7 +2987,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 69,
@@ -2842,7 +3014,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 70,
@@ -2867,7 +3041,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 	{
 		id: 71,
@@ -2892,7 +3068,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 
 	{
@@ -2930,7 +3108,8 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: []
 	},
 	{
 		id: 73,
@@ -2963,7 +3142,9 @@ export default [
 				title: 'Governance Structure',
 				url: 'https://github.com/bitfwdcommunity/KoalaDAO/blob/master/Governance.MD'
 			}
-		]
+		],
+		team: [],
+		tags: []
 	},
 	{
 		id: 74,
@@ -3007,7 +3188,9 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: []
+		documents: [],
+		team: [],
+		tags: []
 	},
 ]
 
@@ -3059,5 +3242,7 @@ export default [
 			}
 		],
 		documents: []
+		team: [],
+		tags: []
 	},
 */

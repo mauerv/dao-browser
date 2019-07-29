@@ -11,11 +11,18 @@
 .lg-thumbnail {
 	width: 100px;
 }
+.img-round {
+	border-radius: 50%;
+}
 .btn.tag {
 	box-shadow: none;
 	font-size: 12px;
 	padding: 5px 0;
 	width: 120px;
+}
+.btn.tag-simple:hover {
+	cursor: default;
+	box-shadow: none;
 }
 .btn.tag:hover {
 	cursor: default;
@@ -31,6 +38,7 @@
 .secondary-icon {
 	color: #84a7f6;
 }
+
 
 @media only screen and (min-width: 768px) {
   .lg-thumbnail {
