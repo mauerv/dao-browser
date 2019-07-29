@@ -3,7 +3,7 @@ import React from 'react'
 import SocialIcons from '../SocialIcons'
 
 const social = {
-	github: "https://github.com/mauerv/OneBigLab",
+	github: "https://github.com/mauerv/dao-browser",
 	twitter: "daobrowser",
 	telegram: "https://t.me/joinchat/Mrz4fVjr60sJ8xNImnC6xw",
 	medium: "dao-browser",
