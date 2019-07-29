@@ -3,7 +3,6 @@ import React from 'react'
 export default ({ audits }) => (
   <div className='pt-4 pb-4 border-bottom'>
     <h3>Code Audits</h3>
-    {audits.length !== 0 ? (
       <table className='table table-bordered mb-0'>
         <thead className='thead-light'>
           <tr>
@@ -22,8 +21,5 @@ export default ({ audits }) => (
           ))}
         </tbody>
       </table>
-    ) : (
-      <p>There are no known code audits.</p>
-    )}
   </div>
 )

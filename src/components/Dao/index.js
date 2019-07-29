@@ -64,7 +64,7 @@ export default ({ match }) => {
 					</div>
 				</MDBRow>
 			)}
-			<ContractGrid contracts={dao.contracts} contractProof={dao.contractProof}/>
+			{dao.contracts.length !== 0 && <ContractGrid contracts={dao.contracts} />}
 			<MDBRow>
 				{dao.contractProof && (
 		      <div className='col-12 pt-4 pb-4 border-bottom'>
@@ -73,8 +73,8 @@ export default ({ match }) => {
 		      </div>
 		    )}
 			</MDBRow>
-			<AuditList audits={dao.audits}/>
-			<DocumentGrid documents={dao.documents}/>
+			{dao.audits.length !== 0 && <AuditList audits={dao.audits}/>}
+			{dao.documents.length!== 0 && <DocumentGrid documents={dao.documents}/>}
 			{dao.podcasts.length !== 0 && (
 				<MDBRow className='pt-4 pb-4 border-bottom'>
 					<h3 className='col-12'>Podcasts</h3>
