@@ -29,8 +29,8 @@ export default () => (
 			</div>
 			<div className='col-12 col-sm-8 offset-sm-1 col-lg-8 offset-lg-0'>
 				<h2>Aragon</h2>
-				<p>With a slick UI and a strong team behind it. Aragon is the platform with the greatest track record when it comes to providing tools to create a DAO.</p>
-				<p>More than 15,000 organizations have launched using their stack. The <a href='https://hack.aragon.org/'>developer portal</a> has all the info you need to get started.</p>
+				<p>With a slick UI and a strong team behind it. <a href="https://aragon.org/" target="_blank" rel="noopener noreferrer">Aragon</a> is the platform with the greatest track record when it comes to providing tools to create a DAO.</p>
+				<p>More than 15,000 organizations have launched using their stack. The <a href='https://hack.aragon.org/'>developer portal</a> has all the info you need to get started with building on aragonOS or deploying your own custom organization using the aragonCLI. You can also use the Aragon [web](https://app.aragon.org) or [desktop](https://github.com/aragon/aragon-desktop/releases) clients to create and manage a DAO with no coding skills necessary.</p>
 			</div>
 		</div>
 
