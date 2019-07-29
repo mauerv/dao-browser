@@ -2922,7 +2922,7 @@ export default [
 		status: 'prelaunch',
 		image: 'bitfwd.jpg',
 		description: "The KoalaDAO #Blockathon mission is to run a continuous online Blockchain hackathon that is geared toward inclusive participation and supports the growth of leading crypto projects in that are matching the following verticals: Social, Mobile and Consumer Market. The aim is to serve as testbed for a decentralized ecosystem accelerator community. At the initial stage, the majority of the reputation will be held with the eucalyptus tree committee as described in the governance section below. The reputation will be dynamically adjusted using DAOstack's Alchemy platform. Stakeholders of #KoalaDAO #Blockathon are diverse and come from different organizations or are independent contributors and others.",
-		website: ``,
+		website: `https://www.bitfwd.com/`,
 		assetsGoverned: '',
 		decentralizationLevel: 'Fully Decentralized with Centralized Seed',
 		centralizationPoints: 'During the first 3 months a special group of members called the gardeners will hold the majority of reputation. They will be in charge of steering the DAO and seeding reputation.',
