@@ -3157,26 +3157,8 @@ export default [
 		blockchain: '-',
 		framework: '-',
 		mail: 'info@consoc.io',
-		contracts: [
-			{
-				name: '',
-				address: ``,
-				description: ``
-			},
-			{
-				name: '',
-				address: ``,
-				description: ''
-			}
-		],
-		audits: [
-			{
-				auditor: '',
-				auditorWebsite: '',
-				auditUrl: '',
-				auditDate: ""
-			}
-		],
+		contracts: [],
+		audits: [],
 		social: {
 			github: '',
 			twitter: '',
