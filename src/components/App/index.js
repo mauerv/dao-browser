@@ -12,6 +12,7 @@ import News from '../News'
 import Daos from '../Daos/'
 import Dao from '../Dao'
 import ScrollToTop from '../ScrollToTop'
+import Funding from '../Funding'
 
 import * as ROUTES from '../../constants/routes'
 
@@ -27,6 +28,7 @@ function App() {
 						<Route path={ROUTES.NEWS} component={News} />
 						<Route exact path={ROUTES.DAOS} component={Daos} />
 						<Route path={ROUTES.DAO} component={Dao} />
+						<Route path={ROUTES.FUNDING} component={Funding} />
 					</div>
 					<Footer />
 		    </div>

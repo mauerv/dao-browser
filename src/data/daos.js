@@ -1,26 +1,10 @@
 export default [
 	{
 		id: 0,
-		podcasts: [
-			{
-				title: 'MolochDAO: Could This Decentralized Autonomous Organization Help Ethereum Scale Faster?',
-				url: 'https://unchainedpodcast.com/molochdao-could-this-decentralized-autonomous-organization-help-ethereum-scale-faster/',
-				date: '19/03/2019'
-			},
-			{
-				title: 'MolochDAO and Ethereum Clients',
-				url: 'https://www.stitcher.com/podcast/anchor-podcasts/membranlabs/e/58553712',
-				date: '03/02/2019'
-			},
-			{
-				title: 'Ameen Soleimani: Moloch DAO – A Simple Yet Unforgiving DAO to Fund Ethereum Development (#297)',
-				url: 'https://www.youtube.com/watch?v=YgEXImQLoq4',
-				date: '24/07/2019'
-			}
-		],
 		title: 'MolochDAO',
 		subtitle: 'A community DAO focused on funding Ethereum dev',
 		status: 'active',
+		tags: ['Funding', 'ETH 2.0'],
 		team: [
 			{
 				name: 'Ameen Soleimani',
@@ -43,7 +27,6 @@ export default [
 				twitter: 'Arjun_Bhuptani'
 			}
 		],
-		tags: ['Funding', 'ETH 2.0'],
 		assetsGoverned: 'The community decides that members to accept, in what proposals to work on and how to spend the crypto funds controlled by the DAO.',
 		decentralizationLevel: 'Fully Decentralized',
 		centralizationPoints: 'None',
@@ -93,6 +76,23 @@ export default [
 				title: 'The Moloch DAO: Collapsing The Firm.',
 				url: 'https://medium.com/@simondlr/the-moloch-dao-collapsing-the-firm-2a800b3aa2e7',
 				date: '16/01/2019'
+			}
+		],
+		podcasts: [
+			{
+				title: 'MolochDAO: Could This Decentralized Autonomous Organization Help Ethereum Scale Faster?',
+				url: 'https://unchainedpodcast.com/molochdao-could-this-decentralized-autonomous-organization-help-ethereum-scale-faster/',
+				date: '19/03/2019'
+			},
+			{
+				title: 'MolochDAO and Ethereum Clients',
+				url: 'https://www.stitcher.com/podcast/anchor-podcasts/membranlabs/e/58553712',
+				date: '03/02/2019'
+			},
+			{
+				title: 'Ameen Soleimani: Moloch DAO – A Simple Yet Unforgiving DAO to Fund Ethereum Development (#297)',
+				url: 'https://www.youtube.com/watch?v=YgEXImQLoq4',
+				date: '24/07/2019'
 			}
 		]
 	},
@@ -171,7 +171,7 @@ export default [
 		title: 'MakerDAO',
 		subtitle: 'Transparent and sustainable finance',
 		status: 'active',
-		tags: [],
+		tags: ['Stablecoin'],
 		image: 'maker.jpg',
 		podcasts: [
 			{
@@ -1198,7 +1198,7 @@ export default [
 			}
 		],
 		title: 'DigixDAO',
-		subtitle: '',
+		subtitle: 'The Digix Decentralized Autonomous Organization',
 		audits: [
 			{
 				auditor: 'Chainsecurity',
@@ -1291,7 +1291,7 @@ export default [
 		id: 22,
 		podcasts: [],
 		title: 'KittyDAO',
-		subtitle: '',
+		subtitle: 'Decentralized Cat Governance',
 		audits: [],
 		status: 'active',
 		image: 'cryptokitties.jpg',
@@ -2275,7 +2275,7 @@ export default [
 		id: 51,
 		podcasts: [],
 		title: 'Meme Factory',
-		tags: ['TCR', 'ERC721'],
+		tags: ['TCR', 'ERC721', 'Marketplace'],
 		subtitle: 'Create and trade provably rare digital assets',
 		status: 'active',
 		image: 'memefactory.jpg',

@@ -15,9 +15,12 @@ export default () => (
 		      <li className="nav-item">
 		      	<Link to={ROUTES.DAOS} className='nav-link text-light'>Explore</Link>
 		      </li>
-		      <li className="nav-item">
-		      	<Link to={ROUTES.CREATE_INFO} className='nav-link text-light'>Start DAO</Link>
-		      </li>
+          <li className="nav-item">
+            <Link to={ROUTES.CREATE_INFO} className='nav-link text-light'>Start DAO</Link>
+          </li>
+          <li className="nav-item">
+            <Link to={ROUTES.FUNDING} className='nav-link text-light'>Need Funding?</Link>
+          </li>
 		    </ul>
 	  	</div>
   	</div>
