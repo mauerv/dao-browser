@@ -27,7 +27,8 @@ Some of the data was gathered thanks to the efforts of [Eric Arsenault](https://
 * [Aragon Board](https://miro.com/app/board/o9J_kxXpuF4=/)
 * [DAOStack Board](https://miro.com/app/board/o9J_kxpeJuY=/)
 
-License
+## License
+
 Copyright (c) 2019 Mauro Velazquez. All rights reserved.
 
 This work is licensed under the terms of the MIT license.
