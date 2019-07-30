@@ -1,6 +1,8 @@
 # DAO Browser
 
-A central repository to get info about the growing DAO ecosystem. The idea is to track new organizations, types of governance that develop and get data on how successful they end up being. Also serve as a place where people can learn about relevant standards, tooling, funding opportunities, etc about this emerging awesome field.
+A unified repository to get info about the growing DAO ecosystem. The idea is to track new organisations, the types of governance that they try and get data on how successful they end up being.
+
+It also intends to be a place where people can learn about relevant standards, tooling, funding opportunities, etc in this emerging awesome field.
 
 The project was initially born out of me trying to do data analysis for a few of the bigger DAOs and TCR projects and finding it annoyingly hard to find their Mainnet contract addresses.
 
@@ -14,9 +16,9 @@ For now the easiest way to add your DAO is to make a pull request updating the [
 
 ## Follow Progress
 
-I'm using Trello to manage tasks, altough I'm open to alternatives, including something where the community can create tasks, vote tasks, etc. The board is public if you want to follow the [project's progress](https://trello.com/b/lliWWbQ3/dao-browser).
+I'm using Trello to manage tasks, but I'm open to alternatives, including something where the community can create tasks, vote, etc. The board is public if you want to follow the [project's progress](https://trello.com/b/lliWWbQ3/dao-browser).
 
-## Any suggestions?
+## Any Suggestions?
 
 If you want something changed, data added, a new DAO indexed, a meta idea on how to run/build the site, but you don't want or can't do it, just create an issue and I or someone else can get on building it asap.
 
@@ -26,6 +28,8 @@ Some of the data was gathered thanks to the efforts of [Eric Arsenault](https://
 
 * [Aragon Board](https://miro.com/app/board/o9J_kxXpuF4=/)
 * [DAOStack Board](https://miro.com/app/board/o9J_kxpeJuY=/)
+
+Also some of the ideas for tags and categories.
 
 ## License
 
