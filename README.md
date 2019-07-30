@@ -1,68 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# DAO Browser
 
-## Available Scripts
+A central repository to get info about the growing DAO ecosystem. The idea is to track new organizations, types of governance that develop and get data on how successful they end up being. Also serve as a place where people can learn about relevant standards, tooling, funding opportunities, etc about this emerging awesome field.
 
-In the project directory, you can run:
+The project was initially born out of me trying to do data analysis for a few of the bigger DAOs and TCR projects and finding it annoyingly hard to find their Mainnet contract addresses.
 
-### `npm start`
+## Get The Data
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For now the site is a react app without a backend. The data is stored in a simple [daos.js](https://github.com/mauerv/dao-browser/blob/master/src/data/daos.js) file. Feel free to use it however you need it. In the next 2-3 weeks I'll build an actual backend for the site but the data will continue to be freely available.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Add Your DAO 
 
-### `npm test`
+For now the easiest way to add your DAO is to make a pull request updating the [daos.js](https://github.com/mauerv/dao-browser/blob/master/src/data/daos.js) file with the relevant info. At the end of the file you can see a commented structure of what data I'm expecting, or see some of the other DAOs as an example. You can also check [this doc](https://app.graphitedocs.com/shared/docs/maurovelazquez.id.blockstack&id=1564135151143) for the data schema.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Follow Progress
 
-### `npm run build`
+I'm using Trello to manage tasks, altough I'm open to alternatives, including something where the community can create tasks, vote tasks, etc. The board is public if you want to follow the [project's progress](https://trello.com/b/lliWWbQ3/dao-browser).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Any suggestions?
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If you want something changed, data added, a new DAO indexed, a meta idea on how to run/build the site, but you don't want or can't do it, just create an issue and I or someone else can get on building it asap.
