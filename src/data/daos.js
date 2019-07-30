@@ -2628,7 +2628,6 @@ export default [
 		},
 		articles: [],
 		documents: [],
-		team: [],
 		tags: []
 	},
 	{
@@ -2701,8 +2700,7 @@ export default [
 				title: 'LegalBlock Paper I',
 				url: 'http://legalblock.co/documents/LegalBlock%20Paper%20I%20.pdf'
 			}
-		],
-		team: []
+		]
 	},
 	{
 		id: 60,
