@@ -3197,7 +3197,13 @@ export default [
 /*
 	{
 		id: 0,
-		podcasts: [],
+		podcasts: [
+			{
+				title: '',
+				url: '',
+				date: ''
+			}
+		],
 		title: '',
 		subtitle: '',
 		status: '-',
@@ -3212,11 +3218,6 @@ export default [
 				name: '',
 				address: ``,
 				description: ``
-			},
-			{
-				name: '',
-				address: ``,
-				description: ''
 			}
 		],
 		audits: [
@@ -3233,7 +3234,10 @@ export default [
 			medium: '',
 			telegram: '',
 			reddit: '',
+			youtube: '',
 			discord: '',
+			discourse: '',
+			daotalk: ''
 		},
 		articles: [
 			{
@@ -3241,8 +3245,19 @@ export default [
 				url: ``
 			}
 		],
-		documents: []
-		team: [],
-		tags: []
+		documents: [
+			{
+				title: '',
+				url: ''
+			}
+		],
+		team: [
+			{
+				name: '',
+				twitter: ''
+			}
+		],
+		tags: [],
+		mailingList: ''
 	},
 */
