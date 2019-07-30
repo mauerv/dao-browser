@@ -518,7 +518,12 @@ export default [
 		description: 'MetaCartel DAO is a not for profit grants DAO that aims to fund and support projects that are looking to advance usability, UX or further experiment with new Web 3.0 use cases.',
 		website: `https://www.metacartel.org/`,
 		contractProof: `https://twitter.com/meta_cartel/status/1151137914950017024`,
-		team: [],
+		team: [
+			{
+				name: 'Peter',
+				twitter: 'pet3rpan_'
+			}
+		],
 		contracts: [
 			{
 				name: 'DAO contract',
@@ -776,7 +781,7 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Grants']
 	},
 	{
 		id: 10,
@@ -860,7 +865,7 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Grants']
 	},
 	{
 		id: 12,
@@ -904,7 +909,7 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['State', 'Idealist']
 	},
 	{
 		id: 13,
@@ -943,7 +948,7 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Physical']
 	},
 	{
 		id: 14,
@@ -1018,13 +1023,13 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Grants']
 	},
 	{
 		id: 16,
 		podcasts: [],
 		title: 'dHack',
-		subtitle: 'Decentralized Hackathon',
+		subtitle: 'Decentralized Blockchain Hackathon',
 		status: 'active',
 		audits: [],
 		image: 'dhack.jpg',
@@ -1056,7 +1061,7 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Hackathons']
 	},
 	{
 		id: 17,
@@ -1071,6 +1076,7 @@ export default [
 		description: 'A DAO to manage part of the membership donations of the Psychedelic Society.',
 		website: `https://psychedelicsociety.org.uk/`,
 		contractProof: ``,
+		dapp: 'https://alchemy.daostack.io/dao/0x70c36947837b43665ed5ea85c112aa0f72cf9fb3',
 		contracts: [
 			{
 				name: 'Avatar',
@@ -1094,7 +1100,7 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Idealist', 'Advocacy']
 	},
 	{
 		id: 18,
@@ -1176,7 +1182,7 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Legal Entity']
 	},
 	{
 		id: 20,
@@ -1913,22 +1919,29 @@ export default [
 			}
 		],
 		team: [],
-		tags: []
+		tags: ['Events']
 	},
 	{
 		id: 41,
 		podcasts: [],
 		title: 'memeDAO',
-		subtitle: '',
-		status: '-',
+		subtitle: 'Meme Registry',
+		status: 'active',
 		image: 'placeholder.jpg',
-		description: '',
+		description: 'A meme registry curated by DAO members.',
 		website: ``,
 		contractProof: ``,
-		blockchain: '-',
-		framework: '-',
-		contracts: [],
+		blockchain: 'Ethereum',
+		framework: 'DAOStack',
+		contracts: [
+			{
+				title: 'Avatar',
+				address: '0x0004a4c02f97a2cdab3628ac4b834ce4c14f5cf7',
+				description: 'The main DAO contract in the network.'
+			}
+		],
 		audits: [],
+		dapp: 'https://alchemy.daostack.io/dao/0x0004a4c02f97a2cdab3628ac4b834ce4c14f5cf7',
 		social: {
 			github: '',
 			twitter: '',
@@ -1940,7 +1953,7 @@ export default [
 		articles: [],
 		documents: [],
 		team: [],
-		tags: []
+		tags: ['Recreation']
 	},
 	{
 		id: 42,
@@ -1973,7 +1986,7 @@ export default [
 		],
 		documents: [],
 		team: [],
-		tags: []
+		tags: ['Registry', 'Grants']
 	},
 	{
 		id: 43,
@@ -2054,7 +2067,7 @@ export default [
 		articles: [],
 		documents: [],
 		team: [],
-		tags: []
+		tags: ['Academic']
 	},
 	{
 		id: 46,
@@ -2114,14 +2127,14 @@ export default [
 		id: 48,
 		podcasts: [],
 		title: 'Greta DAO',
-		subtitle: '',
-		status: '-',
+		subtitle: 'Helping solve climate change',
+		status: 'prelaunch',
 		image: 'placeholder.jpg',
-		description: '',
-		website: ``,
+		description: 'Ultimately the goal is to create a long term, successful, non-legal, non-profit, organisation to fund anything around the preservation of the common goods.',
+		website: `http://greta.fund/`,
 		contractProof: ``,
-		blockchain: '-',
-		framework: '-',
+		blockchain: 'Ethereum',
+		framework: 'Aragon',
 		contracts: [],
 		audits: [],
 		social: {
@@ -2140,7 +2153,12 @@ export default [
 			}
 		],
 		documents: [],
-		team: [],
+		team: [
+			{
+				name: 'Gustav Marwin',
+				twitter: 'GustavMarwin_'
+			}
+		],
 		tags: []
 	},
 	{
