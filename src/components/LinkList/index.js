@@ -8,8 +8,8 @@ export default ({ title, list }) => {
         <ul className='col-12 list-group'>
           {list.map(item => (
             <li key={item.url} className='list-group-item d-flex justify-content-md-between flex-column flex-md-row align-items-md-center'>
-              <a href={item.url} target='_blank' rel="noopener noreferrer" ><h6>{item.title}</h6></a>
-              <p className='ml-'>{item.date}</p>
+              <a href={item.url} target='_blank' rel="noopener noreferrer" ><p className='mb-0'>{item.title}</p></a>
+              <p className='mb-0'>{item.date}</p>
             </li>
           ))}
         </ul>

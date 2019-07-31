@@ -2103,7 +2103,7 @@ export default [
 		subtitle: 'Co-operative of community owned companies',
 		status: 'prelaunch',
 		image: 'workers_dao.png',
-		description: 'The WorkersDAO is an infrastructure for community owned self-organized and sustainable companies. The amount of money someone pays doesn’t give him more or less say in the company. It is a membership where you have to invest a minimum amount to become a member and each member has one vote.',
+		description: 'The WorkersDAO is an infrastructure for community owned self-organized and sustainable companies. The amount of money someone pays doesn’t give him more or less say in a company. It is a membership where you have to invest a minimum amount to become a member and each member has one vote.',
 		website: `https://sites.google.com/view/workers-dao/idea`,
 		contractProof: ``,
 		blockchain: 'Ethereum',
