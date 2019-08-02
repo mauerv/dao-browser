@@ -7,22 +7,30 @@ import {
   FETCH_DAO_SUCCESS
 } from '../constants/actionTypes'
 
-export const doDaoListFetch = () => dispatch => {
+export const doDaoListFetch = () => async dispatch => {
   dispatch({ type: FETCH_DAOS_BEGIN })
-  fetch('http://localhost:4000/daos')
-    .then(response => response.json())
-    .then(data => dispatch({
+  let response = await fetch('http://localhost:4000/daos')
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
       type: FETCH_DAOS_SUCCESS,
       payload: data
-    }))
+    })
+  } else {
+    dispatch({ type: FETCH_DAOS_ERROR })
+  }
 }
 
-export const doDaoFetch = id => dispatch => {
+export const doDaoFetch = id => async dispatch => {
   dispatch({ type: FETCH_DAO_BEGIN })
-  fetch(`http://localhost:4000/daos/${id}`)
-    .then(response => response.json())
-    .then(data => dispatch({
+  let response = await fetch(`http://localhost:4000/daos/${id}`)
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
       type: FETCH_DAO_SUCCESS,
       payload: data
-    }))
+    })
+  } else {
+    dispatch({ type: FETCH_DAO_ERROR })
+  }
 }
