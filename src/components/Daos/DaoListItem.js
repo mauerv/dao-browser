@@ -10,7 +10,6 @@ import FrameworkTag from '../Tags/FrameworkTag'
 
 export default ({ dao }) => (
   <div className='list-group-item d-flex flex-column flex-md-row justify-content-between'>
-
 		<div className='d-flex flex-row mt-1'>
 	    <Link to={`${ROUTES.DAOS}/${dao.id}`}>
 	      <img src={dao.image_url} alt='' className='img-thumbnail sm-thumbnail' />

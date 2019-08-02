@@ -15,10 +15,10 @@ export default ({ audits }) => {
             </thead>
             <tbody>
               {audits.map(audit => (
-                <tr key={audit.auditUrl}>
-                  <td><a href={audit.auditorWebsite} target="_blank"  rel="noopener noreferrer">{audit.auditor}</a></td>
-                  <td><a href={audit.auditUrl} target="_blank"  rel="noopener noreferrer" className='break-words'>{audit.auditUrl}</a></td>
-                  <td><p>{audit.auditDate}</p></td>
+                <tr key={audit.url}>
+                  <td><a href={audit.auditor.website} target="_blank"  rel="noopener noreferrer">{audit.auditor.name}</a></td>
+                  <td><a href={audit.url} target="_blank"  rel="noopener noreferrer" className='break-words'>{audit.url}</a></td>
+                  <td><p>{audit.date}</p></td>
                 </tr>
               ))}
             </tbody>
