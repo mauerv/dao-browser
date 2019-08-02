@@ -20,7 +20,7 @@ class Dao extends Component {
 	render() {
 		const { dao } = this.props
 
-		if (!dao) {
+		if (!dao || !dao.contributors) {
 			return <div />
 		}
 
