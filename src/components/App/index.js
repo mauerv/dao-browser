@@ -9,7 +9,7 @@ import Footer from '../Footer'
 import Landing from '../Landing'
 import CreateInfo from '../CreateInfo'
 import News from '../News'
-import Daos from '../Daos/'
+import ConnectedDaos from '../../containers/ConnectedDaos'
 import Dao from '../Dao'
 import ScrollToTop from '../ScrollToTop'
 import Funding from '../Funding'
@@ -26,7 +26,7 @@ function App() {
 						<Route exact path={ROUTES.HOME} component={Landing} />
 						<Route path={ROUTES.CREATE_INFO} component={CreateInfo} />
 						<Route path={ROUTES.NEWS} component={News} />
-						<Route exact path={ROUTES.DAOS} component={Daos} />
+						<Route exact path={ROUTES.DAOS} component={ConnectedDaos} />
 						<Route path={ROUTES.DAO} component={Dao} />
 						<Route path={ROUTES.FUNDING} component={Funding} />
 					</div>

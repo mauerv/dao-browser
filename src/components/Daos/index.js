@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import DaoListItem from './DaoListItem'
 
-import daos from '../../data/daos'
+class Daos extends Component {
+	componentDidMount() {
+		this.props.onDaoListFetch()
+	}
 
-export default () => (
-	<div className='container'>
-		<ul className='list-group'>
-			{daos.map(dao => (
-				<DaoListItem key={dao.id} dao={dao}/>
-			))}
-		</ul>
-	</div>
-)
+	render() {
+		const { daos } = this.props
+
+		return (
+			<div className='container'>
+				<ul className='list-group'>
+					{daos.map(dao => (
+						<DaoListItem key={dao.id} dao={dao}/>
+					))}
+				</ul>
+			</div>
+		)
+	}
+}
+
+export default Daos
