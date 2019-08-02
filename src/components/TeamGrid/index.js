@@ -15,6 +15,7 @@ export default ({ team }) => {
             <img
               className='img-thumbnail sm-thumbnail img-round'
               src={`http://avatars.io/twitter/${teamMember.twitter}`}
+              alt=''
             />
             <p>@{teamMember.twitter}</p>
           </a>
