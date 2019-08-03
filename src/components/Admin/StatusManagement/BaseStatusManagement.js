@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import StatusListItem from './StatusListItem'
+
 class BaseStatusManagement extends Component {
   state = {
     text: ''
@@ -25,9 +27,12 @@ class BaseStatusManagement extends Component {
           <h3>Current Status Codes</h3>
           <ul className='list-group'>
             {statuses.map(status => (
-              <li key={status.name} className='list-group-item'>
-                {status.name}
-              </li>
+              <StatusListItem
+                status={status}
+                onEditStatus={this.props.onEditStatus}
+                onDeleteStatus={this.props.onDeleteStatus}
+                key={status.name} 
+              />
             ))}
           </ul>
         </div>
