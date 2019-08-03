@@ -13,6 +13,7 @@ import ConnectedDaos from '../../containers/ConnectedDaos'
 import ConnectedDao from '../../containers/ConnectedDao'
 import ScrollToTop from '../ScrollToTop'
 import Funding from '../Funding'
+import Admin from '../Admin'
 
 import * as ROUTES from '../../constants/routes'
 
@@ -29,6 +30,7 @@ function App() {
 						<Route exact path={ROUTES.DAOS} component={ConnectedDaos} />
 						<Route path={ROUTES.DAO} component={ConnectedDao} />
 						<Route path={ROUTES.FUNDING} component={Funding} />
+						<Route path={ROUTES.ADMIN} component={Admin} />
 					</div>
 					<Footer />
 		    </div>
