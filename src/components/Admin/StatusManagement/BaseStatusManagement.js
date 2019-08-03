@@ -13,6 +13,7 @@ class BaseStatusManagement extends Component {
 
   onSubmit = e => {
     e.preventDefault()
+    this.props.onCreateStatus(this.state.text)
   }
 
   render() {
@@ -21,7 +22,7 @@ class BaseStatusManagement extends Component {
     return (
       <div className='pt-5 pb-5'>
         <div className='pt-3 pb-3'>
-          <h2>Current Status Codes</h2>
+          <h3>Current Status Codes</h3>
           <ul className='list-group'>
             {statuses.map(status => (
               <li key={status.name} className='list-group-item'>
@@ -30,7 +31,7 @@ class BaseStatusManagement extends Component {
             ))}
           </ul>
         </div>
-        <div className='pt-3 pb-3'> 
+        <div className='pt-3 pb-3'>
           <h3>Add a Status</h3>
           <form onSubmit={this.onSubmit}>
             <div className='form-group'>

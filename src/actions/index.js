@@ -7,7 +7,10 @@ import {
   FETCH_DAO_SUCCESS,
   FETCH_STATUSES_BEGIN,
   FETCH_STATUSES_ERROR,
-  FETCH_STATUSES_SUCCESS
+  FETCH_STATUSES_SUCCESS,
+  CREATE_STATUS_BEGIN,
+  CREATE_STATUS_ERROR,
+  CREATE_STATUS_SUCCESS
 } from '../constants/actionTypes'
 
 export const doDaoListFetch = () => async dispatch => {
@@ -49,5 +52,27 @@ export const doStatusListFetch = () => async dispatch => {
     })
   } else {
     dispatch({ type: FETCH_STATUSES_ERROR })
+  }
+}
+
+export const doCreateStatus = text => async dispatch => {
+  dispatch({ type: CREATE_STATUS_BEGIN })
+  let formData = { status: {  name: text } }
+  let response = await fetch('http://localhost:4000/statuses', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
+      type: CREATE_STATUS_SUCCESS,
+      payload: data
+    })
+  } else {
+    dispatch({ type: CREATE_STATUS_ERROR })
   }
 }
