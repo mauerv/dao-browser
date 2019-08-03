@@ -61,7 +61,7 @@ class Dao extends Component {
 				<TagGroup
 					blockchain={dao.blockchain.name}
 					framework={dao.framework.name}
-					status={dao.status.text}
+					status={dao.status.name}
 				/>
 				<TeamGrid team={dao.contributors} />
 				<TextBlock title='Assets Governed' text={dao.assets_governed} />
