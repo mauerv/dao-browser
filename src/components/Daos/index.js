@@ -1,25 +1,15 @@
-import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import DaoListItem from './DaoListItem'
+import BaseDaos from './BaseDaos'
 
-class Daos extends Component {
-	componentDidMount() {
-		this.props.onDaoListFetch()
-	}
+import { getDaos } from '../../selectors'
+import { doDaoListFetch } from '../../actions'
 
-	render() {
-		const { daos } = this.props
+const mapStateToProps = state => ({
+  daos: getDaos(state)
+})
 
-		return (
-			<div className='container'>
-				<ul className='list-group'>
-					{daos.map(dao => (
-						<DaoListItem key={dao.id} dao={dao}/>
-					))}
-				</ul>
-			</div>
-		)
-	}
-}
-
-export default Daos
+export default connect(
+  mapStateToProps,
+  { onDaoListFetch: doDaoListFetch }
+)(BaseDaos)

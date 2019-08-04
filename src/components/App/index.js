@@ -8,8 +8,8 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Landing from '../Landing'
 import CreateInfo from '../CreateInfo'
-import ConnectedDaos from '../../containers/ConnectedDaos'
-import ConnectedDao from '../../containers/ConnectedDao'
+import Daos from '../Daos'
+import Dao from '../Dao'
 import ScrollToTop from '../ScrollToTop'
 import Funding from '../Funding'
 import Admin from '../Admin'
@@ -28,8 +28,8 @@ function App() {
 		    	<div className='content'>
 						<Route exact path={ROUTES.HOME} component={Landing} />
 						<Route path={ROUTES.CREATE_INFO} component={CreateInfo} />
-						<Route exact path={ROUTES.DAOS} component={ConnectedDaos} />
-						<Route path={ROUTES.DAO} component={ConnectedDao} />
+						<Route exact path={ROUTES.DAOS} component={Daos} />
+						<Route path={ROUTES.DAO} component={Dao} />
 						<Route path={ROUTES.FUNDING} component={Funding} />
 						<Route exact path={ROUTES.ADMIN} component={Admin} />
 						<Route exact path={ROUTES.EDIT_DAOS} component={EditDaos} />
