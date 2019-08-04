@@ -5,7 +5,7 @@ import {
   EDIT_STATUS_BEGIN, EDIT_STATUS_ERROR, EDIT_STATUS_SUCCESS
 } from '../constants/actionTypes'
 
-import { doListFetch } from './util'
+import { doListFetch } from './resourceActions'
 
 export const doStatusListFetch = () => dispatch => {
   doListFetch(

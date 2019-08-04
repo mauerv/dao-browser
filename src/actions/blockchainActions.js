@@ -5,7 +5,7 @@ import {
   EDIT_BLOCKCHAIN_BEGIN, EDIT_BLOCKCHAIN_ERROR, EDIT_BLOCKCHAIN_SUCCESS
 } from '../constants/actionTypes'
 
-import { doListFetch } from './util'
+import { doListFetch } from './resourceActions'
 
 export const doBlockchainListFetch = () => dispatch => {
   doListFetch(

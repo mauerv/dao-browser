@@ -3,7 +3,7 @@ import {
   FETCH_DAO_BEGIN, FETCH_DAO_ERROR, FETCH_DAO_SUCCESS
 } from '../constants/actionTypes'
 
-import { doListFetch } from './util'
+import { doListFetch } from './resourceActions'
 
 export const doDaoListFetch = () => dispatch => {
   doListFetch(
