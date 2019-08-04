@@ -16,6 +16,7 @@ class BasicResource extends Component {
   onSubmit = e => {
     e.preventDefault()
     this.props.onCreateResource(this.state.text)
+    this.setState({ text: '' })
   }
 
   render() {
