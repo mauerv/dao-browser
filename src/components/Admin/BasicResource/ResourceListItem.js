@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-class StatusListItem extends Component {
+class ResourceListItem extends Component {
   state = {
-    text: this.props.status.name,
+    text: this.props.resource.name,
     editing: false
   }
 
@@ -11,19 +11,19 @@ class StatusListItem extends Component {
   onStopEdit = () => this.setState({ editing: false })
 
   onEditSubmit = () => {
-    this.props.onEditStatus(this.state.text, this.props.status.id)
+    this.props.onEditResource(this.state.text, this.props.resource.id)
     this.onStopEdit()
   }
 
   onChange = e => this.setState({ text: e.target.value })
 
   render() {
-    const { status, onEditStatus, onDeleteStatus } = this.props
+    const { resource, onEditResource, onDeleteResource } = this.props
     const { editing, text } = this.state
 
     if (editing) {
       return (
-        <li key={status.name} className='list-group-item d-flex justify-content-between align-items-center'>
+        <li className='list-group-item d-flex justify-content-between align-items-center'>
           <form className='flex-grow-1 mr-3'>
             <input
               onChange={this.onChange}
@@ -40,7 +40,7 @@ class StatusListItem extends Component {
     } else {
       return (
         <li className='list-group-item d-flex justify-content-between align-items-center'>
-          <p className='mb-0'>{status.name}</p>
+          <p className='mb-0'>{resource.name}</p>
           <div>
             <p
               onClick={this.onStartEdit}
@@ -48,7 +48,7 @@ class StatusListItem extends Component {
               Edit
             </p>
             <p
-              onClick={() => onDeleteStatus(status.id)}
+              onClick={() => onDeleteResource(resource.id)}
               className='btn btn-sm btn-danger'
             >
               Delete
@@ -60,4 +60,4 @@ class StatusListItem extends Component {
   }
 }
 
-export default StatusListItem
+export default ResourceListItem

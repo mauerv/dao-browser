@@ -1,53 +1,53 @@
 import React, { Component } from 'react'
 
-import BlockchainListItem from './BlockchainListItem'
+import ResourceListItem from './ResourceListItem'
 
-class BaseBlockchainManagement extends Component {
+class BasicResource extends Component {
   state = {
     text: ''
   }
 
   componentDidMount() {
-    this.props.onBlockchainListFetch()
+    this.props.onResourceListFetch()
   }
 
   onChange = e => this.setState({ text: e.target.value })
 
   onSubmit = e => {
     e.preventDefault()
-    this.props.onCreateBlockchain(this.state.text)
+    this.props.onCreateResource(this.state.text)
   }
 
   render() {
-    const { blockchains } = this.props
+    const { resourceList, resourceName } = this.props
 
     return (
       <div className='pt-5 pb-5'>
         <div className='pt-3 pb-3'>
-          <h3>Current Available Blockchain</h3>
+          <h3>Current Available {resourceName}</h3>
           <ul className='list-group'>
-            {blockchains.map(blockchain => (
-              <BlockchainListItem
-                blockchain={blockchain}
-                onEditBlockchain={this.props.onEditBlockchain}
-                onDeleteBlockchain={this.props.onDeleteBlockchain}
-                key={blockchain.name}
+            {resourceList.map(resource => (
+              <ResourceListItem
+                resource={resource}
+                onEditResource={this.props.onEditResource}
+                onDeleteResource={this.props.onDeleteResource}
+                key={resource.id}
               />
             ))}
           </ul>
         </div>
         <div className='pt-3 pb-3'>
-          <h3>Add a Blockchain</h3>
+          <h3>Add a {resourceName}</h3>
           <form onSubmit={this.onSubmit}>
             <div className='form-group'>
-              <label htmlFor='blockchainName'>Blockchain Name</label>
+              <label htmlFor={`${resourceName}Name`}>{resourceName} Name</label>
               <input
                 type='text'
                 value={this.state.text}
                 onChange={this.onChange}
                 className='form-control'
-                id='blockchainName'
-                placeholder="Enter new blockchain"
+                id={`${resourceName}Name`}
+                placeholder={`Enter new ${resourceName}`}
               />
             </div>
             <button className="btn btn-primary ml-0">Submit</button>
@@ -58,4 +58,4 @@ class BaseBlockchainManagement extends Component {
   }
 }
 
-export default BaseBlockchainManagement
+export default BasicResource
