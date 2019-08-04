@@ -2521,13 +2521,14 @@ export default [
 		subtitle: 'Helping Open Source Communities Thrive',
 		status: '-',
 		image: '1hive.png',
-		description: '',
+		description: '1Hive is a decentralized autonomous organization working to grow an open source commons and improve open source sustainability.',
 		website: `https://1hive.org/`,
 		contractProof: ``,
 		blockchain: '-',
 		framework: '-',
 		contracts: [],
 		audits: [],
+		dapp: 'https://rinkeby.aragon.org/#/0xe520428C232F6Da6f694b121181f907931fD2211/0xc2555abaed3797b52248e814172d2bea6728e542',
 		social: {
 			github: '',
 			twitter: '1HiveOrg',
@@ -2543,7 +2544,12 @@ export default [
 			}
 		],
 		documents: [],
-		team: [],
+		team: [
+			{
+				name: 'Luke Duncan',
+				twitter: 'lkngtn'
+			}
+		],
 		tags: []
 	},
 	{
@@ -2833,10 +2839,10 @@ export default [
 		status: '-',
 		image: 'space_decentral.jpg',
 		description: '',
-		website: ``,
+		website: `https://spacedecentral.net/`,
 		contractProof: ``,
-		blockchain: '-',
-		framework: '-',
+		blockchain: 'Ethereum',
+		framework: 'Aragon',
 		contracts: [],
 		audits: [],
 		social: {
@@ -2848,7 +2854,12 @@ export default [
 			discord: '',
 		},
 		articles: [],
-		documents: [],
+		documents: [
+			{
+				title: 'Whitepaper',
+				url: 'https://spacedecentral.net/White_Paper.pdf'
+			}
+		],
 		team: [],
 		tags: []
 	},
@@ -3235,6 +3246,72 @@ export default [
 		documents: [],
 		team: [],
 		tags: []
+	},
+	{
+		id: 74,
+		title: 'Developer Colony',
+		subtitle: '',
+		status: 'active',
+		image: '',
+		description: '',
+		website: `https://docs.colony.io/contribute/`,
+		contractProof: ``,
+		blockchain: 'Ethereum',
+		framework: 'Colony',
+		contracts: [
+			{
+				name: '',
+				address: ``,
+				description: ``
+			}
+		],
+		podcasts: [
+			{
+				title: '',
+				url: '',
+				date: ''
+			}
+		],
+		audits: [
+			{
+				auditor: '',
+				auditorWebsite: '',
+				auditUrl: '',
+				auditDate: ""
+			}
+		],
+		social: {
+			github: '',
+			twitter: '',
+			medium: '',
+			telegram: '',
+			reddit: '',
+			youtube: '',
+			discord: '',
+			discourse: '',
+			daotalk: ''
+		},
+		articles: [
+			{
+				title: `A Colony for Developers`,
+				url: `https://blog.colony.io/a-colony-for-developers/amp/`,
+				date: '03/07/2019'
+			}
+		],
+		documents: [
+			{
+				title: '',
+				url: ''
+			}
+		],
+		team: [
+			{
+				name: '',
+				twitter: ''
+			}
+		],
+		tags: [],
+		mailingList: ''
 	},
 ]
 
