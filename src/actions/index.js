@@ -12,6 +12,14 @@ import {
   doEditStatus
 } from './statusActions'
 
+// Actions related to the Blockchain model.
+import {
+  doBlockchainListFetch,
+  doCreateBlockchain,
+  doDeleteBlockchain,
+  doEditBlockchain
+} from './blockchainActions'
+
 // Export everything from a single index endpoint.
 export {
   doDaoFetch,
@@ -19,5 +27,9 @@ export {
   doStatusListFetch,
   doCreateStatus,
   doDeleteStatus,
-  doEditStatus
+  doEditStatus,
+  doBlockchainListFetch,
+  doCreateBlockchain,
+  doDeleteBlockchain,
+  doEditBlockchain
 }

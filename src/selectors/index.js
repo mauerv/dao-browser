@@ -4,3 +4,5 @@ export const getDao = (state, id) =>
   state.daos.find(dao => dao.id === id)
 
 export const getStatuses = state => state.statuses
+
+export const getBlockchains = state => state.blockchains
