@@ -1,9 +1,9 @@
+/* Layout Classes */
 .content {
 	margin: 56px auto 62px auto;
 }
-.wrap-url {
-	word-wrap: break-word;
-}
+
+/*  Bootstrap Enhancements */
 .sm-thumbnail {
 	width: 100px;
 	max-width: 100px;
@@ -46,6 +46,15 @@
 	cursor: pointer;
 }
 
+/* Helper Clases */
+.break-words {
+	word-break: break-all;
+}
+.wrap-url {
+	word-wrap: break-word;
+}
+
+/* Media Queries */
 @media only screen and (min-width: 768px) {
   .lg-thumbnail {
 		width: 150px;
@@ -56,8 +65,4 @@
   .lg-thumbnail {
 		width: 200px;
   }
-}
-
-.break-words {
-	word-break: break-all;
 }
