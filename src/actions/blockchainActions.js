@@ -5,10 +5,13 @@ import {
   EDIT_BLOCKCHAIN_BEGIN, EDIT_BLOCKCHAIN_ERROR, EDIT_BLOCKCHAIN_SUCCESS
 } from '../constants/actionTypes'
 
-import { doListFetch } from './resourceActions'
+import {
+  doResourceListFetch,
+  doCreateResource
+} from './resourceActions'
 
 export const doBlockchainListFetch = () => dispatch => {
-  doListFetch(
+  doResourceListFetch(
     dispatch,
     'blockchains',
     FETCH_BLOCKCHAINS_BEGIN,
@@ -17,26 +20,16 @@ export const doBlockchainListFetch = () => dispatch => {
   )
 }
 
-export const doCreateBlockchain = text => async dispatch => {
-  dispatch({ type: CREATE_BLOCKCHAIN_BEGIN })
-  let formData = { blockchain: {  name: text } }
-  let response = await fetch('http://localhost:4000/blockchains', {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  if (response.ok) {
-    let data = await response.json()
-    dispatch({
-      type: CREATE_BLOCKCHAIN_SUCCESS,
-      payload: data
-    })
-  } else {
-    dispatch({ type: CREATE_BLOCKCHAIN_ERROR })
-  }
+export const doCreateBlockchain = text => dispatch => {
+  let formData = { blockchain: { name: text } }
+  doCreateResource(
+    dispatch,
+    'blockchains',
+    formData,
+    CREATE_BLOCKCHAIN_BEGIN,
+    CREATE_BLOCKCHAIN_ERROR,
+    CREATE_BLOCKCHAIN_SUCCESS,
+  )
 }
 
 export const doDeleteBlockchain = id => async dispatch => {

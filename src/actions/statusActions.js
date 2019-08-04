@@ -5,10 +5,13 @@ import {
   EDIT_STATUS_BEGIN, EDIT_STATUS_ERROR, EDIT_STATUS_SUCCESS
 } from '../constants/actionTypes'
 
-import { doListFetch } from './resourceActions'
+import {
+  doResourceListFetch,
+  doCreateResource
+} from './resourceActions'
 
 export const doStatusListFetch = () => dispatch => {
-  doListFetch(
+  doResourceListFetch(
     dispatch,
     'statuses',
     FETCH_STATUSES_BEGIN,
@@ -18,25 +21,15 @@ export const doStatusListFetch = () => dispatch => {
 }
 
 export const doCreateStatus = text => async dispatch => {
-  dispatch({ type: CREATE_STATUS_BEGIN })
   let formData = { status: {  name: text } }
-  let response = await fetch('http://localhost:4000/statuses', {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  if (response.ok) {
-    let data = await response.json()
-    dispatch({
-      type: CREATE_STATUS_SUCCESS,
-      payload: data
-    })
-  } else {
-    dispatch({ type: CREATE_STATUS_ERROR })
-  }
+  doCreateResource(
+    dispatch,
+    'statuses',
+    formData,
+    CREATE_STATUS_BEGIN,
+    CREATE_STATUS_ERROR,
+    CREATE_STATUS_SUCCESS
+  )
 }
 
 export const doDeleteStatus = id => async dispatch => {
