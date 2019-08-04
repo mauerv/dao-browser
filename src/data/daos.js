@@ -2611,19 +2611,19 @@ export default [
 		id: 57,
 		podcasts: [],
 		title: 'Aragon DAC',
-		subtitle: '',
-		status: '-',
+		subtitle: 'Community effort for Aragon development',
+		status: 'disolved',
 		image: 'aragon_dac.jpg',
-		description: 'Aragon DAC is the 2nd team working on the Aragon Project. Empowering Freedom. Building Human Collaboration, focusing on devX. ',
+		description: 'The second team that will be working on the Aragon stack is a community focused effort led by the Giveth community: the Aragon DAC.',
 		website: `http://aragondac.org/`,
 		contractProof: ``,
-		blockchain: '-',
-		framework: '-',
+		blockchain: 'Ethereum',
+		framework: 'Giveth',
 		contracts: [],
 		audits: [],
 		social: {
 			github: '',
-			twitter: '',
+			twitter: 'AragonDac',
 			medium: '',
 			telegram: '',
 			reddit: '',
@@ -2631,8 +2631,25 @@ export default [
 		},
 		articles: [],
 		documents: [],
-		team: [],
-		tags: []
+		team: [
+			{
+				name: 'Quazia',
+				twitter: 'LollLunn'
+			},
+			{
+				name: 'Chris Remus',
+				twitter: 'cjremus'
+			},
+			{
+				name: 'Griff Green',
+				twitter: 'thegrifft'
+			},
+			{
+				name: 'Kris Decoodt',
+				twitter: 'krrisis'
+			}
+		],
+		tags: ['DAC']
 	},
 	{
 		id: 58,
