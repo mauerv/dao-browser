@@ -1,5 +1,5 @@
-export default [
-	{
+export default {
+	"moloch-dao": {
 		id: 0,
 		title: 'MolochDAO',
 		subtitle: 'A community DAO focused on funding Ethereum dev',
@@ -96,7 +96,7 @@ export default [
 			}
 		]
 	},
-	{
+	"humanity-dao": {
 		id: 1,
 		podcasts: [
 			{
@@ -166,7 +166,7 @@ export default [
 			discord: 'yvUqPUn',
 		}
 	},
-	{
+	"maker-dao": {
 		id: 2,
 		title: 'MakerDAO',
 		subtitle: 'Transparent and sustainable finance',
@@ -282,14 +282,9 @@ export default [
 			}
 		]
 	},
-	{
+	"nexus-mutual": {
 		id: 3,
 		podcasts: [
-			{
-				title: 'Episode 13: Nexus Mutual with Hugh Karp',
-				url: 'https://anchor.fm/wizardofdapps/episodes/Episode-13-Nexus-Mutual-with-Hugh-Karp-e4qe6l/a-ak0r55',
-				date: '01/08/2019'
-			},
 			{
 				title: 'Ep.43 – ‘Mutualisation’ of insurance through blockchain – insights from Nexus Mutual',
 				url: 'https://www.insureblocks.com/ep-43-mutualisation-of-insurance-through-blockchain-insights-from-nexus-mutual/',
@@ -317,20 +312,12 @@ export default [
 				auditDate: "20/05/2019"
 			}
 		],
-		team: [
-			{
-				name: 'Hugh Karp',
-				twitter: 'HughKarp'
-			}
-		],
+		team: [],
 		image: 'nexus_mutual.jpg',
 		blockchain: 'Ethereum',
 		framework: 'Custom',
-		dapp: 'https://app.nexusmutual.io/',
-		decentralizationLevel: 'Digital Cooperative: Partial decentralization with legal entity and replazable central board.',
-		centralizationPoints: "They have a legal entity in the UK, with 5 shareholders that have higher power than the rest of the DAO participants. For example the Board has power to slash people's stakes as they see fit. Board members can be replaced at any time. Some advantages of this is that DAO members have a limited liability of $1.",
 		description: 'Nexus Mutual is building a decentralised alternative to insurance. We’re using blockchain technology to build a mutual (a risk sharing pool) to return the power of insurance to the people. The platform will be built on the Ethereum public chain. It will allow anyone to become a member and buy cover. It replaces the idea of a traditional insurance company, because it is wholly owned by the members. The model encourages engagement as members will get economic incentives for participating in Risk Assessment, Claims Assessment and Governance.',
-		website: `https://nexusmutual.io/`,
+		website: `https://nexusmutual.gitbook.io/docs/`,
 		contractProof: `https://nexusmutual.gitbook.io/docs/docs#deployed-contract-information-deployed-23-may-2019`,
 		contracts: [
 			{
@@ -433,32 +420,16 @@ export default [
 			discord: 'DwtQuSD',
 			email: 'info@nexusmutual.io'
 		},
-		articles: [
-			{
-				title: 'Smart Contract Cover: A Safety Net for Ethereum Smart Contracts',
-				url: 'https://medium.com/nexus-mutual/smart-contract-cover-55782407722c',
-				date: '22/01/2018'
-			},
-			{
-				title: 'Smart Contract Cover is now live!',
-				url: 'https://medium.com/nexus-mutual/smart-contract-cover-is-now-live-91b3015f99eb',
-				date: '12/07/2019'
-			},
-			{
-				title: 'Digital cooperatives are the future',
-				url: 'https://medium.com/nexus-mutual/digital-cooperatives-are-the-future-2b0772c1e03a',
-				date: '14/05/2019'
-			}
-		],
+		articles: [],
 		documents: [
 			{
 				title: "Whitepaper",
 				url: 'https://www.nexusmutual.io/assets/docs/nmx_white_paperv2_3.pdf'
 			}
 		],
-		tags: ['Bonding Curve', 'Insurance', 'DeFi', 'Liquid Voting']
+		tags: []
 	},
-	{
+	"kleros": {
 		id: 4,
 		podcasts: [
 			{
@@ -534,7 +505,7 @@ export default [
 		],
 		tags: []
 	},
-	{
+	"metacartel": {
 		id: 5,
 		podcasts: [],
 		title: 'Metacartel',
@@ -578,7 +549,7 @@ export default [
 		documents: [],
 		tags: []
 	},
-	{
+	"yang-dao": {
 		id: 6,
 		podcasts: [],
 		title: 'YangDAO',
@@ -616,7 +587,7 @@ export default [
 		documents: [],
 		tags: []
 	},
-	{
+	"dxdao": {
 		id: 7,
 		podcasts: [
 			{
@@ -708,7 +679,7 @@ export default [
 		],
 		tags: []
 	},
-	{
+	"genesis-dao": {
 		id: 8,
 		podcasts: [
 			{
@@ -767,7 +738,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"polka-dao": {
 		id: 9,
 		podcasts: [],
 		title: 'PolkaDAO',
@@ -812,7 +783,7 @@ export default [
 		team: [],
 		tags: ['Grants']
 	},
-	{
+	"cura-dao": {
 		id: 10,
 		podcasts: [],
 		title: 'CuraDAO',
@@ -852,7 +823,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"efx-dao": {
 		id: 11,
 		podcasts: [],
 		title: 'efxDAO',
@@ -896,7 +867,7 @@ export default [
 		team: [],
 		tags: ['Grants']
 	},
-	{
+	"liberland-dao": {
 		id: 12,
 		podcasts: [
 			{
@@ -940,7 +911,7 @@ export default [
 		team: [],
 		tags: ['State', 'Idealist']
 	},
-	{
+	"prague-dao": {
 		id: 13,
 		podcasts: [],
 		title: 'Prague DAO',
@@ -979,7 +950,7 @@ export default [
 		team: [],
 		tags: ['Physical']
 	},
-	{
+	"quest-society": {
 		id: 14,
 		podcasts: [],
 		title: 'Quest Society',
@@ -1016,7 +987,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"kyber-exp-2": {
 		id: 15,
 		podcasts: [],
 		title: 'KyberDAO Exp #2',
@@ -1054,7 +1025,7 @@ export default [
 		team: [],
 		tags: ['Grants']
 	},
-	{
+	"dhack": {
 		id: 16,
 		podcasts: [],
 		title: 'dHack',
@@ -1092,7 +1063,7 @@ export default [
 		team: [],
 		tags: ['Hackathons']
 	},
-	{
+	"psychedelic-society-dao": {
 		id: 17,
 		podcasts: [],
 		title: 'Psychedelic Society DAO',
@@ -1131,7 +1102,7 @@ export default [
 		team: [],
 		tags: ['Idealist', 'Advocacy']
 	},
-	{
+	"cement-dao": {
 		id: 18,
 		podcasts: [],
 		title: 'CementDAO',
@@ -1169,7 +1140,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"d-org": {
 		id: 19,
 		podcasts: [],
 		title: 'dOrg',
@@ -1213,7 +1184,7 @@ export default [
 		team: [],
 		tags: ['Legal Entity']
 	},
-	{
+	"digix-dao": {
 		id: 20,
 		podcasts: [
 			{
@@ -1279,7 +1250,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"rec-dao": {
 		id: 21,
 		podcasts: [],
 		title: 'RECDAO',
@@ -1322,7 +1293,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"kitty-dao": {
 		id: 22,
 		podcasts: [],
 		title: 'KittyDAO',
@@ -1355,7 +1326,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"kyodo-dao": {
 		id: 23,
 		podcasts: [],
 		title: 'KyodoDAO',
@@ -1388,7 +1359,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"aragon-network": {
 		id: 24,
 		podcasts: [
 			{
@@ -1455,7 +1426,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"nest-dao": {
 		id: 25,
 		podcasts: [],
 		title: 'Nest DAO',
@@ -1489,7 +1460,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"reward-dac": {
 		id: 26,
 		podcasts: [],
 		title: 'RewardDAC',
@@ -1522,7 +1493,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"unicorn-dao": {
 		id: 27,
 		podcasts: [],
 		title: 'Unicorn DAO',
@@ -1555,7 +1526,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"giveth-dac": {
 		id: 28,
 		podcasts: [
 			{
@@ -1588,7 +1559,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"dao-inubator": {
 		id: 29,
 		podcasts: [],
 		title: 'DAO Incubator',
@@ -1615,7 +1586,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"trojan-dao": {
 		id: 30,
 		podcasts: [],
 		title: 'Trojan DAO',
@@ -1653,7 +1624,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"the-trading-hall": {
 		id: 31,
 		podcasts: [],
 		title: 'TheTradingHall',
@@ -1686,7 +1657,7 @@ export default [
 		documents: [],
 		tags: []
 	},
-	{
+	"video-dao": {
 		id: 32,
 		podcasts: [],
 		title: 'Video DAO',
@@ -1713,7 +1684,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"nowhere-plastik": {
 		id: 33,
 		podcasts: [],
 		title: 'NowHerePlastik',
@@ -1740,7 +1711,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"bundlesblock-dao": {
 		id: 34,
 		podcasts: [],
 		title: 'Bundlesblock DAO',
@@ -1767,7 +1738,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"smart-machine": {
 		id: 35,
 		podcasts: [],
 		title: 'SmartMachine',
@@ -1794,7 +1765,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"betoken": {
 		id: 36,
 		podcasts: [],
 		title: 'Betoken',
@@ -1830,7 +1801,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"personal-tokens": {
 		id: 37,
 		podcasts: [],
 		title: 'Personal Tokens',
@@ -1858,7 +1829,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"audacity": {
 		id: 38,
 		podcasts: [],
 		title: 'Audacity',
@@ -1885,7 +1856,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"bk-dao": {
 		id: 39,
 		podcasts: [],
 		title: 'bkDAO',
@@ -1918,7 +1889,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"blockdam": {
 		id: 40,
 		podcasts: [],
 		title: 'Blockdam',
@@ -1950,7 +1921,7 @@ export default [
 		team: [],
 		tags: ['Events']
 	},
-	{
+	"meme-dao": {
 		id: 41,
 		podcasts: [],
 		title: 'memeDAO',
@@ -1984,7 +1955,7 @@ export default [
 		team: [],
 		tags: ['Recreation']
 	},
-	{
+	"bitfwd-blockathon": {
 		id: 42,
 		podcasts: [],
 		title: 'bitfwd Blockathon',
@@ -2017,7 +1988,7 @@ export default [
 		team: [],
 		tags: ['Registry', 'Grants']
 	},
-	{
+	"the-dmo": {
 		id: 43,
 		podcasts: [],
 		title: 'The DMO',
@@ -2044,7 +2015,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"general-store-dao": {
 		id: 44,
 		podcasts: [],
 		title: 'General Store DAO',
@@ -2071,7 +2042,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"research-dao": {
 		id: 45,
 		podcasts: [],
 		title: 'Research DAO',
@@ -2098,7 +2069,7 @@ export default [
 		team: [],
 		tags: ['Academic']
 	},
-	{
+	"grammar-dao": {
 		id: 46,
 		podcasts: [],
 		title: 'GrammarDAO',
@@ -2125,7 +2096,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"workers-dao": {
 		id: 47,
 		podcasts: [],
 		title: 'WorkersDAO',
@@ -2152,7 +2123,7 @@ export default [
 		team: [],
 		tags: ['Cooperative', 'Holacracy']
 	},
-	{
+	"greta-dao": {
 		id: 48,
 		podcasts: [],
 		title: 'Greta DAO',
@@ -2190,7 +2161,7 @@ export default [
 		],
 		tags: []
 	},
-	{
+	"bodi-dao": {
 		id: 49,
 		podcasts: [],
 		title: 'Because of the Internet DAO',
@@ -2227,7 +2198,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"district0x-network": {
 		id: 50,
 		title: 'District0x Network',
 		subtitle: 'A network of decentralized marketplaces and communities',
@@ -2318,7 +2289,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"meme-factory": {
 		id: 51,
 		podcasts: [],
 		title: 'Meme Factory',
@@ -2388,7 +2359,7 @@ export default [
 		],
 		team: []
 	},
-	{
+	"name-bazaar": {
 		id: 52,
 		podcasts: [],
 		title: 'Name Bazaar',
@@ -2482,7 +2453,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"kipos": {
 		id: 53,
 		podcasts: [],
 		title: 'Kipos',
@@ -2514,7 +2485,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"1hive": {
 		id: 54,
 		podcasts: [],
 		title: '1Hive',
@@ -2546,7 +2517,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"blankdao": {
 		id: 55,
 		podcasts: [],
 		title: 'blankdao',
@@ -2580,7 +2551,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"aragon-one": {
 		id: 56,
 		podcasts: [],
 		title: 'Aragon One',
@@ -2607,7 +2578,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"aragon-dac": {
 		id: 57,
 		podcasts: [],
 		title: 'Aragon DAC',
@@ -2634,7 +2605,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"ocean-protocol": {
 		id: 58,
 		podcasts: [
 			{
@@ -2677,7 +2648,7 @@ export default [
 		documents: [],
 		tags: []
 	},
-	{
+	"legalblock": {
 		id: 59,
 		podcasts: [
 			{
@@ -2749,7 +2720,7 @@ export default [
 			}
 		]
 	},
-	{
+	"ethlance": {
 		id: 60,
 		podcasts: [],
 		title: 'Ethlance',
@@ -2781,7 +2752,7 @@ export default [
 		],
 		team: []
 	},
-	{
+	"status": {
 		id: 61,
 		podcasts: [],
 		title: 'Status',
@@ -2808,7 +2779,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"space-decentral": {
 		id: 62,
 		podcasts: [],
 		title: 'Space Decentral',
@@ -2835,7 +2806,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"melon": {
 		id: 63,
 		podcasts: [
 			{
@@ -2879,7 +2850,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"althea": {
 		id: 64,
 		podcasts: [],
 		title: 'Althea.org DAOs',
@@ -2906,7 +2877,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"open-esq": {
 		id: 65,
 		podcasts: [],
 		title: 'Open ESQ',
@@ -2948,7 +2919,7 @@ export default [
 		],
 		tags: []
 	},
-	{
+	"pool-together": {
 		id: 66,
 		podcasts: [],
 		title: 'Pool Together',
@@ -2975,7 +2946,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"request-network": {
 		id: 67,
 		podcasts: [],
 		title: 'Request Network',
@@ -3002,7 +2973,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"decentraland": {
 		id: 68,
 		podcasts: [],
 		title: 'Decentraland',
@@ -3036,7 +3007,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"red-light-district": {
 		id: 69,
 		podcasts: [],
 		title: 'Red Light District',
@@ -3063,7 +3034,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"autark": {
 		id: 70,
 		podcasts: [],
 		title: 'Autark',
@@ -3090,7 +3061,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"aragon-black": {
 		id: 71,
 		podcasts: [],
 		title: 'Aragon Black',
@@ -3117,8 +3088,7 @@ export default [
 		team: [],
 		tags: []
 	},
-
-	{
+	"adchain": {
 		id: 72,
 		podcasts: [
 			{
@@ -3156,7 +3126,7 @@ export default [
 		documents: [],
 		team: []
 	},
-	{
+	"koala-dao": {
 		id: 73,
 		podcasts: [],
 		title: 'KoalaDAO',
@@ -3191,7 +3161,7 @@ export default [
 		team: [],
 		tags: []
 	},
-	{
+	"consoc-io": {
 		id: 74,
 		podcasts: [],
 		title: 'Consoc.io',
@@ -3218,8 +3188,8 @@ export default [
 		documents: [],
 		team: [],
 		tags: []
-	},
-]
+	}
+}
 
 /*
 	{

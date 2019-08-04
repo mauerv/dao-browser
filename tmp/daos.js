@@ -286,11 +286,6 @@ export default [
 		id: 3,
 		podcasts: [
 			{
-				title: 'Episode 13: Nexus Mutual with Hugh Karp',
-				url: 'https://anchor.fm/wizardofdapps/episodes/Episode-13-Nexus-Mutual-with-Hugh-Karp-e4qe6l/a-ak0r55',
-				date: '01/08/2019'
-			},
-			{
 				title: 'Ep.43 – ‘Mutualisation’ of insurance through blockchain – insights from Nexus Mutual',
 				url: 'https://www.insureblocks.com/ep-43-mutualisation-of-insurance-through-blockchain-insights-from-nexus-mutual/',
 				date: '27/01/2019'
@@ -317,20 +312,12 @@ export default [
 				auditDate: "20/05/2019"
 			}
 		],
-		team: [
-			{
-				name: 'Hugh Karp',
-				twitter: 'HughKarp'
-			}
-		],
+		team: [],
 		image: 'nexus_mutual.jpg',
 		blockchain: 'Ethereum',
 		framework: 'Custom',
-		dapp: 'https://app.nexusmutual.io/',
-		decentralizationLevel: 'Digital Cooperative: Partial decentralization with legal entity and replazable central board.',
-		centralizationPoints: "They have a legal entity in the UK, with 5 shareholders that have higher power than the rest of the DAO participants. For example the Board has power to slash people's stakes as they see fit. Board members can be replaced at any time. Some advantages of this is that DAO members have a limited liability of $1.",
 		description: 'Nexus Mutual is building a decentralised alternative to insurance. We’re using blockchain technology to build a mutual (a risk sharing pool) to return the power of insurance to the people. The platform will be built on the Ethereum public chain. It will allow anyone to become a member and buy cover. It replaces the idea of a traditional insurance company, because it is wholly owned by the members. The model encourages engagement as members will get economic incentives for participating in Risk Assessment, Claims Assessment and Governance.',
-		website: `https://nexusmutual.io/`,
+		website: `https://nexusmutual.gitbook.io/docs/`,
 		contractProof: `https://nexusmutual.gitbook.io/docs/docs#deployed-contract-information-deployed-23-may-2019`,
 		contracts: [
 			{
@@ -433,30 +420,14 @@ export default [
 			discord: 'DwtQuSD',
 			email: 'info@nexusmutual.io'
 		},
-		articles: [
-			{
-				title: 'Smart Contract Cover: A Safety Net for Ethereum Smart Contracts',
-				url: 'https://medium.com/nexus-mutual/smart-contract-cover-55782407722c',
-				date: '22/01/2018'
-			},
-			{
-				title: 'Smart Contract Cover is now live!',
-				url: 'https://medium.com/nexus-mutual/smart-contract-cover-is-now-live-91b3015f99eb',
-				date: '12/07/2019'
-			},
-			{
-				title: 'Digital cooperatives are the future',
-				url: 'https://medium.com/nexus-mutual/digital-cooperatives-are-the-future-2b0772c1e03a',
-				date: '14/05/2019'
-			}
-		],
+		articles: [],
 		documents: [
 			{
 				title: "Whitepaper",
 				url: 'https://www.nexusmutual.io/assets/docs/nmx_white_paperv2_3.pdf'
 			}
 		],
-		tags: ['Bonding Curve', 'Insurance', 'DeFi', 'Liquid Voting']
+		tags: []
 	},
 	{
 		id: 4,
