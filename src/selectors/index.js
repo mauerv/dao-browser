@@ -6,3 +6,5 @@ export const getDao = (state, id) =>
 export const getStatuses = state => state.statuses
 
 export const getBlockchains = state => state.blockchains
+
+export const getFrameworks = state => state.frameworks

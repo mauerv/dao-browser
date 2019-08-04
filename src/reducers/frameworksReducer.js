@@ -1,0 +1,15 @@
+import resourceReducer from './resourceReducer'
+
+import {
+  FETCH_FRAMEWORKS_SUCCESS,
+  CREATE_FRAMEWORK_SUCCESS,
+  DELETE_FRAMEWORK_SUCCESS,
+  EDIT_FRAMEWORK_SUCCESS
+} from '../constants/actionTypes'
+
+export default resourceReducer(
+  FETCH_FRAMEWORKS_SUCCESS,
+  CREATE_FRAMEWORK_SUCCESS,
+  DELETE_FRAMEWORK_SUCCESS,
+  EDIT_FRAMEWORK_SUCCESS
+)

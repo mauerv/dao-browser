@@ -20,6 +20,14 @@ import {
   doEditBlockchain
 } from './blockchainActions'
 
+// Actions related to the Framework model.
+import {
+  doFrameworkListFetch,
+  doCreateFramework,
+  doDeleteFramework,
+  doEditFramework
+} from './frameworkActions'
+
 // Export everything from a single index endpoint.
 export {
   doDaoFetch,
@@ -31,5 +39,9 @@ export {
   doBlockchainListFetch,
   doCreateBlockchain,
   doDeleteBlockchain,
-  doEditBlockchain
+  doEditBlockchain,
+  doFrameworkListFetch,
+  doCreateFramework,
+  doDeleteFramework,
+  doEditFramework
 }
