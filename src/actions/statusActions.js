@@ -8,7 +8,8 @@ import {
 import {
   doResourceListFetch,
   doCreateResource,
-  doDeleteResource
+  doDeleteResource,
+  doEditResource
 } from './resourceActions'
 
 export const doStatusListFetch = () => dispatch => {
@@ -45,23 +46,15 @@ export const doDeleteStatus = id => async dispatch => {
 }
 
 export const doEditStatus = (text, id) => async dispatch => {
-  dispatch({ type: EDIT_STATUS_BEGIN })
   const formData = { status: { name: text } }
-  let response = await fetch(`http://localhost:4000/statuses/${id}`, {
-    method: 'put',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  if (response.ok) {
-    let data = await response.json()
-    dispatch({
-      type: EDIT_STATUS_SUCCESS,
-      payload: data
-    })
-  } else {
-    dispatch({ type: EDIT_STATUS_ERROR })
-  }
+  doEditResource(
+    dispatch,
+    'statuses',
+    id,
+    formData,
+    EDIT_STATUS_BEGIN,
+    EDIT_STATUS_ERROR,
+    EDIT_STATUS_SUCCESS
+
+  )
 }

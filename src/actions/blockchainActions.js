@@ -8,7 +8,8 @@ import {
 import {
   doResourceListFetch,
   doCreateResource,
-  doDeleteResource
+  doDeleteResource,
+  doEditResource
 } from './resourceActions'
 
 export const doBlockchainListFetch = () => dispatch => {
@@ -45,23 +46,14 @@ export const doDeleteBlockchain = id => async dispatch => {
 }
 
 export const doEditBlockchain = (text, id) => async dispatch => {
-  dispatch({ type: EDIT_BLOCKCHAIN_BEGIN })
   const formData = { blockchain: { name: text } }
-  let response = await fetch(`http://localhost:4000/blockchains/${id}`, {
-    method: 'put',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  if (response.ok) {
-    let data = await response.json()
-    dispatch({
-      type: EDIT_BLOCKCHAIN_SUCCESS,
-      payload: data
-    })
-  } else {
-    dispatch({ type: EDIT_BLOCKCHAIN_ERROR })
-  }
+  doEditResource(
+    dispatch,
+    'blockchains',
+    id,
+    formData,
+    EDIT_BLOCKCHAIN_BEGIN,
+    EDIT_BLOCKCHAIN_ERROR,
+    EDIT_BLOCKCHAIN_SUCCESS
+  )
 }

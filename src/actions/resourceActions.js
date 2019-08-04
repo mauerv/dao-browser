@@ -89,3 +89,32 @@ export const doDeleteResource = async (
     dispatch({ type: errorAction})
   }
 }
+
+export const doEditResource = async (
+  dispatch,
+  resourceName,
+  resourceId,
+  formData,
+  beginAction,
+  errorAction,
+  successAction
+) => {
+  dispatch({ type: beginAction })
+  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+    method: 'put',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
+      type: successAction,
+      payload: data
+    })
+  } else {
+    dispatch({ type: errorAction })
+  }
+}
