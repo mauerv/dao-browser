@@ -23,9 +23,9 @@ class BasicResource extends Component {
     const { resourceList, resourceName } = this.props
 
     return (
-      <div className='pt-5 pb-5'>
+      <div className='pt-3 pb-3 border-bottom'>
         <div className='pt-3 pb-3'>
-          <h3>Current Available {resourceName}</h3>
+          <h3>Current {resourceName} list</h3>
           <ul className='list-group'>
             {resourceList.map(resource => (
               <ResourceListItem
@@ -41,13 +41,11 @@ class BasicResource extends Component {
           <h3>Add a {resourceName}</h3>
           <form onSubmit={this.onSubmit}>
             <div className='form-group'>
-              <label htmlFor={`${resourceName}Name`}>{resourceName} Name</label>
               <input
                 type='text'
                 value={this.state.text}
                 onChange={this.onChange}
                 className='form-control'
-                id={`${resourceName}Name`}
                 placeholder={`Enter new ${resourceName}`}
               />
             </div>
