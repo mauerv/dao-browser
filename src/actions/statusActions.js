@@ -7,7 +7,8 @@ import {
 
 import {
   doResourceListFetch,
-  doCreateResource
+  doCreateResource,
+  doDeleteResource
 } from './resourceActions'
 
 export const doStatusListFetch = () => dispatch => {
@@ -33,18 +34,14 @@ export const doCreateStatus = text => async dispatch => {
 }
 
 export const doDeleteStatus = id => async dispatch => {
-  dispatch({ type: DELETE_STATUS_BEGIN })
-  let response = await fetch(`http://localhost:4000/statuses/${id}`, {
-    method: 'delete'
-  })
-  if (response.ok) {
-    dispatch({
-      type: DELETE_STATUS_SUCCESS,
-      payload: id
-    })
-  } else {
-    dispatch({ type: DELETE_STATUS_ERROR})
-  }
+  doDeleteResource(
+    dispatch,
+    'statuses',
+    id,
+    DELETE_STATUS_BEGIN,
+    DELETE_STATUS_ERROR,
+    DELETE_STATUS_SUCCESS
+  )
 }
 
 export const doEditStatus = (text, id) => async dispatch => {

@@ -7,7 +7,8 @@ import {
 
 import {
   doResourceListFetch,
-  doCreateResource
+  doCreateResource,
+  doDeleteResource
 } from './resourceActions'
 
 export const doBlockchainListFetch = () => dispatch => {
@@ -33,18 +34,14 @@ export const doCreateBlockchain = text => dispatch => {
 }
 
 export const doDeleteBlockchain = id => async dispatch => {
-  dispatch({ type: DELETE_BLOCKCHAIN_BEGIN })
-  let response = await fetch(`http://localhost:4000/blockchains/${id}`, {
-    method: 'delete'
-  })
-  if (response.ok) {
-    dispatch({
-      type: DELETE_BLOCKCHAIN_SUCCESS,
-      payload: id
-    })
-  } else {
-    dispatch({ type: DELETE_BLOCKCHAIN_ERROR})
-  }
+  doDeleteResource(
+    dispatch,
+    'blockchains',
+    id,
+    DELETE_BLOCKCHAIN_BEGIN,
+    DELETE_BLOCKCHAIN_ERROR,
+    DELETE_BLOCKCHAIN_SUCCESS
+  )
 }
 
 export const doEditBlockchain = (text, id) => async dispatch => {

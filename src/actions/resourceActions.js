@@ -67,3 +67,25 @@ export const doCreateResource = async (
     dispatch({ type: errorAction })
   }
 }
+
+export const doDeleteResource = async (
+  dispatch,
+  resourceName,
+  resourceId,
+  beginAction,
+  errorAction,
+  successAction
+) => {
+  dispatch({ type: beginAction })
+  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+    method: 'delete'
+  })
+  if (response.ok) {
+    dispatch({
+      type: successAction,
+      payload: resourceId
+    })
+  } else {
+    dispatch({ type: errorAction})
+  }
+}
