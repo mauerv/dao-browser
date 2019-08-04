@@ -1,9 +1,5 @@
 import React from 'react'
 
-// FIXME: remove this?
-// import { Link } from 'react-router-dom'
-// import * as ROUTES from '../../constants/routes'
-
 export default () => (
   <div className='container'>
     <div className='row p-5 text-center'>
