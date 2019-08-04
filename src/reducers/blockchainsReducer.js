@@ -1,4 +1,4 @@
-import resourceReducer from './resourceReducer'
+import resourceReducer from './_baseResourceReducer'
 
 import {
   FETCH_BLOCKCHAINS_SUCCESS,

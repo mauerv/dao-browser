@@ -6,7 +6,7 @@ import {
 import {
   doResourceListFetch,
   doResourceFetch
-} from './resourceActions'
+} from './_baseResourceActions'
 
 export const doDaoListFetch = () => dispatch => {
   doResourceListFetch(

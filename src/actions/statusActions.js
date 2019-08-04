@@ -10,7 +10,7 @@ import {
   doCreateResource,
   doDeleteResource,
   doEditResource
-} from './resourceActions'
+} from './_baseResourceActions'
 
 export const doStatusListFetch = () => dispatch => {
   doResourceListFetch(
