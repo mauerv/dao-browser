@@ -6,14 +6,14 @@ import {
 } from '../constants/actionTypes'
 
 import {
-  doResourceListFetch,
+  doFetchResourceList,
   doCreateResource,
   doDeleteResource,
   doEditResource
 } from './_baseResourceActions'
 
-export const doStatusListFetch = () => dispatch => {
-  doResourceListFetch(
+export const doFetchStatusList = () => dispatch => {
+  doFetchResourceList(
     dispatch,
     'statuses',
     FETCH_STATUSES_BEGIN,

@@ -4,12 +4,13 @@ import {
 } from '../constants/actionTypes'
 
 import {
-  doResourceListFetch,
-  doResourceFetch
+  doFetchResourceList,
+  doFetchResource,
+  doResourceCreate
 } from './_baseResourceActions'
 
 export const doDaoListFetch = () => dispatch => {
-  doResourceListFetch(
+  doFetchResourceList(
     dispatch,
     'daos',
     FETCH_DAOS_BEGIN,
@@ -18,8 +19,8 @@ export const doDaoListFetch = () => dispatch => {
   )
 }
 
-export const doDaoFetch = id => dispatch => {
-  doResourceFetch(
+export const doFetchDao = id => dispatch => {
+  doFetchResource(
     dispatch,
     'daos',
     id,

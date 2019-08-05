@@ -6,14 +6,14 @@ import {
 } from '../constants/actionTypes'
 
 import {
-  doResourceListFetch,
+  doFetchResourceList,
   doCreateResource,
   doDeleteResource,
   doEditResource
 } from './_baseResourceActions'
 
-export const doBlockchainListFetch = () => dispatch => {
-  doResourceListFetch(
+export const doFetchBlockchainList = () => dispatch => {
+  doFetchResourceList(
     dispatch,
     'blockchains',
     FETCH_BLOCKCHAINS_BEGIN,

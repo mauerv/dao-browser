@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 
 import { getFrameworks } from '../../selectors'
 import {
-  doFrameworkListFetch,
+  doFetchFrameworkList,
   doCreateFramework,
   doDeleteFramework,
   doEditFramework
@@ -17,7 +17,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    onResourceListFetch: doFrameworkListFetch,
+    onResourceListFetch: doFetchFrameworkList,
     onCreateResource: doCreateFramework,
     onDeleteResource: doDeleteFramework,
     onEditResource: doEditFramework

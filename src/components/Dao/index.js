@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import BaseDao from './BaseDao'
 
 import { getDao } from '../../selectors'
-import { doDaoFetch } from '../../actions'
+import { doFetchDao } from '../../actions'
 
 const mapStateToProps = (state, ownProps) => ({
   dao: getDao(state, parseInt(ownProps.match.params.id))
@@ -11,5 +11,5 @@ const mapStateToProps = (state, ownProps) => ({
 
 export default connect(
   mapStateToProps,
-  { onDaoFetch: doDaoFetch }
+  { onFetchDao: doFetchDao }
 )(BaseDao)

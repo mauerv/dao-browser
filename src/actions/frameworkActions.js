@@ -6,14 +6,14 @@ import {
 } from '../constants/actionTypes'
 
 import {
-  doResourceListFetch,
+  doFetchResourceList,
   doCreateResource,
   doDeleteResource,
   doEditResource
 } from './_baseResourceActions'
 
-export const doFrameworkListFetch = () => dispatch => {
-  doResourceListFetch(
+export const doFetchFrameworkList = () => dispatch => {
+  doFetchResourceList(
     dispatch,
     'frameworks',
     FETCH_FRAMEWORKS_BEGIN,

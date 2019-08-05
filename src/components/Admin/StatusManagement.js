@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 
 import { getStatuses } from '../../selectors'
 import {
-  doStatusListFetch,
+  doFetchStatusList,
   doCreateStatus,
   doDeleteStatus,
   doEditStatus
@@ -17,7 +17,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    onResourceListFetch: doStatusListFetch,
+    onResourceListFetch: doFetchStatusList,
     onCreateResource: doCreateStatus,
     onDeleteResource: doDeleteStatus,
     onEditResource: doEditStatus

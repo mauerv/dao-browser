@@ -1,4 +1,4 @@
-export const doResourceListFetch = async (
+export const doFetchResourceList = async (
   dispatch,
   resourceName,
   beginAction,
@@ -18,7 +18,7 @@ export const doResourceListFetch = async (
   }
 }
 
-export const doResourceFetch = async (
+export const doFetchResource = async (
   dispatch,
   resourceName,
   resourceId,

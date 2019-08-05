@@ -1,12 +1,12 @@
  // Actions related to the DAO model.
 import {
-  doDaoFetch,
+  doFetchDao,
   doDaoListFetch
 } from './daoActions'
 
 // Actions related to the Status model.
 import {
-  doStatusListFetch,
+  doFetchStatusList,
   doCreateStatus,
   doDeleteStatus,
   doEditStatus
@@ -14,7 +14,7 @@ import {
 
 // Actions related to the Blockchain model.
 import {
-  doBlockchainListFetch,
+  doFetchBlockchainList,
   doCreateBlockchain,
   doDeleteBlockchain,
   doEditBlockchain
@@ -22,7 +22,7 @@ import {
 
 // Actions related to the Framework model.
 import {
-  doFrameworkListFetch,
+  doFetchFrameworkList,
   doCreateFramework,
   doDeleteFramework,
   doEditFramework
@@ -30,17 +30,17 @@ import {
 
 // Export everything from a single index endpoint.
 export {
-  doDaoFetch,
+  doFetchDao,
   doDaoListFetch,
-  doStatusListFetch,
+  doFetchStatusList,
   doCreateStatus,
   doDeleteStatus,
   doEditStatus,
-  doBlockchainListFetch,
+  doFetchBlockchainList,
   doCreateBlockchain,
   doDeleteBlockchain,
   doEditBlockchain,
-  doFrameworkListFetch,
+  doFetchFrameworkList,
   doCreateFramework,
   doDeleteFramework,
   doEditFramework

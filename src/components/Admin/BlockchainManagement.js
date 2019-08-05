@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 
 import { getBlockchains } from '../../selectors'
 import {
-  doBlockchainListFetch,
+  doFetchBlockchainList,
   doCreateBlockchain,
   doDeleteBlockchain,
   doEditBlockchain
@@ -17,7 +17,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    onResourceListFetch: doBlockchainListFetch,
+    onResourceListFetch: doFetchBlockchainList,
     onCreateResource: doCreateBlockchain,
     onDeleteResource: doDeleteBlockchain,
     onEditResource: doEditBlockchain

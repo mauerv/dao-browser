@@ -14,7 +14,7 @@ import TeamGrid from '../TeamGrid'
 
 class Dao extends Component {
 	componentDidMount() {
-		this.props.onDaoFetch(this.props.match.params.id)
+		this.props.onFetchDao(this.props.match.params.id)
 	}
 
 	render() {
