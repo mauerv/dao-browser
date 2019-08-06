@@ -1,7 +1,8 @@
 import {
   FETCH_DAOS_SUCCESS,
   FETCH_DAO_SUCCESS,
-  CREATE_DAO_SUCCESS
+  CREATE_DAO_SUCCESS,
+  DELETE_DAO_SUCCESS
 } from '../constants/actionTypes'
 
 const initialState = []
@@ -14,6 +15,8 @@ export default (state = initialState, action) => {
       return applyFetchDaoSuccess(state, action)
     case CREATE_DAO_SUCCESS:
       return applyCreateDaoSuccess(state, action)
+    case DELETE_DAO_SUCCESS:
+      return applyDeleteDaoSuccess(state, action)
     default:
       return state
   }
@@ -41,3 +44,6 @@ export const applyFetchDaoSuccess = (state, action) => {
 }
 
 export const applyCreateDaoSuccess = (state, action) => [...state, action.payload]
+
+export const applyDeleteDaoSuccess = (state, action) =>
+  state.filter(item => item.id !== action.payload)

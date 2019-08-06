@@ -34,7 +34,7 @@ export const doCreateFramework = text => dispatch => {
   )
 }
 
-export const doDeleteFramework = id => async dispatch => {
+export const doDeleteFramework = id => dispatch => {
   doDeleteResource(
     dispatch,
     'frameworks',
@@ -45,7 +45,7 @@ export const doDeleteFramework = id => async dispatch => {
   )
 }
 
-export const doEditFramework = (text, id) => async dispatch => {
+export const doEditFramework = (text, id) => dispatch => {
   const formData = { framework: { name: text } }
   doEditResource(
     dispatch,

@@ -83,7 +83,6 @@ export const doCreateAttachedResource = async (
   for (let key in values) {
     formData.append(`dao[${key}]`, values[key])
   }
-  console.log('Values', values)
 
   let response = await fetch(`http://localhost:4000/${resourceName}`, {
     method: 'post',

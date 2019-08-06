@@ -34,7 +34,7 @@ export const doCreateBlockchain = text => dispatch => {
   )
 }
 
-export const doDeleteBlockchain = id => async dispatch => {
+export const doDeleteBlockchain = id => dispatch => {
   doDeleteResource(
     dispatch,
     'blockchains',
@@ -45,7 +45,7 @@ export const doDeleteBlockchain = id => async dispatch => {
   )
 }
 
-export const doEditBlockchain = (text, id) => async dispatch => {
+export const doEditBlockchain = (text, id) => dispatch => {
   const formData = { blockchain: { name: text } }
   doEditResource(
     dispatch,
