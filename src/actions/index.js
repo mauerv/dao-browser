@@ -1,7 +1,8 @@
  // Actions related to the DAO model.
 import {
   doFetchDao,
-  doDaoListFetch
+  doFetchDaoList,
+  doCreateDao
 } from './daoActions'
 
 // Actions related to the Status model.
@@ -31,7 +32,8 @@ import {
 // Export everything from a single index endpoint.
 export {
   doFetchDao,
-  doDaoListFetch,
+  doFetchDaoList,
+  doCreateDao,
   doFetchStatusList,
   doCreateStatus,
   doDeleteStatus,

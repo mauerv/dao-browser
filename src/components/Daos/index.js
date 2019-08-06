@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import BaseDaos from './BaseDaos'
 
 import { getDaos } from '../../selectors'
-import { doDaoListFetch } from '../../actions'
+import { doFetchDaoList } from '../../actions'
 
 const mapStateToProps = state => ({
   daos: getDaos(state)
@@ -11,5 +11,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { onDaoListFetch: doDaoListFetch }
+  { onFetchDaoList: doFetchDaoList }
 )(BaseDaos)

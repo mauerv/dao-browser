@@ -4,7 +4,7 @@ import DaoListItem from './DaoListItem'
 
 class BaseDaos extends Component {
 	componentDidMount() {
-		this.props.onDaoListFetch()
+		this.props.onFetchDaoList()
 	}
 
 	render() {

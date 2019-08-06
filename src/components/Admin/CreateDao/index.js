@@ -1,23 +1,32 @@
-import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-class CreateDao extends Component {
-  render() {
-    return (
-     <div className='container'>
-       <div className='row pt-3 pb-3'>
-         <div className='col-12'>
-           <h2>Create DAO</h2>
-           <p>Add a new DAO to the registry.</p>
-         </div>
-       </div>
-       <div className='row pt-3 pb-3'>
-         <form>
+import CreateDao from './CreateDao'
 
-         </form>
-       </div>
-     </div>
-    )
+import {
+  getStatuses,
+  getBlockchains,
+  getFrameworks
+} from '../../../selectors'
+
+import {
+  doFetchBlockchainList,
+  doFetchFrameworkList,
+  doFetchStatusList,
+  doCreateDao
+} from '../../../actions'
+
+const mapStateToProps = state => ({
+  statuses: getStatuses(state),
+  blockchains: getBlockchains(state),
+  frameworks: getFrameworks(state)
+})
+
+export default connect(
+  mapStateToProps,
+  {
+    onFetchBlockchainList: doFetchBlockchainList,
+    onFetchFrameworkList: doFetchFrameworkList,
+    onStatusListFetch: doFetchStatusList,
+    onCreateDao: doCreateDao
   }
-}
-
-export default CreateDao
+)(CreateDao)
