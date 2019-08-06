@@ -1,6 +1,5 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import Dropzone from 'react-dropzone'
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
   <div>
