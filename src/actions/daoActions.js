@@ -7,7 +7,8 @@ import {
 import {
   doFetchResourceList,
   doFetchResource,
-  doCreateResource
+  doCreateResource,
+  doCreateAttachedResource
 } from './_baseResourceActions'
 
 export const doFetchDaoList = () => dispatch => {
@@ -32,11 +33,10 @@ export const doFetchDao = id => dispatch => {
 }
 
 export const doCreateDao = values => dispatch => {
-  const formData = { dao: values }
-  doCreateResource(
+  doCreateAttachedResource(
     dispatch,
     'daos',
-    formData,
+    values,
     CREATE_DAO_BEGIN,
     CREATE_DAO_ERROR,
     CREATE_DAO_SUCCESS

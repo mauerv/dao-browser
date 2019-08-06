@@ -1,5 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
+import Dropzone from 'react-dropzone'
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
   <div>
@@ -23,6 +24,24 @@ const renderSelect = ({ input, label, resourceList, type, meta: { touched, error
     </div>
   </div>
 )
+
+const adaptFileEventToValue = delegate => e => delegate(e.target.files[0]);
+
+const renderFileInput = ({
+  input: { value: omitValue, onChange, onBlur, ...inputProps },
+  meta: omitMeta,
+  ...props
+}) => {
+  return (
+    <input
+      onChange={adaptFileEventToValue(onChange)}
+      onBlur={adaptFileEventToValue(onBlur)}
+      type="file"
+      {...props.input}
+      {...props}
+    />
+  )
+}
 
 const CreateDaoForm = props => {
   const {
@@ -59,6 +78,7 @@ const CreateDaoForm = props => {
       <Field name='blockchain_id' resourceList={blockchains} component={renderSelect} label='Blockchain' />
       <Field name='status_id' resourceList={statuses} component={renderSelect} label='Status' />
       <Field name='framework_id' resourceList={frameworks} component={renderSelect} label='Framework' />
+      <Field name='image' component={renderFileInput} />
       <div>
         <button type='submit' disabled={submitting} className='btn btn-primary'>
           Submit

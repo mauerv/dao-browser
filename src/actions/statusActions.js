@@ -22,7 +22,7 @@ export const doFetchStatusList = () => dispatch => {
    )
 }
 
-export const doCreateStatus = text => async dispatch => {
+export const doCreateStatus = text => dispatch => {
   let formData = { status: {  name: text } }
   doCreateResource(
     dispatch,
@@ -34,7 +34,7 @@ export const doCreateStatus = text => async dispatch => {
   )
 }
 
-export const doDeleteStatus = id => async dispatch => {
+export const doDeleteStatus = id => dispatch => {
   doDeleteResource(
     dispatch,
     'statuses',
@@ -45,7 +45,7 @@ export const doDeleteStatus = id => async dispatch => {
   )
 }
 
-export const doEditStatus = (text, id) => async dispatch => {
+export const doEditStatus = (text, id) => dispatch => {
   const formData = { status: { name: text } }
   doEditResource(
     dispatch,

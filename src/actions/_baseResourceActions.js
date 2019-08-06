@@ -1,3 +1,5 @@
+import objectToFormData from 'object-to-formdata'
+
 export const doFetchResourceList = async (
   dispatch,
   resourceName,
@@ -65,6 +67,41 @@ export const doCreateResource = async (
     })
   } else {
     dispatch({ type: errorAction })
+  }
+}
+
+export const doCreateAttachedResource = async (
+  dispatch,
+  resourceName,
+  values,
+  beginAction,
+  errorAction,
+  successAction
+) => {
+  dispatch({ type: beginAction })
+  const formData = new FormData()
+  for (let key in values) {
+    formData.append(`dao[${key}]`, values[key])
+  }
+
+  let response = await fetch(`http://localhost:4000/${resourceName}`, {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'multipart/form-data'
+    },
+    body: formData
+  })
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
+      type: successAction,
+      payload: data
+    })
+  } else {
+    dispatch({ type: errorAction })
+    let error = await response.json()
+    console.log(error);
   }
 }
 
