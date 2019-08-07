@@ -64,9 +64,9 @@ class Dao extends Component {
 					status={dao.status.name}
 				/>
 				<TeamGrid team={dao.contributors} />
-				<TextBlock title='Assets Governed' text={dao.assets_governed} />
-				<TextBlock title='Decentralization Level' text={dao.decentralization_level} />
-				<TextBlock title='Centralization Points' text={dao.centralization_points} />
+				{dao.assets_governed && <TextBlock title='Assets Governed' text={dao.assets_governed} />}
+				{dao.decentralization_level && <TextBlock title='Decentralization Level' text={dao.decentralization_level} />}
+				{dao.centralization_points && <TextBlock title='Centralization Points' text={dao.centralization_points} />}
 				<ContractGrid contracts={dao.contracts} />
 				<LinkBlock title='Contract Proof' url={dao.contract_proof} />
 				<AuditList audits={dao.audits}/>
