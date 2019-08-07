@@ -8,3 +8,5 @@ export const getStatuses = state => state.statuses
 export const getBlockchains = state => state.blockchains
 
 export const getFrameworks = state => state.frameworks
+
+export const getAuditors = state => state.auditors

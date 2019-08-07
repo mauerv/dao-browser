@@ -31,12 +31,24 @@ import {
   doEditFramework
 } from './frameworkActions'
 
+// Actions related to the Auditor model.
+import {
+  doFetchAuditorList,
+  doCreateAuditor,
+  doDeleteAuditor,
+  doEditAuditor
+} from './auditorActions'
+
 // Export everything from a single index endpoint.
 export {
   doFetchDao,
   doFetchDaoList,
   doCreateDao,
   doDeleteDao,
+  doFetchAuditorList,
+  doCreateAuditor,
+  doDeleteAuditor,
+  doEditAuditor,
   doEditDao,
   doFetchStatusList,
   doCreateStatus,

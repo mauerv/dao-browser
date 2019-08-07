@@ -44,7 +44,8 @@ class ResourceListItem extends Component {
           <div>
             <p
               onClick={this.onStartEdit}
-              className='btn btn-sm btn-info'>
+              className='btn btn-sm btn-info'
+            >
               Edit
             </p>
             <p

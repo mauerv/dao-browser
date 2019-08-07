@@ -30,7 +30,7 @@ export const doCreateBlockchain = text => dispatch => {
     formData,
     CREATE_BLOCKCHAIN_BEGIN,
     CREATE_BLOCKCHAIN_ERROR,
-    CREATE_BLOCKCHAIN_SUCCESS,
+    CREATE_BLOCKCHAIN_SUCCESS
   )
 }
 
