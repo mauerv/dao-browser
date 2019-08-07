@@ -68,7 +68,7 @@ class Dao extends Component {
 				{dao.decentralization_level && <TextBlock title='Decentralization Level' text={dao.decentralization_level} />}
 				{dao.centralization_points && <TextBlock title='Centralization Points' text={dao.centralization_points} />}
 				<ContractGrid contracts={dao.contracts} />
-				<LinkBlock title='Contract Proof' url={dao.contract_proof} />
+				{dao.contract_proof && <LinkBlock title='Contract Proof' url={dao.contract_proof} />}
 				<AuditList audits={dao.audits}/>
 				<DocumentGrid documents={dao.documents}/>
 				<LinkList title='Podcasts' list={dao.podcasts} />
