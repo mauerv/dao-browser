@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import EditDao from './EditDao'
+import AdminDao from './AdminDao'
 
 import {
   getStatuses,
@@ -29,4 +29,4 @@ export default connect(
     onFetchStatusList: doFetchStatusList,
     onEditDao: doEditDao
   }
-)(EditDao)
+)(AdminDao)

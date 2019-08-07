@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 
-import { getBlockchains } from '../../selectors'
+import { getBlockchains } from '../../../selectors'
 import {
   doFetchBlockchainList,
   doCreateBlockchain,
   doDeleteBlockchain,
   doEditBlockchain
-} from '../../actions'
+} from '../../../actions'
 
 import BasicResource from './BasicResource'
 

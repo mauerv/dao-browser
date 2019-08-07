@@ -1,13 +1,27 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
-import StatusManagement from './StatusManagement.js'
-import BlockchainManagement from './BlockchainManagement.js'
-import FrameworkManagement from './FrameworkManagement.js'
+import ScrollToTop from '../ScrollToTop'
+import AdminDaos from './AdminDaos'
+import AdminDao from './AdminDao'
+import AdminNewDao from './AdminNewDao'
+import AdminTags from './AdminTags'
+import AdminNavbar from './AdminNavbar'
+import AdminHome from './AdminHome'
+
+import * as ROUTES from '../../constants/routes'
 
 export default () => (
-  <div className='container'>
-    <StatusManagement resourceName='status' />
-    <BlockchainManagement resourceName='blockchain'/>
-    <FrameworkManagement resourceName='framework' />
+  <div>
+    <AdminNavbar />
+    <Route exact path={ROUTES.ADMIN} component={AdminHome} />
+    <Route exact path={ROUTES.ADMIN_DAOS} component={AdminDaos} />
+    <Route path={ROUTES.ADMIN_DAO} component={AdminDao} />
+    <Route path={ROUTES.ADMIN_NEW_DAO} component={AdminNewDao} />
+    <Route path={ROUTES.ADMIN_TAGS} component={AdminTags} />
   </div>
 )

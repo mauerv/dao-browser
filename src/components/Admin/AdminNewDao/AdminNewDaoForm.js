@@ -42,7 +42,7 @@ const renderFileInput = ({
   )
 }
 
-const EditDaoForm = props => {
+const AdminNewDaoForm = props => {
   const {
     handleSubmit,
     pristine,
@@ -51,11 +51,10 @@ const EditDaoForm = props => {
     blockchains,
     frameworks,
     statuses,
-    onEditDao,
-    dao_id
+    onCreateDao
   } = props
   return (
-    <form onSubmit={handleSubmit(values => onEditDao(values, dao_id))} id='editDao'>
+    <form onSubmit={handleSubmit(values => onCreateDao(values))} id='createDao'>
       <Field name='name' type='text' component={renderField} label='Name' />
       <Field name='subtitle' type='text' component={renderField} label='Subtitle' />
       <Field name='description' type='textarea' component={renderField} label='Description' />
@@ -92,5 +91,5 @@ const EditDaoForm = props => {
 }
 
 export default reduxForm({
-  form: 'editDao'
-})(EditDaoForm)
+  form: 'createDao'
+})(AdminNewDaoForm)

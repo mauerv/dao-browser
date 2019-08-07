@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 
-import { getStatuses } from '../../selectors'
+import { getStatuses } from '../../../selectors'
 import {
   doFetchStatusList,
   doCreateStatus,
   doDeleteStatus,
   doEditStatus
-} from '../../actions'
+} from '../../../actions'
 
 import BasicResource from './BasicResource'
 

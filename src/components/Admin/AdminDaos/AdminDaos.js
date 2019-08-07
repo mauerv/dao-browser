@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom'
 
 import * as ROUTES from '../../../constants/routes'
 
-class EditDaos extends Component {
+class AdminDaos extends Component {
   componentDidMount() {
     this.props.onFetchDaoList()
   }
 
   render() {
     const { daos, onDeleteDao } = this.props
-    console.log(daos);
     return (
       <div className='container'>
         <h2>Edit Daos</h2>
@@ -31,7 +30,7 @@ class EditDaos extends Component {
         		</div>
 
         		<div className='d-flex align-items-center'>
-              <Link to={`${ROUTES.EDIT_DAOS}/${dao.id}`} className='btn btn-info btn-sm'>Edit</Link>
+              <Link to={`${ROUTES.ADMIN_DAOS}/${dao.id}`} className='btn btn-info btn-sm'>Edit</Link>
               <button onClick={() => onDeleteDao(dao.id)} className='btn btn-danger btn-sm'>Delete</button>
         		</div>
           </div>
@@ -42,4 +41,4 @@ class EditDaos extends Component {
   }
 }
 
-export default EditDaos
+export default AdminDaos

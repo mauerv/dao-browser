@@ -1,5 +1,3 @@
-import objectToFormData from 'object-to-formdata'
-
 export const doFetchResourceList = async (
   dispatch,
   resourceName,

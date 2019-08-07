@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import EditDaos from './EditDaos'
+import AdminDaos from './AdminDaos'
 
 import { getDaos } from '../../../selectors'
 import {
@@ -18,4 +18,4 @@ export default connect(
     onDeleteDao: doDeleteDao,
     onFetchDaoList: doFetchDaoList 
   }
-)(EditDaos)
+)(AdminDaos)

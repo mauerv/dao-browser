@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import EditDaoForm from './EditDaoForm'
+import AdminDaoForm from './AdminDaoForm'
 
-class EditDao extends Component {
+class AdminDao extends Component {
   componentDidMount() {
     this.props.onFetchBlockchainList()
     this.props.onFetchFrameworkList()
@@ -20,7 +20,7 @@ class EditDao extends Component {
             <p>Edit a DAO in the registry.</p>
           </div>
           <div className='col-12'>
-            <EditDaoForm
+            <AdminDaoForm
              statuses={statuses}
              frameworks={frameworks}
              blockchains={blockchains}
@@ -34,4 +34,4 @@ class EditDao extends Component {
   }
 }
 
-export default EditDao
+export default AdminDao

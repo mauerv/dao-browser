@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import CreateDao from './CreateDao'
+import AdminNewDao from './AdminNewDao'
 
 import {
   getStatuses,
@@ -29,4 +29,4 @@ export default connect(
     onFetchStatusList: doFetchStatusList,
     onCreateDao: doCreateDao
   }
-)(CreateDao)
+)(AdminNewDao)

@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 
-import { getFrameworks } from '../../selectors'
+import { getFrameworks } from '../../../selectors'
 import {
   doFetchFrameworkList,
   doCreateFramework,
   doDeleteFramework,
   doEditFramework
-} from '../../actions'
+} from '../../../actions'
 
 import BasicResource from './BasicResource'
 
