@@ -6,7 +6,7 @@ class CreateDao extends Component {
   componentDidMount() {
     this.props.onFetchBlockchainList()
     this.props.onFetchFrameworkList()
-    this.props.onStatusListFetch()
+    this.props.onFetchStatusList()
   }
 
   render() {

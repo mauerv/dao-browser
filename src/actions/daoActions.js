@@ -2,7 +2,8 @@ import {
   FETCH_DAOS_BEGIN, FETCH_DAOS_ERROR, FETCH_DAOS_SUCCESS,
   FETCH_DAO_BEGIN, FETCH_DAO_ERROR, FETCH_DAO_SUCCESS,
   CREATE_DAO_BEGIN, CREATE_DAO_ERROR, CREATE_DAO_SUCCESS,
-  DELETE_DAO_BEGIN, DELETE_DAO_ERROR, DELETE_DAO_SUCCESS
+  DELETE_DAO_BEGIN, DELETE_DAO_ERROR, DELETE_DAO_SUCCESS,
+  EDIT_DAO_BEGIN, EDIT_DAO_ERROR, EDIT_DAO_SUCCESS
 } from '../constants/actionTypes'
 
 import {
@@ -10,7 +11,8 @@ import {
   doFetchResource,
   doCreateResource,
   doCreateAttachedResource,
-  doDeleteResource
+  doDeleteResource,
+  doEditAttachedResource
 } from './_baseResourceActions'
 
 export const doFetchDaoList = () => dispatch => {
@@ -53,5 +55,17 @@ export const doCreateDao = values => dispatch => {
     CREATE_DAO_BEGIN,
     CREATE_DAO_ERROR,
     CREATE_DAO_SUCCESS
+  )
+}
+
+export const doEditDao = (values, id) => dispatch => {
+  doEditAttachedResource(
+    dispatch,
+    'daos',
+    id,
+    values,
+    EDIT_DAO_BEGIN,
+    EDIT_DAO_ERROR,
+    EDIT_DAO_SUCCESS
   )
 }

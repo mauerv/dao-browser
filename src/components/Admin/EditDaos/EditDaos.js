@@ -31,7 +31,7 @@ class EditDaos extends Component {
         		</div>
 
         		<div className='d-flex align-items-center'>
-              <button className='btn btn-info btn-sm'>Edit</button>
+              <Link to={`${ROUTES.EDIT_DAOS}/${dao.id}`} className='btn btn-info btn-sm'>Edit</Link>
               <button onClick={() => onDeleteDao(dao.id)} className='btn btn-danger btn-sm'>Delete</button>
         		</div>
           </div>

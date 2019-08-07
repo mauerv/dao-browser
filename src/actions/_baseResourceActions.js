@@ -151,3 +151,34 @@ export const doEditResource = async (
     dispatch({ type: errorAction })
   }
 }
+
+export const doEditAttachedResource = async (
+  dispatch,
+  resourceName,
+  resourceId,
+  values,
+  beginAction,
+  errorAction,
+  successAction
+) => {
+  dispatch({ type: beginAction })
+
+  const formData = new FormData()
+  for (let key in values) {
+    formData.append(`dao[${key}]`, values[key])
+  }
+
+  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+    method: 'put',
+    body: formData
+  })
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
+      type: successAction,
+      payload: data
+    })
+  } else {
+    dispatch({ type: errorAction })
+  }
+}

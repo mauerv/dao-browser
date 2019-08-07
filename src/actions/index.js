@@ -3,7 +3,8 @@ import {
   doFetchDao,
   doFetchDaoList,
   doCreateDao,
-  doDeleteDao
+  doDeleteDao,
+  doEditDao
 } from './daoActions'
 
 // Actions related to the Status model.
@@ -36,6 +37,7 @@ export {
   doFetchDaoList,
   doCreateDao,
   doDeleteDao,
+  doEditDao,
   doFetchStatusList,
   doCreateStatus,
   doDeleteStatus,

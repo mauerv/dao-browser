@@ -26,7 +26,7 @@ export default connect(
   {
     onFetchBlockchainList: doFetchBlockchainList,
     onFetchFrameworkList: doFetchFrameworkList,
-    onStatusListFetch: doFetchStatusList,
+    onFetchStatusList: doFetchStatusList,
     onCreateDao: doCreateDao
   }
 )(CreateDao)
