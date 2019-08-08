@@ -69,7 +69,7 @@ class Dao extends Component {
 				{dao.centralization_points && <TextBlock title='Centralization Points' text={dao.centralization_points} />}
 				<ContractGrid contracts={dao.contracts} />
 				{dao.contract_proof && <LinkBlock title='Contract Proof' url={dao.contract_proof} />}
-				<AuditList audits={dao.audits}/>
+				{dao.audits.length !== 0 && <AuditList audits={dao.audits}/>}
 				<DocumentGrid documents={dao.documents}/>
 				<LinkList title='Podcasts' list={dao.podcasts} />
 				<LinkList title='Insightful Articles' list={dao.articles} />
