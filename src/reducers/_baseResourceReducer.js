@@ -1,14 +1,17 @@
 const initialState = []
 
 export default (
+  fetchListAction,
   fetchAction,
   createAction,
   deleteAction,
   editAction
 ) => (state = initialState, action) => {
   switch (action.type) {
-    case fetchAction:
+    case fetchListAction:
       return applyFetchResourceListSuccess(state, action)
+    case fetchAction:
+      return applyFetchResourceSuccess(state, action)
     case createAction:
       return applyCreateResourceSuccess(state, action)
     case deleteAction:
@@ -21,6 +24,22 @@ export default (
 }
 
 export const applyFetchResourceListSuccess = (state, action) => action.payload
+
+export const applyFetchResourceSuccess = (state, action) => {
+  let isPresent = false
+  let newState = state.map(item => {
+    if (item.id === action.payload.id) {
+      isPresent = true
+      return action.payload
+    } else {
+      return item
+    }
+  })
+  if (!isPresent) {
+    newState.push(action.payload)
+  }
+  return newState
+}
 
 export const applyCreateResourceSuccess = (state, action) => [...state, action.payload]
 
