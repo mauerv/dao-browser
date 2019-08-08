@@ -10,7 +10,7 @@ import DocumentGrid from '../DocumentGrid'
 import TextBlock from '../TextBlock'
 import LinkList from '../LinkList'
 import LinkBlock from '../LinkBlock'
-import TeamGrid from '../TeamGrid'
+import ContributorGrid from '../ContributorGrid'
 
 class Dao extends Component {
 	componentDidMount() {
@@ -63,7 +63,7 @@ class Dao extends Component {
 					framework={dao.framework.name}
 					status={dao.status.name}
 				/>
-				<TeamGrid team={dao.contributors} />
+				{dao.contributors.length != 0 && <ContributorGrid contributors={dao.contributors} />}
 				{dao.assets_governed && <TextBlock title='Assets Governed' text={dao.assets_governed} />}
 				{dao.decentralization_level && <TextBlock title='Decentralization Level' text={dao.decentralization_level} />}
 				{dao.centralization_points && <TextBlock title='Centralization Points' text={dao.centralization_points} />}
