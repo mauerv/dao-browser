@@ -22,8 +22,8 @@ export const doFetchStatusList = () => dispatch => {
    )
 }
 
-export const doCreateStatus = text => dispatch => {
-  let formData = { status: {  name: text } }
+export const doCreateStatus = values => dispatch => {
+  let formData = { status: values }
   doCreateResource(
     dispatch,
     'statuses',
@@ -45,8 +45,8 @@ export const doDeleteStatus = id => dispatch => {
   )
 }
 
-export const doEditStatus = (text, id) => dispatch => {
-  const formData = { status: { name: text } }
+export const doEditStatus = (values, id) => dispatch => {
+  const formData = { status: values }
   doEditResource(
     dispatch,
     'statuses',

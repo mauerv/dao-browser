@@ -8,7 +8,7 @@ import {
   doEditBlockchain
 } from '../../../actions'
 
-import BasicResource from './BasicResource'
+import BaseResource from '../BaseResource'
 
 const mapStateToProps = state => ({
   resourceList: getBlockchains(state)
@@ -17,9 +17,9 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    onResourceListFetch: doFetchBlockchainList,
+    onFetchResourceList: doFetchBlockchainList,
     onCreateResource: doCreateBlockchain,
     onDeleteResource: doDeleteBlockchain,
     onEditResource: doEditBlockchain
   }
-)(BasicResource)
+)(BaseResource)

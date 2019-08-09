@@ -8,7 +8,7 @@ import {
   doEditStatus
 } from '../../../actions'
 
-import BasicResource from './BasicResource'
+import BaseResource from '../BaseResource'
 
 const mapStateToProps = state => ({
   resourceList: getStatuses(state)
@@ -17,9 +17,9 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    onResourceListFetch: doFetchStatusList,
+    onFetchResourceList: doFetchStatusList,
     onCreateResource: doCreateStatus,
     onDeleteResource: doDeleteStatus,
     onEditResource: doEditStatus
   }
-)(BasicResource)
+)(BaseResource)

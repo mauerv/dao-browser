@@ -1,16 +1,26 @@
 import React, { Component } from 'react'
 
 import AdminDaoForm from './AdminDaoForm'
+import ManageNestedResource from './ManageNestedResource'
 
 class AdminDao extends Component {
   componentDidMount() {
     this.props.onFetchBlockchainList()
     this.props.onFetchFrameworkList()
     this.props.onFetchStatusList()
+    this.props.onFetchDao(this.props.match.params.dao_id)
   }
   render() {
     const { dao_id } = this.props.match.params
-    const { statuses, blockchains, frameworks, onEditDao } = this.props
+    const {
+      statuses,
+      blockchains,
+      frameworks,
+      onEditDao,
+      dao
+    } = this.props
+
+    if (!dao) return <div />
 
     return (
       <div className='container'>
@@ -26,6 +36,12 @@ class AdminDao extends Component {
              blockchains={blockchains}
              onEditDao={onEditDao}
              dao_id={dao_id}
+            />
+          </div>
+          <div className='col-12'>
+            <ManageNestedResource
+              resourceList={dao.documents}
+              resourceName='Documents'
             />
           </div>
         </div>

@@ -8,7 +8,7 @@ import {
   doEditFramework
 } from '../../../actions'
 
-import BasicResource from './BasicResource'
+import BaseResource from '../BaseResource'
 
 const mapStateToProps = state => ({
   resourceList: getFrameworks(state)
@@ -17,9 +17,9 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    onResourceListFetch: doFetchFrameworkList,
+    onFetchResourceList: doFetchFrameworkList,
     onCreateResource: doCreateFramework,
     onDeleteResource: doDeleteFramework,
     onEditResource: doEditFramework
   }
-)(BasicResource)
+)(BaseResource)

@@ -1,25 +1,14 @@
-import { connect } from 'react-redux'
+import React from 'react'
 
-import { getAuditors } from '../../../selectors'
-import {
-  doFetchAuditorList,
-  doCreateAuditor,
-  doDeleteAuditor,
-  doEditAuditor
-} from '../../../actions'
+import BaseAdminAuditors from './BaseAdminAuditors'
 
-import BaseAuditorManagement from './BaseAuditorManagement'
+const resourceStruct = {
+  name: '',
+  website: ''
+}
 
-const mapStateToProps = state => ({
-  auditorList: getAuditors(state)
-})
-
-export default connect(
-  mapStateToProps,
-  {
-    onAuditorListFetch: doFetchAuditorList,
-    onCreateAuditor: doCreateAuditor,
-    onDeleteAuditor: doDeleteAuditor,
-    onEditAuditor: doEditAuditor
-  }
-)(BaseAuditorManagement)
+export default () => (
+  <div className='container'>
+    <BaseAdminAuditors resourceName='auditor' resourceStruct={resourceStruct} />
+  </div>
+)

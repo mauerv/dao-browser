@@ -5,20 +5,23 @@ import AdminDao from './AdminDao'
 import {
   getStatuses,
   getBlockchains,
-  getFrameworks
+  getFrameworks,
+  getDao
 } from '../../../selectors'
 
 import {
   doFetchBlockchainList,
   doFetchFrameworkList,
   doFetchStatusList,
+  doFetchDao,
   doEditDao
 } from '../../../actions'
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   statuses: getStatuses(state),
   blockchains: getBlockchains(state),
-  frameworks: getFrameworks(state)
+  frameworks: getFrameworks(state),
+  dao: getDao(state, parseInt(ownProps.match.params.dao_id))
 })
 
 export default connect(
@@ -27,6 +30,7 @@ export default connect(
     onFetchBlockchainList: doFetchBlockchainList,
     onFetchFrameworkList: doFetchFrameworkList,
     onFetchStatusList: doFetchStatusList,
-    onEditDao: doEditDao
+    onEditDao: doEditDao,
+    onFetchDao: doFetchDao
   }
 )(AdminDao)

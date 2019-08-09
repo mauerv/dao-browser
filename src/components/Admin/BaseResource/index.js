@@ -2,25 +2,23 @@ import React, { Component } from 'react'
 
 import ResourceListItem from './ResourceListItem'
 
-class BasicResource extends Component {
-  state = {
-    text: ''
-  }
+class BaseResource extends Component {
+  state = this.props.resourceStruct
 
   componentDidMount() {
-    this.props.onResourceListFetch()
+    this.props.onFetchResourceList()
   }
 
-  onChange = e => this.setState({ text: e.target.value })
+  onChange = e => this.setState({ [e.target.name]: e.target.value })
 
   onSubmit = e => {
     e.preventDefault()
-    this.props.onCreateResource(this.state.text)
-    this.setState({ text: '' })
+    this.props.onCreateResource(this.state)
+    this.setState(this.props.resourceStruct)
   }
 
   render() {
-    const { resourceList, resourceName } = this.props
+    const { resourceList, resourceName, resourceStruct } = this.props
 
     return (
       <div className='pt-3 pb-3 border-bottom'>
@@ -30,6 +28,7 @@ class BasicResource extends Component {
             {resourceList.map(resource => (
               <ResourceListItem
                 resource={resource}
+                resourceStruct={resourceStruct}
                 onEditResource={this.props.onEditResource}
                 onDeleteResource={this.props.onDeleteResource}
                 key={resource.id}
@@ -41,13 +40,16 @@ class BasicResource extends Component {
           <h3>Add a {resourceName}</h3>
           <form onSubmit={this.onSubmit}>
             <div className='form-group'>
-              <input
-                type='text'
-                value={this.state.text}
-                onChange={this.onChange}
-                className='form-control'
-                placeholder={`Enter new ${resourceName}`}
-              />
+              {Object.keys(this.state).map(key => (
+                <input
+                  type='text'
+                  name={key}
+                  value={this.state[key]}
+                  onChange={this.onChange}
+                  className='form-control'
+                  placeholder={`Insert ${key}`}
+                />
+              ))}
             </div>
             <button className="btn btn-primary ml-0">Submit</button>
           </form>
@@ -57,4 +59,4 @@ class BasicResource extends Component {
   }
 }
 
-export default BasicResource
+export default BaseResource

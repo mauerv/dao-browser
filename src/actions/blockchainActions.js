@@ -22,8 +22,8 @@ export const doFetchBlockchainList = () => dispatch => {
   )
 }
 
-export const doCreateBlockchain = text => dispatch => {
-  let formData = { blockchain: { name: text } }
+export const doCreateBlockchain = values => dispatch => {
+  let formData = { blockchain: values }
   doCreateResource(
     dispatch,
     'blockchains',
@@ -45,8 +45,8 @@ export const doDeleteBlockchain = id => dispatch => {
   )
 }
 
-export const doEditBlockchain = (text, id) => dispatch => {
-  const formData = { blockchain: { name: text } }
+export const doEditBlockchain = (values, id) => dispatch => {
+  const formData = { blockchain: values }
   doEditResource(
     dispatch,
     'blockchains',
