@@ -2,20 +2,30 @@ import React, { Component } from 'react'
 
 import AuditorListItem from './AuditorListItem'
 
+const initialState = {
+  name: '',
+  website: ''
+}
+
 class BaseAuditorManagement extends Component {
-  state = {
-    name: '',
-    website: ''
-  }
+  state = initialState
 
   componentDidMount() {
     this.props.onAuditorListFetch()
   }
 
-  onChange = e => this.setState({ text: e.targ })
+  onChange = e => this.setState({ [e.target.name]: e.target.value })
 
   onSubmit = e => {
     e.preventDefault()
+
+    const values = {
+      name: this.state.name,
+      website: this.state.website
+    }
+
+    this.props.onCreateAuditor(values)
+    this.setState(initialState)
   }
 
   render() {
@@ -46,6 +56,7 @@ class BaseAuditorManagement extends Component {
             <div className='form-group'>
               <input
                 type='text'
+                name='name'
                 value={this.state.name}
                 onChange={this.onChange}
                 className='form-control'
@@ -54,6 +65,7 @@ class BaseAuditorManagement extends Component {
             <div className='form-group'>
               <input
                 type='text'
+                name='website'
                 value={this.state.website}
                 onChange={this.onChange}
                 className='form-control'
