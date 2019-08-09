@@ -16,7 +16,7 @@ class AuditorListItem extends Component {
       name: this.state.name,
       website: this.state.website
     }
-    this.props.onEditResource(values, this.props.auditor.id)
+    this.props.onEditAuditor(values, this.props.auditor.id)
     this.onStopEdit()
   }
 
@@ -28,13 +28,28 @@ class AuditorListItem extends Component {
 
     if (editing) {
       return (
-        null
+        <li className='list-group-item d-flex justify-content-between align-items-center'>
+            <input
+              onChange={this.onChange}
+              value={name}
+              name='name'
+              className='form-control mr-2'
+            />
+            <input
+              onChange={this.onChange}
+              value={website}
+              name='website'
+              className='form-control mr-2'
+            />
+            <i onClick={this.onEditSubmit} className="far fa-check-square fa-3x text-success form-icon-button"></i>
+            <i onClick={this.onStopEdit} className="far fa-window-close fa-3x text-danger ml-2 form-icon-button"></i>
+        </li>
       )
     } else {
       return (
-        <li className='row justify-content-between'>
+        <li className='d-flex justify-content-between'>
           <div className='d-flex'>
-            <p>{auditor.name}</p>
+            <p className='mr-5'>{auditor.name}</p>
             <p>{auditor.website}</p>
           </div>
           <div>
