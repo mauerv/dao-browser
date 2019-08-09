@@ -18,7 +18,7 @@ class ResourceListItem extends Component {
   onChange = e => this.setState({ text: e.target.value })
 
   render() {
-    const { resource, onEditResource, onDeleteResource } = this.props
+    const { resource, onDeleteResource } = this.props
     const { editing, text } = this.state
 
     if (editing) {

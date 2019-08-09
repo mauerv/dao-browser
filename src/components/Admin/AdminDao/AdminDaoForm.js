@@ -46,7 +46,6 @@ const AdminDaoForm = props => {
   const {
     handleSubmit,
     pristine,
-    reset,
     submitting,
     blockchains,
     frameworks,

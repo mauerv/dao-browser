@@ -1,11 +1,6 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
-import ScrollToTop from '../ScrollToTop'
 import AdminDaos from './AdminDaos'
 import AdminDao from './AdminDao'
 import AdminNewDao from './AdminNewDao'

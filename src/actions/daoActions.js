@@ -9,7 +9,6 @@ import {
 import {
   doFetchResourceList,
   doFetchResource,
-  doCreateResource,
   doCreateAttachedResource,
   doDeleteResource,
   doEditAttachedResource

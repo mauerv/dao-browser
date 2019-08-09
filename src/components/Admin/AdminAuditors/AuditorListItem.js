@@ -23,7 +23,7 @@ class AuditorListItem extends Component {
   onChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
-    const { auditor, onEditAuditor, onDeleteAuditor } = this.props
+    const { auditor, onDeleteAuditor } = this.props
     const { editing, name, website } = this.state
 
     if (editing) {
