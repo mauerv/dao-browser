@@ -3,8 +3,8 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import ContractGrid from '../ContractGrid'
 import SocialIcons from '../SocialIcons'
-import TagGroup from '../Tags/TagGroup'
-import TagGrid from '../Tags/TagGrid'
+import TagGroup from '../TagGroup'
+import TagGrid from '../TagGrid'
 import AuditList from '../AuditList'
 import DocumentGrid from '../DocumentGrid'
 import TextBlock from '../TextBlock'
@@ -73,7 +73,7 @@ class Dao extends Component {
 				<DocumentGrid documents={dao.documents}/>
 				<LinkList title='Podcasts' list={dao.podcasts} />
 				<LinkList title='Insightful Articles' list={dao.articles} />
-				<TagGrid tags={dao.tags} />
+				{dao.tags.length !== 0 && <TagGrid tags={dao.tags} />}
 			</MDBContainer>
 		)
 	}

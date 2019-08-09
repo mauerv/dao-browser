@@ -5,8 +5,7 @@ import {
 
 import * as ROUTES from '../../constants/routes'
 
-import ChainTag from '../Tags/ChainTag'
-import FrameworkTag from '../Tags/FrameworkTag'
+import TagGroupItem from '../TagGroup/TagGroupItem'
 
 export default ({ dao }) => (
   <div className='list-group-item d-flex flex-column flex-md-row justify-content-between'>
@@ -23,8 +22,8 @@ export default ({ dao }) => (
 		</div>
 
 		<div className='d-flex flex-md-column justify-content-between align-items-end'>
-			<ChainTag chain={dao.blockchain.name} label={false} />
-			<FrameworkTag framework={dao.framework.name} label={false} />
+			<TagGroupItem name={dao.blockchain.name} tagType='Blockchain'/>
+			<TagGroupItem name={dao.framework.name} tagType='Framework'/>
 		</div>
   </div>
 )

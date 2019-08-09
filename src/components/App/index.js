@@ -4,15 +4,18 @@ import {
 	Route
 } from 'react-router-dom'
 
+// Layout Components
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+// Page Components
 import Landing from '../Landing'
 import CreateInfo from '../CreateInfo'
 import Daos from '../Daos'
 import Dao from '../Dao'
-import ScrollToTop from '../ScrollToTop'
 import Funding from '../Funding'
 import Admin from '../Admin'
+// Higher Order Components
+import ScrollToTop from '../ScrollToTop'
 
 import * as ROUTES from '../../constants/routes'
 
