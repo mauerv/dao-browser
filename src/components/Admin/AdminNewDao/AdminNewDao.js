@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import { reduxForm } from 'redux-form'
 
-import AdminNewDaoForm from './AdminNewDaoForm'
+import AdminDaoForm from '../AdminDaoForm'
+
+const AdminNewDaoForm = reduxForm({
+  form: 'createDao'
+})(AdminDaoForm)
 
 class AdminNewDao extends Component {
   componentDidMount() {
@@ -10,7 +15,12 @@ class AdminNewDao extends Component {
   }
 
   render() {
-    const { statuses, blockchains, frameworks, onCreateDao } = this.props
+    const {
+      statuses,
+      blockchains,
+      frameworks,
+      onCreateDao
+    } = this.props
 
     return (
      <div className='container'>

@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import { reduxForm } from 'redux-form'
 
-import AdminDaoForm from './AdminDaoForm'
+import AdminDaoForm from '../AdminDaoForm'
+const AdminEditDaoForm = reduxForm({
+  form: 'editDao'
+})(AdminDaoForm)
 
 class AdminDao extends Component {
   componentDidMount() {
@@ -29,7 +33,7 @@ class AdminDao extends Component {
             <p>Edit a DAO in the registry.</p>
           </div>
           <div className='col-12'>
-            <AdminDaoForm
+            <AdminEditDaoForm
              statuses={statuses}
              frameworks={frameworks}
              blockchains={blockchains}

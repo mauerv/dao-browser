@@ -16,7 +16,7 @@ class AdminDaos extends Component {
         <h2>Edit Daos</h2>
         <ul className='list-group'>
         {daos.map(dao => (
-          <div className='list-group-item d-flex flex-column flex-md-row justify-content-between'>
+          <div key={dao.id} className='list-group-item d-flex flex-column flex-md-row justify-content-between'>
         		<div className='d-flex flex-row mt-1'>
         	    <Link to={`${ROUTES.DAOS}/${dao.id}`}>
         	      <img src={dao.image_url} alt='' className='img-thumbnail sm-thumbnail' />
