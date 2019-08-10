@@ -9,8 +9,8 @@ import {
 
 class AdminDaoForm extends Component {
   handleFormSubmit = values => {
-    const { dao_id, onEditDao, onCreateDao } = this.props
-    dao_id ? onEditDao(values, dao_id) : onCreateDao(values)
+    const { initialValues, onEditDao, onCreateDao } = this.props
+    initialValues ? onEditDao(values, initialValues.id) : onCreateDao(values)
   }
 
   render() {
@@ -21,10 +21,8 @@ class AdminDaoForm extends Component {
       blockchains,
       frameworks,
       statuses,
-      onEditDao,
-      onCreateDao,
-      dao_id
     } = this.props
+
     return (
       <form onSubmit={handleSubmit(this.handleFormSubmit)}>
         <Field name='name' type='text' component={renderField} label='Name' />

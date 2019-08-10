@@ -14,7 +14,6 @@ class AdminEditDao extends Component {
     this.props.onFetchDao(this.props.match.params.dao_id)
   }
   render() {
-    const { dao_id } = this.props.match.params
     const {
       statuses,
       blockchains,
@@ -38,7 +37,8 @@ class AdminEditDao extends Component {
              frameworks={frameworks}
              blockchains={blockchains}
              onEditDao={onEditDao}
-             dao_id={dao_id}
+             dao={dao}
+             initialValues={dao}
             />
           </div>
         </div>
