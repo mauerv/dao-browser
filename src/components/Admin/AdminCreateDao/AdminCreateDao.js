@@ -3,11 +3,11 @@ import { reduxForm } from 'redux-form'
 
 import AdminDaoForm from '../AdminDaoForm'
 
-const AdminNewDaoForm = reduxForm({
+const AdminCreateDaoForm = reduxForm({
   form: 'createDao'
 })(AdminDaoForm)
 
-class AdminNewDao extends Component {
+class AdminCreateDao extends Component {
   componentDidMount() {
     this.props.onFetchBlockchainList()
     this.props.onFetchFrameworkList()
@@ -30,7 +30,7 @@ class AdminNewDao extends Component {
            <p>Add a new DAO to the registry.</p>
          </div>
          <div className='col-12'>
-           <AdminNewDaoForm
+           <AdminCreateDaoForm
             statuses={statuses}
             frameworks={frameworks}
             blockchains={blockchains}
@@ -43,4 +43,4 @@ class AdminNewDao extends Component {
   }
 }
 
-export default AdminNewDao
+export default AdminCreateDao

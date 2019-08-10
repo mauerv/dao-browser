@@ -6,7 +6,7 @@ const AdminEditDaoForm = reduxForm({
   form: 'editDao'
 })(AdminDaoForm)
 
-class AdminDao extends Component {
+class AdminEditDao extends Component {
   componentDidMount() {
     this.props.onFetchBlockchainList()
     this.props.onFetchFrameworkList()
@@ -47,4 +47,4 @@ class AdminDao extends Component {
   }
 }
 
-export default AdminDao
+export default AdminEditDao

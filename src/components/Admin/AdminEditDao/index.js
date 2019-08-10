@@ -1,24 +1,27 @@
 import { connect } from 'react-redux'
 
-import AdminNewDao from './AdminNewDao'
+import AdminEditDao from './AdminEditDao'
 
 import {
   getStatuses,
   getBlockchains,
-  getFrameworks
+  getFrameworks,
+  getDao
 } from '../../../selectors'
 
 import {
   doFetchBlockchainList,
   doFetchFrameworkList,
   doFetchStatusList,
-  doCreateDao
+  doFetchDao,
+  doEditDao
 } from '../../../actions'
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   statuses: getStatuses(state),
   blockchains: getBlockchains(state),
-  frameworks: getFrameworks(state)
+  frameworks: getFrameworks(state),
+  dao: getDao(state, parseInt(ownProps.match.params.dao_id))
 })
 
 export default connect(
@@ -27,6 +30,7 @@ export default connect(
     onFetchBlockchainList: doFetchBlockchainList,
     onFetchFrameworkList: doFetchFrameworkList,
     onFetchStatusList: doFetchStatusList,
-    onCreateDao: doCreateDao
+    onEditDao: doEditDao,
+    onFetchDao: doFetchDao
   }
-)(AdminNewDao)
+)(AdminEditDao)
