@@ -1,3 +1,5 @@
+import { jsonToFormData } from '../util/formHelpers'
+
 export const doFetchResourceList = async (
   dispatch,
   resourceName,
@@ -77,10 +79,7 @@ export const doCreateAttachedResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
-  const formData = new FormData()
-  for (let key in values) {
-    formData.append(`dao[${key}]`, values[key])
-  }
+  const formData = jsonToFormData(values, 'dao')
 
   let response = await fetch(`http://localhost:4000/${resourceName}`, {
     method: 'post',
@@ -117,7 +116,30 @@ export const doDeleteResource = async (
       payload: resourceId
     })
   } else {
-    dispatch({ type: errorAction})
+    dispatch({ type: errorAction })
+  }
+}
+
+export const doDeleteChildResource = async (
+  dispatch,
+  resourceName,
+  parentId,
+  resourceId,
+  beginAction,
+  errorAction,
+  successAction
+) => {
+  dispatch({ type: beginAction })
+  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+    method: 'delete'
+  })
+  if (response.ok) {
+    dispatch({
+      type: successAction,
+      payload: { resourceId, parentId, resourceName }
+    })
+  } else {
+    dispatch({ type: errorAction })
   }
 }
 
@@ -143,7 +165,7 @@ export const doEditResource = async (
     let data = await response.json()
     dispatch({
       type: successAction,
-      payload: data
+      payload: { data: data, resourceName: resourceName }
     })
   } else {
     dispatch({ type: errorAction })

@@ -4,7 +4,10 @@ import {
   doFetchDaoList,
   doCreateDao,
   doDeleteDao,
-  doEditDao
+  doEditDao,
+  doCreateDaoChild,
+  doDeleteDaoChild,
+  doEditDaoChild
 } from './daoActions'
 
 // Actions related to the Status model.
@@ -45,11 +48,14 @@ export {
   doFetchDaoList,
   doCreateDao,
   doDeleteDao,
+  doEditDao,
+  doCreateDaoChild,
+  doDeleteDaoChild,
+  doEditDaoChild,
   doFetchAuditorList,
   doCreateAuditor,
   doDeleteAuditor,
   doEditAuditor,
-  doEditDao,
   doFetchStatusList,
   doCreateStatus,
   doDeleteStatus,

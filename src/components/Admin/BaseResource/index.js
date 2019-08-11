@@ -48,6 +48,7 @@ class BaseResource extends Component {
                   onChange={this.onChange}
                   className='form-control'
                   placeholder={`Insert ${key}`}
+                  key={key}
                 />
               ))}
             </div>

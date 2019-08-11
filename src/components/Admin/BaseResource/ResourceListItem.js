@@ -7,7 +7,6 @@ class ResourceListItem extends Component {
    }
 
   onStartEdit = () => this.setState({ editing: true })
-
   onStopEdit = () => this.setState({ editing: false })
 
   onEditSubmit = () => {
@@ -20,7 +19,7 @@ class ResourceListItem extends Component {
     this.onStopEdit()
   }
 
-  onChange = e => this.setState({[e.target.name]: e.target.value})
+  onChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
     const { resource, onDeleteResource, resourceStruct } = this.props
@@ -50,18 +49,20 @@ class ResourceListItem extends Component {
         <li className='list-group-item d-flex justify-content-between align-items-center'>
           <p className='mb-0'>{resource.name}</p>
           <div>
-            <p
+            <button
+              type='button'
               onClick={this.onStartEdit}
               className='btn btn-sm btn-info'
             >
               Edit
-            </p>
-            <p
+            </button>
+            <button
+              type='button'
               onClick={() => onDeleteResource(resource.id)}
               className='btn btn-sm btn-danger'
             >
               Delete
-            </p>
+            </button>
           </div>
         </li>
       )

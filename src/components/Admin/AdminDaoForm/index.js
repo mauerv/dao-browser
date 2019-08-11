@@ -4,8 +4,8 @@ import { Field } from 'redux-form'
 import {
   renderField,
   renderSelect,
-  renderFileInput
-} from '../../RenderFormHelpers'
+  renderFileInput,
+} from '../RenderFormHelpers'
 
 class AdminDaoForm extends Component {
   handleFormSubmit = values => {
@@ -25,7 +25,7 @@ class AdminDaoForm extends Component {
 
     return (
       <form onSubmit={handleSubmit(this.handleFormSubmit)}>
-        <Field name='name' type='text' component={renderField} label='Name' />
+        <Field name='name' type='text' component={renderField} label='Name' warn={(value, allValues, props) => 'Fuck you'} />
         <Field name='subtitle' type='text' component={renderField} label='Subtitle' />
         <Field name='description' type='textarea' component={renderField} label='Description' />
         <Field name='website' type='text' component={renderField} label='Website' />

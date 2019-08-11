@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { reduxForm } from 'redux-form'
 
 import AdminDaoForm from '../AdminDaoForm'
+import AdminDocuments from '../AdminDocuments'
+
 const AdminEditDaoForm = reduxForm({
   form: 'editDao'
 })(AdminDaoForm)
@@ -22,7 +24,7 @@ class AdminEditDao extends Component {
       dao
     } = this.props
 
-    if (!dao) return <div />
+    if (!dao || !dao.documents) return <div />
 
     return (
       <div className='container'>
@@ -37,11 +39,14 @@ class AdminEditDao extends Component {
              frameworks={frameworks}
              blockchains={blockchains}
              onEditDao={onEditDao}
-             dao={dao}
              initialValues={dao}
             />
           </div>
         </div>
+        <AdminDocuments
+          documents={dao.documents}
+          dao_id={dao.id}
+        />
       </div>
     )
   }
