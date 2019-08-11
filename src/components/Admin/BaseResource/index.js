@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import ResourceListItem from './ResourceListItem'
 
@@ -58,6 +59,18 @@ class BaseResource extends Component {
       </div>
     )
   }
+}
+
+BaseResource.propTypes = {
+  resourceList: PropTypes.array.isRequired,
+  resourceStruct: PropTypes.object.isRequired,
+  resourceName: PropTypes.string,
+  collectionKey: PropTypes.string,
+  parentName: PropTypes.string,
+  parentId: PropTypes.number,
+  onCreateResource: PropTypes.func.isRequired,
+  onDeleteResource: PropTypes.func.isRequired,
+  onEditResource: PropTypes.func.isRequired
 }
 
 export default BaseResource

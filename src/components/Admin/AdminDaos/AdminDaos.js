@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 
-import { Link } from 'react-router-dom'
-
 import AdminDaosItem from './AdminDaosItem'
-
-import * as ROUTES from '../../../constants/routes'
 
 class AdminDaos extends Component {
   componentDidMount() {

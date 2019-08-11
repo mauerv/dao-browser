@@ -123,8 +123,8 @@ export const doDeleteResource = async (
 export const doDeleteChildResource = async (
   dispatch,
   resourceName,
-  parentId,
   resourceId,
+  parentId,
   beginAction,
   errorAction,
   successAction

@@ -1,18 +1,18 @@
 import { connect } from 'react-redux'
 
-import BaseAdminDocuments from './BaseAdminDocuments'
-
 import {
   doCreateDaoChild,
   doDeleteDaoChild,
   doEditDaoChild
 } from '../../../actions'
 
+import BaseChildResource from '../BaseChildResource'
+
 export default connect(
   null,
   {
-    onCreateDaoChild: doCreateDaoChild,
-    onDeleteDaoChild: doDeleteDaoChild,
-    onEditDaoChild: doEditDaoChild
+    onCreateResource: doCreateDaoChild,
+    onDeleteResource: doDeleteDaoChild,
+    onEditResource: doEditDaoChild
   }
-)(BaseAdminDocuments)
+)(BaseChildResource)

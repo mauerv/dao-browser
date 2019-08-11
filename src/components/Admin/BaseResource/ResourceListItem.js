@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class ResourceListItem extends Component {
   state = {
@@ -10,19 +11,25 @@ class ResourceListItem extends Component {
   onStopEdit = () => this.setState({ editing: false })
 
   onEditSubmit = () => {
-    const { resourceStruct } = this.props
+    const { resource, resourceStruct, onEditResource, collectionKey } = this.props
     let values = {}
     for (let key in resourceStruct) {
       values[key] = this.state[key]
     }
-    this.props.onEditResource(values, this.props.resource.id)
+    onEditResource(values, resource.id, collectionKey)
     this.onStopEdit()
   }
 
   onChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
-    const { resource, onDeleteResource, resourceStruct } = this.props
+    const {
+      resource,
+      onDeleteResource,
+      resourceStruct,
+      parentId,
+      collectionKey
+    } = this.props
     const { editing } = this.state
 
     if (editing) {
@@ -35,6 +42,7 @@ class ResourceListItem extends Component {
                 name={key}
                 value={this.state[key]}
                 className='form-control'
+                key={key}
               />
             ))}
           </form>
@@ -47,7 +55,11 @@ class ResourceListItem extends Component {
     } else {
       return (
         <li className='list-group-item d-flex justify-content-between align-items-center'>
-          <p className='mb-0'>{resource.name}</p>
+          {Object.keys(resourceStruct).map(key => (
+            <p key={key}>
+              {this.state[key]}
+            </p>
+          ))}
           <div>
             <button
               type='button'
@@ -58,7 +70,7 @@ class ResourceListItem extends Component {
             </button>
             <button
               type='button'
-              onClick={() => onDeleteResource(resource.id)}
+              onClick={() => onDeleteResource(resource.id, parentId, collectionKey)}
               className='btn btn-sm btn-danger'
             >
               Delete
@@ -68,6 +80,15 @@ class ResourceListItem extends Component {
       )
     }
   }
+}
+
+ResourceListItem.propTypes = {
+  resource: PropTypes.object.isRequired,
+  resourceStruct: PropTypes.object.isRequired,
+  onEditResource: PropTypes.func.isRequired,
+  onDeleteResource: PropTypes.func.isRequired,
+  parentId: PropTypes.number,
+  collectionKey: PropTypes.string,
 }
 
 export default ResourceListItem

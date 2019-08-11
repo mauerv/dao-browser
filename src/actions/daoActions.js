@@ -15,9 +15,9 @@ import {
   doCreateResource,
   doCreateAttachedResource,
   doDeleteResource,
-  doEditResource,
   doDeleteChildResource,
-  doEditAttachedResource
+  doEditResource,
+  doEditAttachedResource,
 } from './_baseResourceActions'
 
 export const doFetchDaoList = () => dispatch => {
@@ -87,19 +87,20 @@ export const doCreateDaoChild = (values, childKey, childResourceName) => dispatc
   )
 }
 
-export const doDeleteDaoChild = (dao_id, id, childResourceName) => dispatch => {
+export const doDeleteDaoChild = (id, dao_id, childResourceName) => dispatch => {
   doDeleteChildResource(
     dispatch,
     childResourceName,
-    dao_id,
     id,
+    dao_id,
     DELETE_DAO_CHILD_BEGIN,
     DELETE_DAO_CHILD_ERROR,
     DELETE_DAO_CHILD_SUCCESS,
   )
 }
 
-export const doEditDaoChild = (childResourceName, id, values) => dispatch => {
+export const doEditDaoChild = (values, id, childResourceName) => dispatch => {
+  console.log('Child Resource Name:', childResourceName);
   doEditResource(
     dispatch,
     childResourceName,

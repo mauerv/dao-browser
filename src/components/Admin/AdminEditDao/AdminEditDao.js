@@ -44,8 +44,12 @@ class AdminEditDao extends Component {
           </div>
         </div>
         <AdminDocuments
-          documents={dao.documents}
-          dao_id={dao.id}
+          resourceList={dao.documents}
+          resourceStruct={{ title: '', url: '' }}
+          resourceName='document'
+          collectionKey='documents'
+          parentName='dao'
+          parentId={dao.id}
         />
       </div>
     )
