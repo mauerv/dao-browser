@@ -42,6 +42,22 @@ import {
   doEditAuditor
 } from './auditorActions'
 
+// Actions related to the Tags model.
+import {
+  doFetchTagList,
+  doCreateTag,
+  doDeleteTag,
+  doEditTag
+} from './tagActions'
+
+// Actions related to the Contributor model.
+import {
+  doFetchContributorList,
+  doCreateContributor,
+  doDeleteContributor,
+  doEditContributor
+} from './contributorActions'
+
 // Export everything from a single index endpoint.
 export {
   doFetchDao,
@@ -67,5 +83,13 @@ export {
   doFetchFrameworkList,
   doCreateFramework,
   doDeleteFramework,
-  doEditFramework
+  doEditFramework,
+  doFetchTagList,
+  doCreateTag,
+  doDeleteTag,
+  doEditTag,
+  doFetchContributorList,
+  doCreateContributor,
+  doDeleteContributor,
+  doEditContributor
 }

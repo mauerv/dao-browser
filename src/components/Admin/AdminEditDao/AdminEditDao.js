@@ -75,6 +75,22 @@ class AdminEditDao extends Component {
           parentName='dao'
           parentId={dao.id}
         />
+        <ManageChildResource
+          resourceList={dao.audits}
+          resourceStruct={{ url: '', date: '', auditor_id: '' }}
+          resourceName='audit'
+          collectionKey='audits'
+          parentName='dao'
+          parentId={dao.id}
+        />
+        <ManageChildResource
+          resourceList={dao.contributors}
+          resourceStruct={{ name: '', twitter: '' }}
+          resourceName='contributor'
+          collectionKey='contributors'
+          parentName='dao'
+          parentId={dao.id}
+        />
       </div>
     )
   }

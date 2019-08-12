@@ -38,6 +38,7 @@ class ResourceListItem extends Component {
           <form className='flex-grow-1 mr-3'>
             {Object.keys(resourceStruct).map(key => (
               <input
+                type={key === 'date' ? 'date' : 'text'}
                 onChange={this.onChange}
                 name={key}
                 value={this.state[key]}

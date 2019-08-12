@@ -5,7 +5,7 @@ import ResourceListItem from '../BaseResource/ResourceListItem'
 
 import { capitalize } from '../../../util'
 
-class BaseChildResource extends Component {
+class BaseManageChildResource extends Component {
   state = this.props.resourceStruct
 
   onChange = e => this.setState({ [e.target.name]: e.target.value })
@@ -27,7 +27,6 @@ class BaseChildResource extends Component {
       values[key] = this.state[key]
     }
     values[`${parentName}_id`] = parentId
-
     onCreateResource(values, resourceName, collectionKey)
 
     this.setState(resourceStruct)
@@ -45,10 +44,10 @@ class BaseChildResource extends Component {
     } = this.props
 
     return (
-      <div className='pt-3 pb-3'>
+      <div className='row flex-column pt-3 pb-3'>
         <div className='pt-3 pb-3'>
           <h3>{capitalize(collectionKey)}</h3>
-          <ul>
+          <ul className='list-group'>
             {resourceList.map(resource => (
               <ResourceListItem
                 resource={resource}
@@ -63,19 +62,23 @@ class BaseChildResource extends Component {
           </ul>
         </div>
         <div className='pt-3 pb-3'>
+          <h3>Add a {resourceName}</h3>
           <form onSubmit={this.onSubmit}>
-            <input
-              onChange={this.onChange}
-              name='title'
-              value={this.state.title}
-            />
-            <input
-              onChange={this.onChange}
-              name='url'
-              value={this.state.url}
-            />
+            {Object.keys(this.state).map(key => (
+              <div className='form-group' key={key}>
+                <label htmlFor={key}>{capitalize(resourceName)} {key}</label>
+                <input
+                  type={key === 'date' ? 'date' : 'text'}
+                  name={key}
+                  value={this.state[key]}
+                  onChange={this.onChange}
+                  className='form-control'
+                  id={key}
+                />
+              </div>
+            ))}
             <button type='submit'>
-              Add {resourceName}
+              Add New
             </button>
           </form>
         </div>
@@ -84,7 +87,7 @@ class BaseChildResource extends Component {
   }
 }
 
-BaseChildResource.propTypes = {
+BaseManageChildResource.propTypes = {
   resourceList: PropTypes.array.isRequired,
   resourceStruct: PropTypes.object.isRequired,
   resourceName: PropTypes.string,
@@ -96,4 +99,4 @@ BaseChildResource.propTypes = {
   onEditResource: PropTypes.func.isRequired
 }
 
-export default BaseChildResource
+export default BaseManageChildResource

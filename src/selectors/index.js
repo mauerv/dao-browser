@@ -10,3 +10,7 @@ export const getBlockchains = state => state.blockchains
 export const getFrameworks = state => state.frameworks
 
 export const getAuditors = state => state.auditors
+
+export const getTags = state => state.tags
+
+export const getContributors = state => state.contributors

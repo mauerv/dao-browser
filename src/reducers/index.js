@@ -5,6 +5,8 @@ import statusesReducer from './statusesReducer'
 import blockchainsReducer from './blockchainsReducer'
 import frameworksReducer from './frameworksReducer'
 import auditorsReducer from './auditorsReducer'
+import tagsReducer from './tagsReducer'
+import contributorsReducer from './contributorsReducer'
 
 import { reducer as formReducer } from 'redux-form'
 
@@ -14,5 +16,7 @@ export default combineReducers({
   blockchains: blockchainsReducer,
   frameworks: frameworksReducer,
   auditors: auditorsReducer,
-  form: formReducer
+  form: formReducer,
+  tags: tagsReducer,
+  contributors: contributorsReducer
 })

@@ -93,8 +93,6 @@ export const doCreateAttachedResource = async (
     })
   } else {
     dispatch({ type: errorAction })
-    let error = await response.json()
-    console.log(error);
   }
 }
 

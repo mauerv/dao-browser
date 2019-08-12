@@ -100,7 +100,6 @@ export const doDeleteDaoChild = (id, dao_id, childResourceName) => dispatch => {
 }
 
 export const doEditDaoChild = (values, id, childResourceName) => dispatch => {
-  console.log('Child Resource Name:', childResourceName);
   doEditResource(
     dispatch,
     childResourceName,

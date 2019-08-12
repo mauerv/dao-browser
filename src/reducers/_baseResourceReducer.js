@@ -50,7 +50,10 @@ export const applyFetchResourceSuccess = (state, action) => {
   return newState
 }
 
-export const applyCreateResourceSuccess = (state, action) => [...state, action.payload.data]
+export const applyCreateResourceSuccess = (state, action) => {
+  console.log('From the reducer', action);
+  return [...state, action.payload.data]
+}
 
 export const applyDeleteResourceSuccess = (state, action) =>
   state.filter(item => item.id !== action.payload)
