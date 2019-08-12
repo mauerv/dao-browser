@@ -6,7 +6,7 @@ import {
   doEditDaoChild
 } from '../../../actions'
 
-import BaseChildResource from '../BaseChildResource'
+import BaseManageChildResource from './BaseManageChildResource'
 
 export default connect(
   null,
@@ -15,4 +15,4 @@ export default connect(
     onDeleteResource: doDeleteDaoChild,
     onEditResource: doEditDaoChild
   }
-)(BaseChildResource)
+)(BaseManageChildResource)

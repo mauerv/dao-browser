@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { reduxForm } from 'redux-form'
 
 import AdminDaoForm from '../AdminDaoForm'
-import AdminDocuments from '../AdminDocuments'
+import ManageChildResource from '../ManageChildResource'
 
 const AdminEditDaoForm = reduxForm({
   form: 'editDao'
@@ -43,11 +43,35 @@ class AdminEditDao extends Component {
             />
           </div>
         </div>
-        <AdminDocuments
+        <ManageChildResource
           resourceList={dao.documents}
           resourceStruct={{ title: '', url: '' }}
           resourceName='document'
           collectionKey='documents'
+          parentName='dao'
+          parentId={dao.id}
+        />
+        <ManageChildResource
+          resourceList={dao.articles}
+          resourceStruct={{ title: '', url: '', date: '' }}
+          resourceName='article'
+          collectionKey='articles'
+          parentName='dao'
+          parentId={dao.id}
+        />
+        <ManageChildResource
+          resourceList={dao.podcasts}
+          resourceStruct={{ title: '', url: '', date: '' }}
+          resourceName='podcast'
+          collectionKey='podcasts'
+          parentName='dao'
+          parentId={dao.id}
+        />
+        <ManageChildResource
+          resourceList={dao.contracts}
+          resourceStruct={{ name: '', address: '', description: '' }}
+          resourceName='contract'
+          collectionKey='contracts'
           parentName='dao'
           parentId={dao.id}
         />

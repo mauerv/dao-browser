@@ -50,7 +50,7 @@ export const applyFetchResourceSuccess = (state, action) => {
   return newState
 }
 
-export const applyCreateResourceSuccess = (state, action) => [...state, action.payload]
+export const applyCreateResourceSuccess = (state, action) => [...state, action.payload.data]
 
 export const applyDeleteResourceSuccess = (state, action) =>
   state.filter(item => item.id !== action.payload)
@@ -59,8 +59,9 @@ export const applyEditResourceSuccess = (state, action) =>
   state.map(item => item.id === action.payload.data.id ? action.payload.data : item)
 
 export const applyCreateChildSuccess = (state, action) => state.map(resource => {
-  if (resource.id === action.payload.dao_id) {
-    return {...resource, documents: [...resource.documents, action.payload]}
+  const { data, resourceName } = action.payload
+  if (resource.id === data.dao_id) {
+    return {...resource, [resourceName]: [...resource[resourceName], data]}
   } else {
     return resource
   }

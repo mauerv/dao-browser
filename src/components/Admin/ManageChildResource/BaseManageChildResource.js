@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import ResourceListItem from '../BaseResource/ResourceListItem'
 
+import { capitalize } from '../../../util'
+
 class BaseChildResource extends Component {
   state = this.props.resourceStruct
 
@@ -35,6 +37,7 @@ class BaseChildResource extends Component {
     const {
       resourceList,
       resourceStruct,
+      resourceName,
       onDeleteResource,
       onEditResource,
       parentId,
@@ -44,6 +47,7 @@ class BaseChildResource extends Component {
     return (
       <div className='pt-3 pb-3'>
         <div className='pt-3 pb-3'>
+          <h3>{capitalize(collectionKey)}</h3>
           <ul>
             {resourceList.map(resource => (
               <ResourceListItem
@@ -71,7 +75,7 @@ class BaseChildResource extends Component {
               value={this.state.url}
             />
             <button type='submit'>
-              Add Document
+              Add {resourceName}
             </button>
           </form>
         </div>
