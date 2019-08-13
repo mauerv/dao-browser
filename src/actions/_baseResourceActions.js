@@ -89,7 +89,7 @@ export const doCreateAttachedResource = async (
     let data = await response.json()
     dispatch({
       type: successAction,
-      payload: data
+      payload: { data: data, resourceName: resourceName }
     })
   } else {
     dispatch({ type: errorAction })

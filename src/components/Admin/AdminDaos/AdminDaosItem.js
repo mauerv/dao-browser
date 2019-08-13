@@ -17,7 +17,7 @@ const AdminDaosItem = ({ dao, onDeleteDao }) => (
         <p>{dao.subtitle}</p>
       </div>
     </div>
-    <div className='d-flex align-items-center'>
+    <div className='d-flex align-items-center justify-content-center'>
       <Link to={`${ROUTES.ADMIN_DAOS}/${dao.id}`} className='btn btn-info btn-sm'>Edit</Link>
       <button onClick={() => onDeleteDao(dao.id)} className='btn btn-danger btn-sm'>Delete</button>
     </div>
