@@ -3,9 +3,12 @@ import { reduxForm } from 'redux-form'
 
 import AdminDaoForm from '../AdminDaoForm'
 import ManageChildResource from '../ManageChildResource'
+import LinkResource from '../LinkResource'
 
 const AdminEditDaoForm = reduxForm({
-  form: 'editDao'
+  form: 'editDao',
+  enableReinitialize: true,
+  destroyOnUnmount: false
 })(AdminDaoForm)
 
 class AdminEditDao extends Component {
@@ -13,6 +16,8 @@ class AdminEditDao extends Component {
     this.props.onFetchBlockchainList()
     this.props.onFetchFrameworkList()
     this.props.onFetchStatusList()
+    this.props.onFetchTagList()
+    this.props.onFetchContributorList()
     this.props.onFetchDao(this.props.match.params.dao_id)
   }
   render() {
@@ -20,11 +25,17 @@ class AdminEditDao extends Component {
       statuses,
       blockchains,
       frameworks,
+      tags,
+      contributors,
       onEditDao,
-      dao
+      dao,
+      onLinkResource,
+      onUnlinkResource
     } = this.props
 
     if (!dao || !dao.documents) return <div />
+
+    let {image, ...initialValues} = dao
 
     return (
       <div className='container'>
@@ -39,7 +50,7 @@ class AdminEditDao extends Component {
              frameworks={frameworks}
              blockchains={blockchains}
              onEditDao={onEditDao}
-             initialValues={dao}
+             initialValues={initialValues}
             />
           </div>
         </div>
@@ -90,6 +101,22 @@ class AdminEditDao extends Component {
           collectionKey='contributors'
           parentName='dao'
           parentId={dao.id}
+        />
+        <LinkResource
+          resourceList={tags}
+          parent={dao}
+          pluralResourceKey='tags'
+          singularResourceKey='tag'
+          onLinkResource={onLinkResource}
+          onUnlinkResource={onUnlinkResource}
+        />
+        <LinkResource
+          resourceList={contributors}
+          parent={dao}
+          pluralResourceKey='contributors'
+          singularResourceKey='contributor'
+          onLinkResource={onLinkResource}
+          onUnlinkResource={onUnlinkResource}
         />
       </div>
     )

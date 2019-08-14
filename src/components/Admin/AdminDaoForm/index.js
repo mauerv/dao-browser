@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Field } from 'redux-form'
+import { withRouter } from 'react-router-dom'
 
 import {
   renderField,
@@ -61,4 +62,4 @@ class AdminDaoForm extends Component {
   }
 }
 
-export default AdminDaoForm
+export default withRouter(AdminDaoForm)

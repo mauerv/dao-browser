@@ -8,7 +8,9 @@ export default (
   editAction,
   createChildAction,
   deleteChildAction,
-  editChildAction
+  editChildAction,
+  linkChildAction,
+  unlinkChildAction
 ) => (state = initialState, action) => {
   switch (action.type) {
     case fetchListAction:
@@ -27,6 +29,10 @@ export default (
       return applyDeleteChildSuccess(state, action)
     case editChildAction:
       return applyEditChildSuccess(state, action)
+    case linkChildAction:
+      return applyLinkChildSuccess(state, action)
+    case unlinkChildAction:
+      return applyUnlinkChildSuccess(state, action)
     default:
       return state
   }
@@ -51,7 +57,6 @@ export const applyFetchResourceSuccess = (state, action) => {
 }
 
 export const applyCreateResourceSuccess = (state, action) => {
-  console.log('From the reducer', action);
   return [...state, action.payload.data]
 }
 
@@ -84,20 +89,34 @@ export const applyDeleteChildSuccess = (state, action) => {
 }
 
 export const applyEditChildSuccess = (state, action) => {
-    const { data, resourceName } = action.payload
-    let newState = state.map(resource => {
-      if (resource.id === data.dao_id) {
-        let newCollection = resource[resourceName].map(childResource => {
-          if (childResource.id === data.id) {
-            return data
-          } else {
-            return childResource
-          }
-        })
-        return { ...resource, [resourceName]: newCollection }
-      } else {
-        return resource
-      }
-    })
-    return newState
+  const { data, resourceName } = action.payload
+  let newState = state.map(resource => {
+    if (resource.id === data.dao_id) {
+      let newCollection = resource[resourceName].map(childResource => {
+        if (childResource.id === data.id) {
+          return data
+        } else {
+          return childResource
+        }
+      })
+      return { ...resource, [resourceName]: newCollection }
+    } else {
+      return resource
+    }
+  })
+  return newState
+}
+
+export const applyLinkChildSuccess = (state, action) => {
+  const { data, resourceName } = action.payload
+  return state.map(resource => {
+    return resource.id === data.id ? data : resource
+  })
+}
+
+export const applyUnlinkChildSuccess = (state, action) => {
+  const { data, resourceName } = action.payload
+  return state.map(resource => {
+    return resource.id === data.id ? data : resource
+  })
 }

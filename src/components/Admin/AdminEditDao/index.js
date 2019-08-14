@@ -6,21 +6,29 @@ import {
   getStatuses,
   getBlockchains,
   getFrameworks,
-  getDao
+  getDao,
+  getTags,
+  getContributors
 } from '../../../selectors'
 
 import {
   doFetchBlockchainList,
   doFetchFrameworkList,
   doFetchStatusList,
+  doFetchTagList,
+  doFetchContributorList,
   doFetchDao,
-  doEditDao
+  doEditDao,
+  doLinkDaoResource,
+  doUnlinkDaoResource
 } from '../../../actions'
 
 const mapStateToProps = (state, ownProps) => ({
   statuses: getStatuses(state),
   blockchains: getBlockchains(state),
   frameworks: getFrameworks(state),
+  tags: getTags(state),
+  contributors: getContributors(state),
   dao: getDao(state, parseInt(ownProps.match.params.dao_id))
 })
 
@@ -30,7 +38,11 @@ export default connect(
     onFetchBlockchainList: doFetchBlockchainList,
     onFetchFrameworkList: doFetchFrameworkList,
     onFetchStatusList: doFetchStatusList,
+    onFetchTagList: doFetchTagList,
+    onFetchContributorList: doFetchContributorList,
     onEditDao: doEditDao,
-    onFetchDao: doFetchDao
+    onFetchDao: doFetchDao,
+    onLinkResource: doLinkDaoResource,
+    onUnlinkResource: doUnlinkDaoResource
   }
 )(AdminEditDao)

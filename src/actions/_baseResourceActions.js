@@ -8,7 +8,7 @@ export const doFetchResourceList = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
-  let response = await fetch(`http://localhost:4000/${resourceName}`)
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}`)
   if (response.ok) {
     let data = await response.json()
     dispatch({
@@ -29,7 +29,7 @@ export const doFetchResource = async (
   successAction,
 ) => {
   dispatch({ type: beginAction })
-  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`)
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`)
   if (response.ok) {
     let data = await response.json()
     dispatch({
@@ -51,7 +51,7 @@ export const doCreateResource = async (
 ) => {
   dispatch({ type: beginAction })
 
-  let response = await fetch(`http://localhost:4000/${resourceName}`, {
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}`, {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -81,7 +81,7 @@ export const doCreateAttachedResource = async (
   dispatch({ type: beginAction })
   const formData = jsonToFormData(values, 'dao')
 
-  let response = await fetch(`http://localhost:4000/${resourceName}`, {
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}`, {
     method: 'post',
     body: formData
   })
@@ -105,7 +105,7 @@ export const doDeleteResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
-  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
     method: 'delete'
   })
   if (response.ok) {
@@ -128,7 +128,7 @@ export const doDeleteChildResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
-  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
     method: 'delete'
   })
   if (response.ok) {
@@ -151,7 +151,7 @@ export const doEditResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
-  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
     method: 'put',
     headers: {
       'Accept': 'application/json',
@@ -186,7 +186,7 @@ export const doEditAttachedResource = async (
     formData.append(`dao[${key}]`, values[key])
   }
 
-  let response = await fetch(`http://localhost:4000/${resourceName}/${resourceId}`, {
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
     method: 'put',
     body: formData
   })
@@ -194,7 +194,69 @@ export const doEditAttachedResource = async (
     let data = await response.json()
     dispatch({
       type: successAction,
-      payload: data
+      payload: { data: data, resourceName: resourceName }
+    })
+  } else {
+    dispatch({ type: errorAction })
+  }
+}
+
+export const doLinkResource = async (
+  dispatch,
+  formData,
+  resourceName,
+  resourceId,
+  parentName,
+  parentId,
+  beginAction,
+  errorAction,
+  successAction
+) => {
+  dispatch({ type: beginAction })
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${parentName}/${parentId}/${resourceName}`, {
+    method: 'put',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
+      type: successAction,
+      payload: { data: data, resourceName: resourceName }
+    })
+  } else {
+    dispatch({ type: errorAction })
+  }
+}
+
+export const doUnlinkResource = async (
+  dispatch,
+  formData,
+  resourceName,
+  resourceId,
+  parentName,
+  parentId,
+  beginAction,
+  errorAction,
+  successAction
+) => {
+  dispatch({ type: beginAction })
+  let response = await fetch(`${process.env.REACT_APP_API_URL}${parentName}/${parentId}/${resourceName}`, {
+    method: 'delete',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  if (response.ok) {
+    let data = await response.json()
+    dispatch({
+      type: successAction,
+      payload: { data: data, resourceName: resourceName }
     })
   } else {
     dispatch({ type: errorAction })

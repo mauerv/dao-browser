@@ -7,6 +7,8 @@ import {
   CREATE_DAO_CHILD_BEGIN, CREATE_DAO_CHILD_ERROR, CREATE_DAO_CHILD_SUCCESS,
   DELETE_DAO_CHILD_BEGIN, DELETE_DAO_CHILD_ERROR, DELETE_DAO_CHILD_SUCCESS,
   EDIT_DAO_CHILD_BEGIN, EDIT_DAO_CHILD_ERROR, EDIT_DAO_CHILD_SUCCESS,
+  LINK_DAO_RESOURCE_BEGIN, LINK_DAO_RESOURCE_ERROR, LINK_DAO_RESOURCE_SUCCESS,
+  UNLINK_DAO_RESOURCE_BEGIN, UNLINK_DAO_RESOURCE_ERROR, UNLINK_DAO_RESOURCE_SUCCESS
 } from '../constants/actionTypes'
 
 import {
@@ -18,6 +20,8 @@ import {
   doDeleteChildResource,
   doEditResource,
   doEditAttachedResource,
+  doLinkResource,
+  doUnlinkResource
 } from './_baseResourceActions'
 
 export const doFetchDaoList = () => dispatch => {
@@ -108,5 +112,35 @@ export const doEditDaoChild = (values, id, childResourceName) => dispatch => {
     EDIT_DAO_CHILD_BEGIN,
     EDIT_DAO_CHILD_ERROR,
     EDIT_DAO_CHILD_SUCCESS
+  )
+}
+
+export const doLinkDaoResource = (id, parentId, singularResourceKey, pluralResourceKey) => dispatch => {
+  const values = { dao: { [`${singularResourceKey}_id`]: id } }
+  doLinkResource(
+    dispatch,
+    values,
+    pluralResourceKey,
+    id,
+    'daos',
+    parentId,
+    LINK_DAO_RESOURCE_BEGIN,
+    LINK_DAO_RESOURCE_ERROR,
+    LINK_DAO_RESOURCE_SUCCESS,
+  )
+}
+
+export const doUnlinkDaoResource = (id, parentId, singularResourceKey, pluralResourceKey) => dispatch => {
+  const values = { dao: { [`${singularResourceKey}_id`]: id } }
+  doUnlinkResource(
+    dispatch,
+    values,
+    pluralResourceKey,
+    id,
+    'daos',
+    parentId,
+    UNLINK_DAO_RESOURCE_BEGIN,
+    UNLINK_DAO_RESOURCE_ERROR,
+    UNLINK_DAO_RESOURCE_SUCCESS,
   )
 }

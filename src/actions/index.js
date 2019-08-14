@@ -7,7 +7,9 @@ import {
   doEditDao,
   doCreateDaoChild,
   doDeleteDaoChild,
-  doEditDaoChild
+  doEditDaoChild,
+  doLinkDaoResource,
+  doUnlinkDaoResource
 } from './daoActions'
 
 // Actions related to the Status model.
@@ -68,6 +70,8 @@ export {
   doCreateDaoChild,
   doDeleteDaoChild,
   doEditDaoChild,
+  doLinkDaoResource,
+  doUnlinkDaoResource,
   doFetchAuditorList,
   doCreateAuditor,
   doDeleteAuditor,
