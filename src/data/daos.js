@@ -1623,7 +1623,7 @@ export default [
 		status: 'research',
 		image: 'trojandao.png',
 		description: `A network of artists & developers, co-creating a new cultural economy through blockchain from the ground-up. Starting from Athens, Greece. The TrojanDAO will manage a Community Fund. Trojan Foundation members can vote on how to spend this money: issuing of bounties and, mostly, grants to support art projects. Smart contracts will enable participating projects to manage funding, income distribution, and project governance rights. The goal is to use art value chains to feed a self-sustaining, democratically governed ecosystem for the remuneration of creative labor as a commons.‌`,
-		website: `http://c-a-s-athens.squarespace.com/`,
+		website: `https://www.trojanfoundation.com/`,
 		contractProof: `https://twitter.com/TrojanDAO/status/1153420222348562433`,
 		blockchain: 'Ethereum',
 		framework: 'Moloch Fork',
@@ -1641,12 +1641,13 @@ export default [
 		],
 		audits: [],
 		social: {
-			github: '',
+			github: 'https://github.com/TROJANFOUNDATION',
 			twitter: 'TrojanDAO',
 			medium: '',
 			telegram: '',
 			reddit: '',
 			discord: '',
+			discourse: 'https://trojandao.discoursehosting.net'
 		},
 		articles: [],
 		documents: [],
