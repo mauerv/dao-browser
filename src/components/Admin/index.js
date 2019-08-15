@@ -1,5 +1,4 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
 
 import AdminDaos from './AdminDaos'
 import AdminEditDao from './AdminEditDao'

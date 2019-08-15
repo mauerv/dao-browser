@@ -108,14 +108,14 @@ export const applyEditChildSuccess = (state, action) => {
 }
 
 export const applyLinkChildSuccess = (state, action) => {
-  const { data, resourceName } = action.payload
+  const { data } = action.payload
   return state.map(resource => {
     return resource.id === data.id ? data : resource
   })
 }
 
 export const applyUnlinkChildSuccess = (state, action) => {
-  const { data, resourceName } = action.payload
+  const { data } = action.payload
   return state.map(resource => {
     return resource.id === data.id ? data : resource
   })

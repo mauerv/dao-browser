@@ -6,7 +6,7 @@ import { useAuth0 } from '../../react-auth0-wrapper'
 import * as ROUTES from '../../constants/routes'
 
 const Navbar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
+  const { isAuthenticated, logout } = useAuth0()
 
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-primary fixed-top'>
@@ -36,6 +36,7 @@ const Navbar = () => {
                   <a
                     onClick={() => logout()}
                     className='nav-link text-light'
+                    href='/'
                     >
                     Log out
                   </a>
