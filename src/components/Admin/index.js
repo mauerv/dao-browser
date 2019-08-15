@@ -10,19 +10,20 @@ import AdminCategories from './AdminCategories'
 import AdminNavbar from './AdminNavbar'
 import AdminHome from './AdminHome'
 import AdminContributors from './AdminContributors'
+import PrivateRoute from '../PrivateRoute'
 
 import * as ROUTES from '../../constants/routes'
 
 export default () => (
   <div>
     <AdminNavbar />
-    <Route exact path={ROUTES.ADMIN} component={AdminHome} />
-    <Route exact path={ROUTES.ADMIN_DAOS} component={AdminDaos} />
-    <Route path={ROUTES.ADMIN_AUDITORS} component={AdminAuditors} />
-    <Route path={ROUTES.ADMIN_DAO} component={AdminEditDao} />
-    <Route path={ROUTES.ADMIN_NEW_DAO} component={AdminCreateDao} />
-    <Route path={ROUTES.ADMIN_TAGS} component={AdminTags} />
-    <Route path={ROUTES.ADMIN_CATEGORIES} component={AdminCategories} />
-    <Route path={ROUTES.ADMIN_CONTRIBUTORS} component={AdminContributors} />
+    <PrivateRoute exact path={ROUTES.ADMIN} component={AdminHome} />
+    <PrivateRoute exact path={ROUTES.ADMIN_DAOS} component={AdminDaos} />
+    <PrivateRoute path={ROUTES.ADMIN_AUDITORS} component={AdminAuditors} />
+    <PrivateRoute path={ROUTES.ADMIN_DAO} component={AdminEditDao} />
+    <PrivateRoute path={ROUTES.ADMIN_NEW_DAO} component={AdminCreateDao} />
+    <PrivateRoute path={ROUTES.ADMIN_TAGS} component={AdminTags} />
+    <PrivateRoute path={ROUTES.ADMIN_CATEGORIES} component={AdminCategories} />
+    <PrivateRoute path={ROUTES.ADMIN_CONTRIBUTORS} component={AdminContributors} />
   </div>
 )
