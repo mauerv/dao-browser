@@ -22,10 +22,11 @@ export const doFetchTagList = () => dispatch => {
   )
 }
 
-export const doCreateTag = values => dispatch => {
+export const doCreateTag = values => (dispatch, getState) => {
   let formData = { tag: values }
   doCreateResource(
     dispatch,
+    getState,
     'tags',
     formData,
     CREATE_TAG_BEGIN,
@@ -34,21 +35,23 @@ export const doCreateTag = values => dispatch => {
   )
 }
 
-export const doDeleteTag = id => dispatch => {
+export const doDeleteTag = id => (dispatch, getState) => {
   doDeleteResource(
     dispatch,
+    getState,
     'tags',
     id,
     DELETE_TAG_BEGIN,
     DELETE_TAG_ERROR,
-    DELETE_TAG_SUCCESS
+    DELETE_TAG_SUCCESS,
   )
 }
 
-export const doEditTag = (values, id) => dispatch => {
+export const doEditTag = (values, id) => (dispatch, getState) => {
   const formData = { tag: values }
   doEditResource(
     dispatch,
+    getState,
     'tags',
     id,
     formData,

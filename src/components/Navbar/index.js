@@ -17,9 +17,6 @@ const Navbar = () => {
   		  </button>
   		  <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
   		    <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to={ROUTES.ADMIN} className='nav-link text-light'>Admin</Link>
-            </li>
   		      <li className="nav-item">
   		      	<Link to={ROUTES.DAOS} className='nav-link text-light'>Explore</Link>
   		      </li>
@@ -29,24 +26,21 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to={ROUTES.FUNDING} className='nav-link text-light'>Need Funding?</Link>
             </li>
-            <li className='nav-item'>
-              {!isAuthenticated && (
-                <a
-                  onClick={() => loginWithRedirect({})}
-                  className='nav-link text-light'
-                >
-                  Login
-                </a>
-              )}
-              {isAuthenticated && (
-                <a
-                  onClick={() => logout()}
-                  className='nav-link text-light'
-                  >
-                  Log out
-                </a>
-              )}
-            </li>
+            {isAuthenticated && (
+              <li className="nav-item">
+                <Link to={ROUTES.ADMIN} className='nav-link text-light'>Admin</Link>
+              </li>
+            )}
+            {isAuthenticated && (
+              <li className='nav-item'>
+                  <a
+                    onClick={() => logout()}
+                    className='nav-link text-light'
+                    >
+                    Log out
+                  </a>
+              </li>
+            )}
   		    </ul>
   	  	</div>
     	</div>

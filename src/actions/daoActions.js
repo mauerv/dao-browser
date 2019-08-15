@@ -45,9 +45,10 @@ export const doFetchDao = id => dispatch => {
   )
 }
 
-export const doDeleteDao = id => dispatch => {
+export const doDeleteDao = id => (dispatch, getState) => {
   doDeleteResource(
     dispatch,
+    getState,
     'daos',
     id,
     DELETE_DAO_BEGIN,
@@ -56,9 +57,10 @@ export const doDeleteDao = id => dispatch => {
   )
 }
 
-export const doCreateDao = values => dispatch => {
+export const doCreateDao = values => (dispatch, getState) => {
   doCreateAttachedResource(
     dispatch,
+    getState,
     'daos',
     values,
     CREATE_DAO_BEGIN,
@@ -67,9 +69,10 @@ export const doCreateDao = values => dispatch => {
   )
 }
 
-export const doEditDao = (values, id) => dispatch => {
+export const doEditDao = (values, id) => (dispatch, getState) => {
   doEditAttachedResource(
     dispatch,
+    getState,
     'daos',
     id,
     values,
@@ -79,10 +82,11 @@ export const doEditDao = (values, id) => dispatch => {
   )
 }
 
-export const doCreateDaoChild = (values, childKey, childResourceName) => dispatch => {
+export const doCreateDaoChild = (values, childKey, childResourceName) => (dispatch, getState) => {
   let formData = { [childKey]: values }
   doCreateResource(
     dispatch,
+    getState,
     childResourceName,
     formData,
     CREATE_DAO_CHILD_BEGIN,
@@ -91,9 +95,10 @@ export const doCreateDaoChild = (values, childKey, childResourceName) => dispatc
   )
 }
 
-export const doDeleteDaoChild = (id, dao_id, childResourceName) => dispatch => {
+export const doDeleteDaoChild = (id, dao_id, childResourceName) => (dispatch, getState) => {
   doDeleteChildResource(
     dispatch,
+    getState,
     childResourceName,
     id,
     dao_id,
@@ -103,9 +108,10 @@ export const doDeleteDaoChild = (id, dao_id, childResourceName) => dispatch => {
   )
 }
 
-export const doEditDaoChild = (values, id, childResourceName) => dispatch => {
+export const doEditDaoChild = (values, id, childResourceName) => (dispatch, getState) => {
   doEditResource(
     dispatch,
+    getState,
     childResourceName,
     id,
     values,
@@ -115,10 +121,16 @@ export const doEditDaoChild = (values, id, childResourceName) => dispatch => {
   )
 }
 
-export const doLinkDaoResource = (id, parentId, singularResourceKey, pluralResourceKey) => dispatch => {
+export const doLinkDaoResource = (
+  id,
+  parentId,
+  singularResourceKey,
+  pluralResourceKey
+) => (dispatch, getState) => {
   const values = { dao: { [`${singularResourceKey}_id`]: id } }
   doLinkResource(
     dispatch,
+    getState,
     values,
     pluralResourceKey,
     id,
@@ -130,10 +142,16 @@ export const doLinkDaoResource = (id, parentId, singularResourceKey, pluralResou
   )
 }
 
-export const doUnlinkDaoResource = (id, parentId, singularResourceKey, pluralResourceKey) => dispatch => {
+export const doUnlinkDaoResource = (
+  id,
+  parentId,
+  singularResourceKey,
+  pluralResourceKey
+) => (dispatch, getState) => {
   const values = { dao: { [`${singularResourceKey}_id`]: id } }
   doUnlinkResource(
     dispatch,
+    getState,
     values,
     pluralResourceKey,
     id,

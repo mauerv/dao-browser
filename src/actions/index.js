@@ -60,6 +60,11 @@ import {
   doEditContributor
 } from './contributorActions'
 
+// Actions related to Authentication
+import {
+  doSetAuthToken
+} from './authActions'
+
 // Export everything from a single index endpoint.
 export {
   doFetchDao,
@@ -95,5 +100,6 @@ export {
   doFetchContributorList,
   doCreateContributor,
   doDeleteContributor,
-  doEditContributor
+  doEditContributor,
+  doSetAuthToken
 }

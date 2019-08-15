@@ -22,10 +22,11 @@ export const doFetchFrameworkList = () => dispatch => {
   )
 }
 
-export const doCreateFramework = values => dispatch => {
+export const doCreateFramework = values => (dispatch, getState) => {
   let formData = { framework: values }
   doCreateResource(
     dispatch,
+    getState,
     'frameworks',
     formData,
     CREATE_FRAMEWORK_BEGIN,
@@ -34,9 +35,10 @@ export const doCreateFramework = values => dispatch => {
   )
 }
 
-export const doDeleteFramework = id => dispatch => {
+export const doDeleteFramework = id => (dispatch, getState) => {
   doDeleteResource(
     dispatch,
+    getState,
     'frameworks',
     id,
     DELETE_FRAMEWORK_BEGIN,
@@ -45,10 +47,11 @@ export const doDeleteFramework = id => dispatch => {
   )
 }
 
-export const doEditFramework = (values, id) => dispatch => {
+export const doEditFramework = (values, id) => (dispatch, getState) => {
   const formData = { framework: values }
   doEditResource(
     dispatch,
+    getState,
     'frameworks',
     id,
     formData,

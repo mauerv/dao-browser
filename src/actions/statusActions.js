@@ -22,10 +22,11 @@ export const doFetchStatusList = () => dispatch => {
    )
 }
 
-export const doCreateStatus = values => dispatch => {
+export const doCreateStatus = values => (dispatch, getState) => {
   let formData = { status: values }
   doCreateResource(
     dispatch,
+    getState,
     'statuses',
     formData,
     CREATE_STATUS_BEGIN,
@@ -34,9 +35,10 @@ export const doCreateStatus = values => dispatch => {
   )
 }
 
-export const doDeleteStatus = id => dispatch => {
+export const doDeleteStatus = id => (dispatch, getState) => {
   doDeleteResource(
     dispatch,
+    getState,
     'statuses',
     id,
     DELETE_STATUS_BEGIN,
@@ -45,10 +47,11 @@ export const doDeleteStatus = id => dispatch => {
   )
 }
 
-export const doEditStatus = (values, id) => dispatch => {
+export const doEditStatus = (values, id) => (dispatch, getState) => {
   const formData = { status: values }
   doEditResource(
     dispatch,
+    getState,
     'statuses',
     id,
     formData,

@@ -22,10 +22,11 @@ export const doFetchContributorList = () => dispatch => {
   )
 }
 
-export const doCreateContributor = values => dispatch => {
+export const doCreateContributor = values => (dispatch, getState) => {
   let formData = { contributor: values }
   doCreateResource(
     dispatch,
+    getState,
     'contributors',
     formData,
     CREATE_CONTRIBUTOR_BEGIN,
@@ -34,9 +35,10 @@ export const doCreateContributor = values => dispatch => {
   )
 }
 
-export const doDeleteContributor = id => dispatch => {
+export const doDeleteContributor = id => (dispatch, getState) => {
   doDeleteResource(
     dispatch,
+    getState,
     'contributors',
     id,
     DELETE_CONTRIBUTOR_BEGIN,
@@ -45,10 +47,11 @@ export const doDeleteContributor = id => dispatch => {
   )
 }
 
-export const doEditContributor = (values, id) => dispatch => {
+export const doEditContributor = (values, id) => (dispatch, getState) => {
   const formData = { contributor: values }
   doEditResource(
     dispatch,
+    getState,
     'contributors',
     id,
     formData,

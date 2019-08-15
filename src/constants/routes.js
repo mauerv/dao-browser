@@ -10,6 +10,7 @@ export const DAO = '/daos/:id'
 /** Admin Routes **/
 // Home
 export const ADMIN = '/admin'
+export const LOGIN = '/login'
 // Manage global resources
 export const ADMIN_CATEGORIES = '/admin/categories'
 export const ADMIN_AUDITORS = '/admin/auditors'

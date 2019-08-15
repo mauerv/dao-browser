@@ -43,19 +43,22 @@ export const doFetchResource = async (
 
 export const doCreateResource = async (
   dispatch,
+  getState,
   resourceName,
   formData,
   beginAction,
   errorAction,
-  successAction
+  successAction,
 ) => {
   dispatch({ type: beginAction })
 
+  let authToken = getState().auth
   let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}`, {
     method: 'post',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${authToken}`
     },
     body: JSON.stringify(formData)
   })
@@ -72,6 +75,7 @@ export const doCreateResource = async (
 
 export const doCreateAttachedResource = async (
   dispatch,
+  getState,
   resourceName,
   values,
   beginAction,
@@ -79,10 +83,15 @@ export const doCreateAttachedResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
+
+  let authToken = getState().auth
   const formData = jsonToFormData(values, 'dao')
 
   let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}`, {
     method: 'post',
+    headers: {
+      'Authorization': `Bearer ${authToken}`
+    },
     body: formData
   })
   if (response.ok) {
@@ -98,6 +107,7 @@ export const doCreateAttachedResource = async (
 
 export const doDeleteResource = async (
   dispatch,
+  getState,
   resourceName,
   resourceId,
   beginAction,
@@ -105,8 +115,13 @@ export const doDeleteResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
+
+  let authToken = getState().auth
   let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
-    method: 'delete'
+    method: 'delete',
+    headers: {
+      'Authorization': `Bearer ${authToken}`
+    },
   })
   if (response.ok) {
     dispatch({
@@ -120,6 +135,7 @@ export const doDeleteResource = async (
 
 export const doDeleteChildResource = async (
   dispatch,
+  getState,
   resourceName,
   resourceId,
   parentId,
@@ -128,8 +144,13 @@ export const doDeleteChildResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
+
+  let authToken = getState().auth
   let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
-    method: 'delete'
+    method: 'delete',
+    headers: {
+      'Authorization': `Bearer ${authToken}`
+    },
   })
   if (response.ok) {
     dispatch({
@@ -143,19 +164,23 @@ export const doDeleteChildResource = async (
 
 export const doEditResource = async (
   dispatch,
+  getState,
   resourceName,
   resourceId,
   formData,
   beginAction,
   errorAction,
-  successAction
+  successAction,
 ) => {
   dispatch({ type: beginAction })
+
+  let authToken = getState().auth
   let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
     method: 'put',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${authToken}`
     },
     body: JSON.stringify(formData)
   })
@@ -172,6 +197,7 @@ export const doEditResource = async (
 
 export const doEditAttachedResource = async (
   dispatch,
+  getState,
   resourceName,
   resourceId,
   values,
@@ -181,6 +207,7 @@ export const doEditAttachedResource = async (
 ) => {
   dispatch({ type: beginAction })
 
+  let authToken = getState().auth
   const formData = new FormData()
   for (let key in values) {
     formData.append(`dao[${key}]`, values[key])
@@ -188,6 +215,9 @@ export const doEditAttachedResource = async (
 
   let response = await fetch(`${process.env.REACT_APP_API_URL}${resourceName}/${resourceId}`, {
     method: 'put',
+    headers: {
+      'Authorization': `Bearer ${authToken}`
+    },
     body: formData
   })
   if (response.ok) {
@@ -203,6 +233,7 @@ export const doEditAttachedResource = async (
 
 export const doLinkResource = async (
   dispatch,
+  getState,
   formData,
   resourceName,
   resourceId,
@@ -213,11 +244,14 @@ export const doLinkResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
+
+  let authToken = getState().auth
   let response = await fetch(`${process.env.REACT_APP_API_URL}${parentName}/${parentId}/${resourceName}`, {
     method: 'put',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${authToken}`
     },
     body: JSON.stringify(formData)
   })
@@ -234,6 +268,7 @@ export const doLinkResource = async (
 
 export const doUnlinkResource = async (
   dispatch,
+  getState,
   formData,
   resourceName,
   resourceId,
@@ -244,11 +279,14 @@ export const doUnlinkResource = async (
   successAction
 ) => {
   dispatch({ type: beginAction })
+  let authToken = getState().auth
+
   let response = await fetch(`${process.env.REACT_APP_API_URL}${parentName}/${parentId}/${resourceName}`, {
     method: 'delete',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${authToken}`
     },
     body: JSON.stringify(formData)
   })

@@ -7,6 +7,7 @@ import frameworksReducer from './frameworksReducer'
 import auditorsReducer from './auditorsReducer'
 import tagsReducer from './tagsReducer'
 import contributorsReducer from './contributorsReducer'
+import authReducer from './authReducer'
 
 import { reducer as formReducer } from 'redux-form'
 
@@ -18,5 +19,6 @@ export default combineReducers({
   auditors: auditorsReducer,
   form: formReducer,
   tags: tagsReducer,
-  contributors: contributorsReducer
+  contributors: contributorsReducer,
+  auth: authReducer
 })

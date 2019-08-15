@@ -22,10 +22,11 @@ export const doFetchAuditorList = () => dispatch => {
   )
 }
 
-export const doCreateAuditor = values => dispatch => {
+export const doCreateAuditor = values => (dispatch, getState) => {
   let formData = { auditor: values }
   doCreateResource(
     dispatch,
+    getState,
     'auditors',
     formData,
     CREATE_AUDITOR_BEGIN,
@@ -34,9 +35,10 @@ export const doCreateAuditor = values => dispatch => {
   )
 }
 
-export const doDeleteAuditor = id => dispatch => {
+export const doDeleteAuditor = id => (dispatch, getState) => {
   doDeleteResource(
     dispatch,
+    getState,
     'auditors',
     id,
     DELETE_AUDITOR_BEGIN,
@@ -45,10 +47,11 @@ export const doDeleteAuditor = id => dispatch => {
   )
 }
 
-export const doEditAuditor = (values, id) => dispatch => {
+export const doEditAuditor = (values, id) => (dispatch, getState) => {
   const formData = { auditor: values }
   doEditResource(
     dispatch,
+    getState,
     'auditors',
     id,
     formData,
