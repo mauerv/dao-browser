@@ -1,21 +1,28 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default ({ documents }) => {
+import DocumentGridItem from './DocumentGridItem'
+
+const DocumentGrid = ({ documents }) => {
   if (documents.length !== 0) {
     return (
       <div className='pt-4 pb-4 border-bottom'>
         <h3>Important Docs</h3>
         <div className='row'>
           {documents.map(document => (
-              <div key={document.url} className='col-2 text-center'>
-                <a href={document.url} target='_blank' rel="noopener noreferrer">
-                  <i className="far fa-file-alt fa-4x secondary-icon"></i>
-                  <p className='mt-1'>{document.title}</p>
-                </a>
-              </div>
-            ))}
+            <DocumentGridItem document={document} key={document.id}/>
+          ))}
         </div>
       </div>
     )
   } else return null
 }
+
+DocumentGrid.propTypes = {
+  documents: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  })).isRequired
+}
+
+export default DocumentGrid

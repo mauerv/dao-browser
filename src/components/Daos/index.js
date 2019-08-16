@@ -1,15 +1,15 @@
-import React from 'react'
+import { connect } from 'react-redux'
 
-import DaoListItem from './DaoListItem'
+import BaseDaos from './BaseDaos'
 
-import daos from '../../data/daos'
+import { getDaos } from '../../selectors'
+import { doFetchDaoList } from '../../actions'
 
-export default () => (
-	<div className='container'>
-		<ul className='list-group'>
-			{daos.map(dao => (
-				<DaoListItem key={dao.id} dao={dao}/>
-			))}
-		</ul>
-	</div>
-)
+const mapStateToProps = state => ({
+  daos: getDaos(state)
+})
+
+export default connect(
+  mapStateToProps,
+  { onFetchDaoList: doFetchDaoList }
+)(BaseDaos)
