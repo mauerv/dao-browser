@@ -94,14 +94,6 @@ class AdminEditDao extends Component {
           parentName='dao'
           parentId={dao.id}
         />
-        <ManageChildResource
-          resourceList={dao.contributors}
-          resourceStruct={{ name: '', twitter: '' }}
-          resourceName='contributor'
-          collectionKey='contributors'
-          parentName='dao'
-          parentId={dao.id}
-        />
         <LinkResource
           resourceList={tags}
           parent={dao}
