@@ -31,7 +31,7 @@ class Dao extends Component {
 						<img src={dao.image_url} alt='' className='img-thumbnail' />
 					</MDBCol>
 					<MDBCol className='col-12'>
-						<h1 className='mb-0'>{dao.title}</h1>
+						<h1 className='mb-0'>{dao.name}</h1>
 						<a
 							href={dao.website}
 							target='_blank'
