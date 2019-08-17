@@ -19,7 +19,7 @@ const SocialIcons = ({
   <div className={className}>
     {github && <SocialIconItem network='github' id={github} theme={theme} />}
     {telegram && <SocialIconItem network='telegram' id={telegram} theme={theme} />}
-    {discord && <SocialIconItem network='discord' id={discord} theme={theme} />}
+    {discord && <SocialIconItem network='discord' id={discord} theme={theme} extraUrl='https://discordapp.com/invite/' />}
     {reddit && <SocialIconItem network='reddit' id={reddit} theme={theme} extraUrl='https://reddit.com/r/' />}
     {medium && <SocialIconItem network='medium' id={medium} theme={theme} />}
     {twitter && <SocialIconItem network='twitter' id={twitter} theme={theme} extraUrl='https://twitter.com/' />}
