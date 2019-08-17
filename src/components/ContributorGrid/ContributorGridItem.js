@@ -9,7 +9,7 @@ const ContributorGridItem = ({ twitterId }) => (
   >
     <img
       className='img-thumbnail sm-thumbnail img-round'
-      src={`http://avatars.io/twitter/${twitterId}`}
+      src={`https://avatars.io/twitter/${twitterId}`}
       alt=''
     />
     <p>@{twitterId}</p>
