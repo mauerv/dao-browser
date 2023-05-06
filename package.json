@@ -8,7 +8,7 @@
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mdbreact": "^4.15.0",
     "node-sass": "^4.12.0",
     "object-to-formdata": "^1.6.4",
